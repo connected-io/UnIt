@@ -10,18 +10,84 @@ import Foundation
 import UIKit
 
 protocol PieceOfCakeAccessElementsProtocol {
+    /**
+     Finds the first **UILabel** within the given **UIView** that exactly matches the given text.
+     - parameters:
+        - view: the view that is passed in order to search within its view hierarchy for the label.
+        - text: the string that a label in the given view must match.
+     - returns: The first **UILabel** found to match the text or nil if not.
+     */
     static func firstLabelPassingWith(view: UIView, text: String) -> UILabel?
+    
+    /**
+     Finds the first **UIButton** within the given **UIView** that has the exact same title as the given text.
+     - parameters:
+        - view: the view that is passed in order to search within its view hierarchy for the button.
+        - text: the string that a button title in the given view must match.
+     - returns: The first **UIButton** found to match the text or nil if not.
+     */
     static func firstButtonPassingWith(view: UIView, text: String) -> UIButton?
+    
+    /**
+     Finds the first **UITableViewCell** within the given **UIView** that has a **UILabel** that exactly matches the given text.
+     - parameters:
+        - view: the view that is passed in order to search within its view hierarchy for the table view cell.
+        - text: the string that a label within a table view cell must match.
+     - returns: The first **UITableViewCell** found to match the text or nil if not.
+     */
     static func firstVisibleTableViewCellPassingWith(view: UIView, text: String) -> UITableViewCell?
+    
+    /**
+     Finds the first **UICollectionViewCell** within the given **UIView** that has a **UILabel** that exactly matches the given text.
+     - parameters:
+        - view: the view that is passed in order to search within its view hierarchy for the collection view cell.
+        - text: the string that a label within a collection view cell must match.
+     - returns: The first **UICollectionViewCell** found to match the text or nil if not.
+     */
     static func firstVisibleCollectionViewCellPassingWith(view: UIView, text: String) -> UICollectionViewCell?
 }
 
 protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
+    /**
+     Creates a **UIViewController** or subclass from storyboard and also makes sure it's view lifecycle is ran according to UIKit.
+     - parameters:
+        - storyboardname: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
+        - bundle: the bundle where the storyboard exists.
+        - identifier: the identifier of the view controller that exists inside your storyboard.
+     - returns: Your custom view controller from storyboard.
+     */
     static func loadAndSetupViewControllerFromStoryboard(_ storyboardName: String, _ bundle: Bundle, _ identifier: String) -> UIViewController?
+    
+    /**
+     Creates a **UIViewController** or subclass from xib and also makes sure it's view lifecycle is ran according to UIKit.
+     - parameters:
+        - nibName: the name of the xib file. (i.e. For MyView.xib you would put "MyView").
+        - bundle: the bundle where the xib file exists.
+        - klass: the custom view controller class that you want to instantiate.
+     - returns: Your custom view controller from xib.
+     */
     static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T?
+    
+    /**
+     Runs the view lifecycle on the view controller that is passed in to match UIKit. It will **roughly** follow the following view lifecycle:
+        - viewDidLoad()
+        - viewWillAppear(animated: Bool)
+        - viewWillLayoutSubviews()
+        - viewDidLayoutSubviews()
+        - viewDidAppear(animated: Bool)
+        - viewWillLayoutSubviews()
+        - viewDidLayoutSubviews()
+     */
+    static func kickingUIKitFor(viewController: UIViewController?)
 }
 
 class PieceOfCakeUIHelpers {
+    /**
+     Returns all subviews of a **UIView** of your choice by recursively going through it's view hierarchy.
+     - parameters:
+        - view: The view that you want it's subviews for.
+     - returns: A generic of your choice. (i.e. If you want all labels within a UIView you would write `let labels:[UILabel] = returnSubviewsFor(view: view)`).
+     */
     private static func returnSubviewsFor<T: UIView>(view: UIView) -> [T] {
         var subviews = [T]()
         for subview in view.subviews {
