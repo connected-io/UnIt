@@ -17,7 +17,7 @@ protocol PieceOfCakeAccessElementsProtocol {
         - text: the string that a label in the given view must match.
      - returns: The first **UILabel** found to match the text or nil if not.
      */
-    static func firstLabelPassingWith(view: UIView, text: String) -> UILabel?
+    static func firstLabelPassing(with view: UIView, text: String) -> UILabel?
     
     /**
      Finds the first **UIButton** within the given **UIView** that has the exact same title as the given text.
@@ -26,7 +26,7 @@ protocol PieceOfCakeAccessElementsProtocol {
         - text: the string that a button title in the given view must match.
      - returns: The first **UIButton** found to match the text or nil if not.
      */
-    static func firstButtonPassingWith(view: UIView, text: String) -> UIButton?
+    static func firstButtonPassing(with view: UIView, text: String) -> UIButton?
     
     /**
      Finds the first **UITableViewCell** within the given **UIView** that has a **UILabel** that exactly matches the given text.
@@ -35,7 +35,7 @@ protocol PieceOfCakeAccessElementsProtocol {
         - text: the string that a label within a table view cell must match.
      - returns: The first **UITableViewCell** found to match the text or nil if not.
      */
-    static func firstVisibleTableViewCellPassingWith(view: UIView, text: String) -> UITableViewCell?
+    static func firstVisibleTableViewCellPassing(with view: UIView, text: String) -> UITableViewCell?
     
     /**
      Finds the first **UICollectionViewCell** within the given **UIView** that has a **UILabel** that exactly matches the given text.
@@ -44,7 +44,7 @@ protocol PieceOfCakeAccessElementsProtocol {
         - text: the string that a label within a collection view cell must match.
      - returns: The first **UICollectionViewCell** found to match the text or nil if not.
      */
-    static func firstVisibleCollectionViewCellPassingWith(view: UIView, text: String) -> UICollectionViewCell?
+    static func firstVisibleCollectionViewCellPassing(with view: UIView, text: String) -> UICollectionViewCell?
 }
 
 protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
@@ -64,7 +64,7 @@ protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
         - nibName: the name of the xib file. (i.e. For MyView.xib you would put "MyView").
         - bundle: the bundle where the xib file exists.
         - klass: the custom view controller class that you want to instantiate.
-     - returns: Your custom view controller from xib.
+     - returns: your custom view controller from xib.
      */
     static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T?
     
@@ -125,7 +125,7 @@ extension PieceOfCakeUIHelpers : PieceOfCakeViewControllerSetupAndInstantiationP
 }
 
 extension PieceOfCakeUIHelpers : PieceOfCakeAccessElementsProtocol {
-    static func firstLabelPassingWith(view: UIView, text: String) -> UILabel? {
+    static func firstLabelPassing(with view: UIView, text: String) -> UILabel? {
         let allLabels:[UILabel] = returnSubviewsFor(view: view)
         for label in allLabels {
             if (label.text == text) {
@@ -135,7 +135,7 @@ extension PieceOfCakeUIHelpers : PieceOfCakeAccessElementsProtocol {
         return nil
     }
     
-    static func firstButtonPassingWith(view: UIView, text: String) -> UIButton? {
+    static func firstButtonPassing(with view: UIView, text: String) -> UIButton? {
         let allButtons:[UIButton] = returnSubviewsFor(view: view)
         for button in allButtons {
             if (button.titleLabel?.text == text) {
@@ -145,7 +145,7 @@ extension PieceOfCakeUIHelpers : PieceOfCakeAccessElementsProtocol {
         return nil
     }
     
-    static func firstVisibleTableViewCellPassingWith(view: UIView, text: String) -> UITableViewCell? {
+    static func firstVisibleTableViewCellPassing(with view: UIView, text: String) -> UITableViewCell? {
         let allTableViewCells:[UITableViewCell] = returnSubviewsFor(view: view)
         for tableViewCell in allTableViewCells {
             let labelsInTableViewCell:[UILabel] = returnSubviewsFor(view: tableViewCell)
@@ -158,7 +158,7 @@ extension PieceOfCakeUIHelpers : PieceOfCakeAccessElementsProtocol {
         return nil
     }
     
-    static func firstVisibleCollectionViewCellPassingWith(view: UIView, text: String) -> UICollectionViewCell? {
+    static func firstVisibleCollectionViewCellPassing(with view: UIView, text: String) -> UICollectionViewCell? {
         let allCollectionViewCells:[UICollectionViewCell] = returnSubviewsFor(view: view)
         for collectionViewCell in allCollectionViewCells {
             let labelsInCollectionViewCell:[UILabel] = returnSubviewsFor(view: collectionViewCell)

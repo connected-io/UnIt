@@ -27,19 +27,19 @@ class ViewControllerSpec: QuickSpec {
             }
 
             it("should have a label that has 'Connected.'") {
-                expect(PieceOfCakeUIHelpers.firstLabelPassingWith(view: subject.view, text: "Connected.")).notTo(beNil())
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: subject.view, text: "Connected.")).notTo(beNil())
             }
 
             it("should have a label that has 'Montreal.' which is being set in viewDidAppear:") {
-                expect(PieceOfCakeUIHelpers.firstLabelPassingWith(view: subject.view, text: "Montreal.")).notTo(beNil())
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: subject.view, text: "Montreal.")).notTo(beNil())
             }
             
             it("should have a table view cell with text 'Alaska'") {
-                expect(PieceOfCakeUIHelpers.firstVisibleTableViewCellPassingWith(view: subject.view, text: "Alaska")).notTo(beNil())
+                expect(PieceOfCakeUIHelpers.firstVisibleTableViewCellPassing(with: subject.view, text: "Alaska")).notTo(beNil())
             }
             
             it("should not have a table view cell with text 'Mississippi'") {
-                expect(PieceOfCakeUIHelpers.firstVisibleTableViewCellPassingWith(view: subject.view, text: "Mississippi")).to(beNil())
+                expect(PieceOfCakeUIHelpers.firstVisibleTableViewCellPassing(with: subject.view, text: "Mississippi")).to(beNil())
             }
         }
         
@@ -54,15 +54,15 @@ class ViewControllerSpec: QuickSpec {
             }
 
             it("should have a label that has text: 'Top View Controller Label'") {
-                expect(PieceOfCakeUIHelpers.firstLabelPassingWith(view: nibSubject.view, text: "Top View Controller Label")).notTo(beNil())
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: nibSubject.view, text: "Top View Controller Label")).notTo(beNil())
             }
 
             it("should have a button that has text: 'Bottom View Controller Button'") {
-                expect(PieceOfCakeUIHelpers.firstButtonPassingWith(view: nibSubject.view, text: "Bottom View Controller Button")).notTo(beNil())
+                expect(PieceOfCakeUIHelpers.firstButtonPassing(with: nibSubject.view, text: "Bottom View Controller Button")).notTo(beNil())
             }
 
             it("should not have a label that has text: 'No Label'") {
-                expect(PieceOfCakeUIHelpers.firstLabelPassingWith(view: nibSubject.view, text: "No Label")).to(beNil())
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: nibSubject.view, text: "No Label")).to(beNil())
             }
         }
     }
