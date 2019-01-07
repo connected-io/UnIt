@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F406929C21E3A78C0027C85C /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F406929B21E3A78C0027C85C /* FirstCollectionViewCell.swift */; };
+		F406929E21E3AAEA0027C85C /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */; };
+		F40692A321E3B17A0027C85C /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */; };
+		F40692A421E3B17A0027C85C /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */; };
 		F44AAF7321DE6C9300426D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAF7221DE6C9300426D10 /* AppDelegate.swift */; };
 		F44AAF7521DE6C9300426D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAF7421DE6C9300426D10 /* ViewController.swift */; };
 		F44AAF7821DE6C9300426D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44AAF7621DE6C9300426D10 /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F406929B21E3A78C0027C85C /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
 		F44AAF6F21DE6C9300426D10 /* pieceofcake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pieceofcake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44AAF7221DE6C9300426D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44AAF7421DE6C9300426D10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 				F44AAFB621DEA9F100426D10 /* NibTopViewController.xib */,
 				F44AAFB921DEAA0200426D10 /* NibBottomViewController.swift */,
 				F44AAFBA21DEAA0200426D10 /* NibBottomViewController.xib */,
+				F406929B21E3A78C0027C85C /* FirstCollectionViewCell.swift */,
+				F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */,
+				F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */,
+				F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */,
 			);
 			path = pieceofcake;
 			sourceTree = "<group>";
@@ -296,6 +308,7 @@
 				F44AAFB421DE929300426D10 /* NibViewController.xib in Resources */,
 				F44AAF7821DE6C9300426D10 /* Main.storyboard in Resources */,
 				F44AAFBC21DEAA0200426D10 /* NibBottomViewController.xib in Resources */,
+				F40692A421E3B17A0027C85C /* LabelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F406929C21E3A78C0027C85C /* FirstCollectionViewCell.swift in Sources */,
 				F44AAF7521DE6C9300426D10 /* ViewController.swift in Sources */,
 				F44AAFAB21DE715400426D10 /* PieceOfCakeUIHelpers.swift in Sources */,
+				F40692A321E3B17A0027C85C /* LabelCollectionViewCell.swift in Sources */,
 				F44AAFB221DE928100426D10 /* NibViewController.swift in Sources */,
+				F406929E21E3AAEA0027C85C /* SecondCollectionViewCell.swift in Sources */,
 				F44AAFBB21DEAA0200426D10 /* NibBottomViewController.swift in Sources */,
 				F44AAF7321DE6C9300426D10 /* AppDelegate.swift in Sources */,
 				F44AAFB721DEA9F100426D10 /* NibTopViewController.swift in Sources */,

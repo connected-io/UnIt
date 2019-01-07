@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var torontoLabel: UILabel!
     let statesOfUSAArray = ["Alaska",
                             "Alabama",
@@ -71,6 +72,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         NSLog("storyboard: viewDidLoad")
         setupTableView()
+        setupCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,6 +112,17 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
     }
+    
+    private func setupCollectionView() {
+        firstCollectionView.dataSource = self
+    }
+    
+    // Mark: Actions
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        let nibViewController = NibViewController.init(nibName: "NibViewController", bundle: nil)
+        self.present(nibViewController, animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -122,6 +135,17 @@ extension ViewController: UITableViewDataSource {
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell")
         tableViewCell?.textLabel?.text = statesOfUSAArray[indexPath.row]
         return tableViewCell!
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCollectionView", for: indexPath) as! FirstCollectionViewCell
+        return collectionViewCell
     }
 }
 

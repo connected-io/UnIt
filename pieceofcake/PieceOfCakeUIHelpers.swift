@@ -51,7 +51,7 @@ protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
     /**
      Creates a **UIViewController** or subclass from storyboard and also makes sure it's view lifecycle is ran according to UIKit.
      - parameters:
-        - storyboardname: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
+        - storyboardName: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
         - bundle: the bundle where the storyboard exists.
         - identifier: the identifier of the view controller that exists inside your storyboard.
      - returns: Your custom view controller from storyboard.
@@ -64,7 +64,7 @@ protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
         - nibName: the name of the xib file. (i.e. For MyView.xib you would put "MyView").
         - bundle: the bundle where the xib file exists.
         - klass: the custom view controller class that you want to instantiate.
-     - returns: your custom view controller from xib.
+     - returns: Your custom view controller from xib.
      */
     static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T?
     
@@ -77,6 +77,8 @@ protocol PieceOfCakeViewControllerSetupAndInstantiationProtocol {
         - viewDidAppear(animated: Bool)
         - viewWillLayoutSubviews()
         - viewDidLayoutSubviews()
+     - parameters:
+        - viewController: the **UIViewController** that you want to run the view lifecycle against so it mirrors what UIKit does.
      */
     static func kickingUIKitFor(viewController: UIViewController?)
 }

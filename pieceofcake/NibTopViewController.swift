@@ -9,10 +9,14 @@
 import UIKit
 
 class NibTopViewController: UIViewController {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    let someBrazilStates = ["Acre", "Alagoas", "Amazonas", "Amapá", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Minas Gerais", "Mato Grosso do Sul", "Mato Grosso", "Pará", "Paraíba", "Pernambuco"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("nibTop: viewDidLoad")
+        collectionView.register(UINib.init(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
+        collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,5 +48,16 @@ class NibTopViewController: UIViewController {
         super.viewDidLayoutSubviews()
         NSLog("nibTop: viewDidLayoutSubviews")
     }
+}
 
+extension NibTopViewController : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LabelCollectionViewCell", for: indexPath) as! LabelCollectionViewCell
+        cell.configure(with: someBrazilStates[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return someBrazilStates.count
+    }
 }

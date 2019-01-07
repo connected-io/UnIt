@@ -16,7 +16,7 @@ class ViewControllerSpec: QuickSpec {
         var subject : ViewController!
         var nibSubject : NibViewController!
         
-        describe("VC from storyboard") {
+        describe("ViewController from storyboard") {
             beforeEach() {
                 subject = PieceOfCakeUIHelpers.loadAndSetupViewControllerFromStoryboard("Main", Bundle.main, "ViewController") as? ViewController
             }
@@ -28,6 +28,10 @@ class ViewControllerSpec: QuickSpec {
 
             it("should have a label that has 'Connected.'") {
                 expect(PieceOfCakeUIHelpers.firstLabelPassing(with: subject.view, text: "Connected.")).notTo(beNil())
+            }
+            
+            it("should not have a label that has 'No text'") {
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: subject.view, text: "No text")).to(beNil())
             }
 
             it("should have a label that has 'Montreal.' which is being set in viewDidAppear:") {
@@ -41,9 +45,25 @@ class ViewControllerSpec: QuickSpec {
             it("should not have a table view cell with text 'Mississippi'") {
                 expect(PieceOfCakeUIHelpers.firstVisibleTableViewCellPassing(with: subject.view, text: "Mississippi")).to(beNil())
             }
+            
+            it("should have a collection view cell with 'Ontario'") {
+                expect(PieceOfCakeUIHelpers.firstVisibleCollectionViewCellPassing(with: subject.view, text: "Ontario")).notTo(beNil())
+            }
+            
+            it("should not have a collection view cell with 'Newfoundland'") {
+                expect(PieceOfCakeUIHelpers.firstVisibleCollectionViewCellPassing(with: subject.view, text: "Newfoundland")).to(beNil())
+            }
+            
+            it("should have a label with the text 'Left Stack Label' in a UIStackView") {
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: subject.view, text: "Left Stack Label")).notTo(beNil())
+            }
+            
+            it("should have a button with the text 'Right Stack Button' in a UIStackView") {
+                expect(PieceOfCakeUIHelpers.firstButtonPassing(with: subject.view, text: "Right Stack Button")).notTo(beNil())
+            }
         }
         
-        describe("VC from nib") {
+        describe("ViewController from nib") {
             beforeEach() {
                 nibSubject = PieceOfCakeUIHelpers.loadAndSetupViewControllerFromNib("NibViewController", Bundle.main, NibViewController.self)
             }
@@ -63,6 +83,22 @@ class ViewControllerSpec: QuickSpec {
 
             it("should not have a label that has text: 'No Label'") {
                 expect(PieceOfCakeUIHelpers.firstLabelPassing(with: nibSubject.view, text: "No Label")).to(beNil())
+            }
+
+            it("should have a collection view cell with 'Acre' which is a collection view cell inside a view controller that is in a container view") {
+                expect(PieceOfCakeUIHelpers.firstVisibleCollectionViewCellPassing(with: nibSubject.view, text: "Acre")).notTo(beNil())
+            }
+            
+            it("should not have a collection view cell with 'Pernambuco' which is a collection view cell inside a view controller that is in a container view") {
+                expect(PieceOfCakeUIHelpers.firstVisibleCollectionViewCellPassing(with: nibSubject.view, text: "Pernambuco")).to(beNil())
+            }
+            
+            it("should have a label with the text 'Left Stack Label' in a UIStackView") {
+                expect(PieceOfCakeUIHelpers.firstLabelPassing(with: nibSubject.view, text: "Left Stack Label")).notTo(beNil())
+            }
+            
+            it("should have a button with the text 'Right Stack Button' in a UIStackView") {
+                expect(PieceOfCakeUIHelpers.firstButtonPassing(with: nibSubject.view, text: "Right Stack Button")).notTo(beNil())
             }
         }
     }
