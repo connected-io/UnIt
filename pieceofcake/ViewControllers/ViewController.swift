@@ -123,6 +123,10 @@ class ViewController: UIViewController {
         self.present(nibViewController, animated: true, completion: nil)
     }
     
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        let actionViewController = ActionViewController.init(nibName: "ActionViewController", bundle: nil)
+        self.present(actionViewController, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: UITableViewDataSource {

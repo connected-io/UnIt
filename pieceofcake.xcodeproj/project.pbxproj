@@ -11,6 +11,8 @@
 		F406929E21E3AAEA0027C85C /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */; };
 		F40692A321E3B17A0027C85C /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */; };
 		F40692A421E3B17A0027C85C /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */; };
+		F40692A721E3D7AD0027C85C /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40692A521E3D7AD0027C85C /* ActionViewController.swift */; };
+		F40692A821E3D7AD0027C85C /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40692A621E3D7AD0027C85C /* ActionViewController.xib */; };
 		F44AAF7321DE6C9300426D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAF7221DE6C9300426D10 /* AppDelegate.swift */; };
 		F44AAF7521DE6C9300426D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAF7421DE6C9300426D10 /* ViewController.swift */; };
 		F44AAF7821DE6C9300426D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44AAF7621DE6C9300426D10 /* Main.storyboard */; };
@@ -22,7 +24,6 @@
 		F44AAFA421DE6F9000426D10 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44AAFA221DE6F9000426D10 /* Nimble.framework */; };
 		F44AAFA821DE6FC700426D10 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F44AAFA621DE6FC600426D10 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F44AAFA921DE6FC700426D10 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F44AAFA721DE6FC700426D10 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F44AAFAB21DE715400426D10 /* PieceOfCakeUIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAFAA21DE715400426D10 /* PieceOfCakeUIHelpers.swift */; };
 		F44AAFAD21DE8D0200426D10 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAFAC21DE8D0200426D10 /* ViewControllerSpec.swift */; };
 		F44AAFB221DE928100426D10 /* NibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAFB121DE928100426D10 /* NibViewController.swift */; };
 		F44AAFB421DE929300426D10 /* NibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44AAFB321DE929300426D10 /* NibViewController.xib */; };
@@ -30,6 +31,10 @@
 		F44AAFB821DEA9F100426D10 /* NibTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44AAFB621DEA9F100426D10 /* NibTopViewController.xib */; };
 		F44AAFBB21DEAA0200426D10 /* NibBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AAFB921DEAA0200426D10 /* NibBottomViewController.swift */; };
 		F44AAFBC21DEAA0200426D10 /* NibBottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44AAFBA21DEAA0200426D10 /* NibBottomViewController.xib */; };
+		F4DCE10221E5297E009EBE61 /* UIView+Finding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE10121E5297E009EBE61 /* UIView+Finding.swift */; };
+		F4DCE10421E530F3009EBE61 /* UIViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE10321E530F3009EBE61 /* UIViewController+Setup.swift */; };
+		F4DCE10621E533A3009EBE61 /* UITextField+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE10521E533A3009EBE61 /* UITextField+UserAction.swift */; };
+		F4DCE10821E53513009EBE61 /* UIControl+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE10721E53513009EBE61 /* UIControl+UserAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4DCE0FF21E50DF0009EBE61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +83,8 @@
 		F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
 		F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
+		F40692A521E3D7AD0027C85C /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		F40692A621E3D7AD0027C85C /* ActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		F44AAF6F21DE6C9300426D10 /* pieceofcake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pieceofcake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44AAF7221DE6C9300426D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44AAF7421DE6C9300426D10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +102,6 @@
 		F44AAFA221DE6F9000426D10 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F44AAFA621DE6FC600426D10 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F44AAFA721DE6FC700426D10 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		F44AAFAA21DE715400426D10 /* PieceOfCakeUIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceOfCakeUIHelpers.swift; sourceTree = "<group>"; };
 		F44AAFAC21DE8D0200426D10 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		F44AAFB121DE928100426D10 /* NibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewController.swift; sourceTree = "<group>"; };
 		F44AAFB321DE929300426D10 /* NibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +109,11 @@
 		F44AAFB621DEA9F100426D10 /* NibTopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibTopViewController.xib; sourceTree = "<group>"; };
 		F44AAFB921DEAA0200426D10 /* NibBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibBottomViewController.swift; sourceTree = "<group>"; };
 		F44AAFBA21DEAA0200426D10 /* NibBottomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibBottomViewController.xib; sourceTree = "<group>"; };
+		F4DCE0F621E50ABA009EBE61 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4DCE10121E5297E009EBE61 /* UIView+Finding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Finding.swift"; sourceTree = "<group>"; };
+		F4DCE10321E530F3009EBE61 /* UIViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Setup.swift"; sourceTree = "<group>"; };
+		F4DCE10521E533A3009EBE61 /* UITextField+UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+UserAction.swift"; sourceTree = "<group>"; };
+		F4DCE10721E53513009EBE61 /* UIControl+UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+UserAction.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,23 +169,14 @@
 		F44AAF7121DE6C9300426D10 /* pieceofcake */ = {
 			isa = PBXGroup;
 			children = (
+				F4DCE10A21E535A1009EBE61 /* Views */,
+				F4DCE10921E53582009EBE61 /* ViewControllers */,
+				F4DCE10021E5292C009EBE61 /* Extensions */,
 				F44AAF7221DE6C9300426D10 /* AppDelegate.swift */,
-				F44AAF7421DE6C9300426D10 /* ViewController.swift */,
 				F44AAF7621DE6C9300426D10 /* Main.storyboard */,
 				F44AAF7921DE6C9300426D10 /* Assets.xcassets */,
 				F44AAF7B21DE6C9300426D10 /* LaunchScreen.storyboard */,
 				F44AAF7E21DE6C9300426D10 /* Info.plist */,
-				F44AAFAA21DE715400426D10 /* PieceOfCakeUIHelpers.swift */,
-				F44AAFB121DE928100426D10 /* NibViewController.swift */,
-				F44AAFB321DE929300426D10 /* NibViewController.xib */,
-				F44AAFB521DEA9F100426D10 /* NibTopViewController.swift */,
-				F44AAFB621DEA9F100426D10 /* NibTopViewController.xib */,
-				F44AAFB921DEAA0200426D10 /* NibBottomViewController.swift */,
-				F44AAFBA21DEAA0200426D10 /* NibBottomViewController.xib */,
-				F406929B21E3A78C0027C85C /* FirstCollectionViewCell.swift */,
-				F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */,
-				F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */,
-				F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */,
 			);
 			path = pieceofcake;
 			sourceTree = "<group>";
@@ -191,10 +203,49 @@
 		F44AAFA021DE6F9000426D10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4DCE0F621E50ABA009EBE61 /* XCTest.framework */,
 				F44AAFA221DE6F9000426D10 /* Nimble.framework */,
 				F44AAFA121DE6F9000426D10 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4DCE10021E5292C009EBE61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4DCE10121E5297E009EBE61 /* UIView+Finding.swift */,
+				F4DCE10321E530F3009EBE61 /* UIViewController+Setup.swift */,
+				F4DCE10521E533A3009EBE61 /* UITextField+UserAction.swift */,
+				F4DCE10721E53513009EBE61 /* UIControl+UserAction.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4DCE10921E53582009EBE61 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F44AAF7421DE6C9300426D10 /* ViewController.swift */,
+				F44AAFB121DE928100426D10 /* NibViewController.swift */,
+				F44AAFB321DE929300426D10 /* NibViewController.xib */,
+				F44AAFB521DEA9F100426D10 /* NibTopViewController.swift */,
+				F44AAFB621DEA9F100426D10 /* NibTopViewController.xib */,
+				F44AAFB921DEAA0200426D10 /* NibBottomViewController.swift */,
+				F44AAFBA21DEAA0200426D10 /* NibBottomViewController.xib */,
+				F40692A521E3D7AD0027C85C /* ActionViewController.swift */,
+				F40692A621E3D7AD0027C85C /* ActionViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4DCE10A21E535A1009EBE61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F406929B21E3A78C0027C85C /* FirstCollectionViewCell.swift */,
+				F406929D21E3AAEA0027C85C /* SecondCollectionViewCell.swift */,
+				F40692A121E3B17A0027C85C /* LabelCollectionViewCell.swift */,
+				F40692A221E3B17A0027C85C /* LabelCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +258,7 @@
 				F44AAF6B21DE6C9300426D10 /* Sources */,
 				F44AAF6C21DE6C9300426D10 /* Frameworks */,
 				F44AAF6D21DE6C9300426D10 /* Resources */,
+				F4DCE0FF21E50DF0009EBE61 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +360,7 @@
 				F44AAFB421DE929300426D10 /* NibViewController.xib in Resources */,
 				F44AAF7821DE6C9300426D10 /* Main.storyboard in Resources */,
 				F44AAFBC21DEAA0200426D10 /* NibBottomViewController.xib in Resources */,
+				F40692A821E3D7AD0027C85C /* ActionViewController.xib in Resources */,
 				F40692A421E3B17A0027C85C /* LabelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,13 +387,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F406929C21E3A78C0027C85C /* FirstCollectionViewCell.swift in Sources */,
+				F4DCE10621E533A3009EBE61 /* UITextField+UserAction.swift in Sources */,
 				F44AAF7521DE6C9300426D10 /* ViewController.swift in Sources */,
-				F44AAFAB21DE715400426D10 /* PieceOfCakeUIHelpers.swift in Sources */,
 				F40692A321E3B17A0027C85C /* LabelCollectionViewCell.swift in Sources */,
+				F4DCE10221E5297E009EBE61 /* UIView+Finding.swift in Sources */,
 				F44AAFB221DE928100426D10 /* NibViewController.swift in Sources */,
 				F406929E21E3AAEA0027C85C /* SecondCollectionViewCell.swift in Sources */,
+				F40692A721E3D7AD0027C85C /* ActionViewController.swift in Sources */,
 				F44AAFBB21DEAA0200426D10 /* NibBottomViewController.swift in Sources */,
 				F44AAF7321DE6C9300426D10 /* AppDelegate.swift in Sources */,
+				F4DCE10421E530F3009EBE61 /* UIViewController+Setup.swift in Sources */,
+				F4DCE10821E53513009EBE61 /* UIControl+UserAction.swift in Sources */,
 				F44AAFB721DEA9F100426D10 /* NibTopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,11 +576,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL7Q499FV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pieceofcake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Connected.pieceofcake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -537,11 +599,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL7Q499FV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pieceofcake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Connected.pieceofcake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
