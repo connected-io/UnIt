@@ -18,26 +18,23 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var numericTextField: UITextField!
     @IBOutlet weak var numericTextFieldSwitch: UISwitch!
     
-    // aa2
+    @IBOutlet weak var firstHiddenButton: UIButton!
+    @IBOutlet weak var secondHiddenButton: UIButton!
+    @IBOutlet weak var hiddenViewThatContainsButton: UIView!
+    @IBOutlet weak var buttonInHiddenView: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
         numericTextField.delegate = self
-//        textField.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        firstHiddenButton.isHidden = true
+        secondHiddenButton.alpha = 0
+        hiddenViewThatContainsButton.isHidden = true
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
         buttonSwitch.isOn = !buttonSwitch.isOn
     }
-    
-//    @objc func textFieldEditingChanged(_ textField: UITextField) {
-//        textFieldSwitch.isOn = (textField.text!.count > 0)
-//    }
 }
 
 extension ActionViewController : UITextFieldDelegate {

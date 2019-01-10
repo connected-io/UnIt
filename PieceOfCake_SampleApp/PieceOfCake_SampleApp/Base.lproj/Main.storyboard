@@ -36,7 +36,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRp-5Z-73y">
                                         <rect key="frame" x="0.0" y="20.5" width="187.5" height="141.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-F3-tVf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-F3-tVf">
                                                 <rect key="frame" x="55.5" y="55.5" width="77" height="30"/>
                                                 <state key="normal" title="Left Button"/>
                                                 <connections>
@@ -46,6 +46,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.76405104830000004" blue="0.72385500420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="7Te-F3-tVf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JRp-5Z-73y" secondAttribute="leading" constant="15" id="PvJ-8l-y61"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Te-F3-tVf" secondAttribute="trailing" constant="15" id="Z3A-Lh-fVw"/>
                                             <constraint firstItem="7Te-F3-tVf" firstAttribute="centerY" secondItem="JRp-5Z-73y" secondAttribute="centerY" id="n18-rn-Obz"/>
                                             <constraint firstItem="7Te-F3-tVf" firstAttribute="centerX" secondItem="JRp-5Z-73y" secondAttribute="centerX" id="wKE-1i-PiR"/>
                                         </constraints>
@@ -232,6 +234,7 @@
                     </view>
                     <connections>
                         <outlet property="firstCollectionView" destination="EXY-Pf-Pfd" id="51L-8x-JxW"/>
+                        <outlet property="leftButton" destination="7Te-F3-tVf" id="FZW-1T-MyQ"/>
                         <outlet property="tableView" destination="I9i-ab-YMn" id="uTS-hF-ac2"/>
                         <outlet property="torontoLabel" destination="eqM-TC-xIN" id="MUK-BK-TcL"/>
                     </connections>
