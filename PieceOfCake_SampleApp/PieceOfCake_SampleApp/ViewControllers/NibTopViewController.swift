@@ -1,11 +1,3 @@
-//
-//  NibTopViewController.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-03.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 class NibTopViewController: UIViewController {
@@ -14,39 +6,39 @@ class NibTopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("nibTop: viewDidLoad")
-        collectionView.register(UINib.init(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
+        print("nibTop: viewDidLoad")
+        collectionView.register(UINib(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
         collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NSLog("nibTop: viewWillAppear:")
+        print("nibTop: viewWillAppear:")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NSLog("nibTop: viewDidAppear:")
+        print("nibTop: viewDidAppear:")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("nibTop: viewWillDisappear:")
+        print("nibTop: viewWillDisappear:")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("nibTop: viewDidDisappear:")
+        print("nibTop: viewDidDisappear:")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        NSLog("nibTop: viewWillLayoutSubviews")
+        print("nibTop: viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        NSLog("nibTop: viewDidLayoutSubviews")
+        print("nibTop: viewDidLayoutSubviews")
     }
 }
 

@@ -1,11 +1,3 @@
-//
-//  ViewControllerSpec.swift
-//  pieceofcakeTests
-//
-//  Created by cl-dev on 2019-01-03.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import Nimble
 import Quick
@@ -21,7 +13,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", Bundle.main, "ViewController") as? ViewController
+                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Bundle.main)
             }
 
             it("should not be nil") {
@@ -30,39 +22,39 @@ class SampleAppSpec: QuickSpec {
             }
 
             it("should have a label that has 'Connected.'") {
-                expect(subject.view.firstLabelPassing(with: "Connected.")).notTo(beNil())
+                expect(subject.view.firstLabel(with: "Connected.")).notTo(beNil())
             }
             
             it("should not have a label that has 'No text'") {
-                expect(subject.view.firstLabelPassing(with: "No text")).to(beNil())
+                expect(subject.view.firstLabel(with: "No text")).to(beNil())
             }
 
             it("should have a label that has 'Montreal.' which is being set in viewDidAppear:") {
-                expect(subject.view.firstLabelPassing(with: "Montreal.")).notTo(beNil())
+                expect(subject.view.firstLabel(with: "Montreal.")).notTo(beNil())
             }
             
             it("should have a table view cell with text 'Alaska'") {
-                expect(subject.view.firstVisibleTableViewCellPassing(with: "Alaska")).notTo(beNil())
+                expect(subject.view.firstVisibleTableViewCell(with: "Alaska")).notTo(beNil())
             }
             
             it("should not have a table view cell with text 'Mississippi'") {
-                expect(subject.view.firstVisibleTableViewCellPassing(with: "Mississippi")).to(beNil())
+                expect(subject.view.firstVisibleTableViewCell(with: "Mississippi")).to(beNil())
             }
             
             it("should have a collection view cell with 'Ontario'") {
-                expect(subject.view.firstVisibleCollectionViewCellPassing(with: "Ontario")).notTo(beNil())
+                expect(subject.view.firstVisibleCollectionViewCell(with: "Ontario")).notTo(beNil())
             }
             
             it("should not have a collection view cell with 'Newfoundland'") {
-                expect(subject.view.firstVisibleCollectionViewCellPassing(with: "Newfoundland")).to(beNil())
+                expect(subject.view.firstVisibleCollectionViewCell(with: "Newfoundland")).to(beNil())
             }
             
             it("should have a label with the text 'Left Stack Label' in a UIStackView") {
-                expect(subject.view.firstLabelPassing(with: "Left Stack Label")).notTo(beNil())
+                expect(subject.view.firstLabel(with: "Left Stack Label")).notTo(beNil())
             }
             
             it("should have a button with the text 'Right Stack Button' in a UIStackView") {
-                expect(subject.view.firstButtonPassing(with: "Right Stack Button")).notTo(beNil())
+                expect(subject.view.firstButton(with: "Right Stack Button")).notTo(beNil())
             }
         }
         
@@ -77,34 +69,33 @@ class SampleAppSpec: QuickSpec {
             }
 
             it("should have a label that has text: 'Top View Controller Label'") {
-                expect(nibSubject.view.firstLabelPassing(with: "Top View Controller Label")).notTo(beNil())
+                expect(nibSubject.view.firstLabel(with: "Top View Controller Label")).notTo(beNil())
 
             }
 
             it("should have a button that has text: 'Bottom View Controller Button'") {
-                expect(nibSubject.view.firstButtonPassing(with: "Bottom View Controller Button")).notTo(beNil())
+                expect(nibSubject.view.firstButton(with: "Bottom View Controller Button")).notTo(beNil())
 
             }
 
             it("should not have a label that has text: 'No Label'") {
-                expect(nibSubject.view.firstLabelPassing(with: "No Label")).to(beNil())
-
+                expect(nibSubject.view.firstLabel(with: "No Label")).to(beNil())
             }
 
             it("should have a collection view cell with 'Acre' which is a collection view cell inside a view controller that is in a container view") {
-                expect(nibSubject.view.firstVisibleCollectionViewCellPassing(with: "Acre")).notTo(beNil())
+                expect(nibSubject.view.firstVisibleCollectionViewCell(with: "Acre")).notTo(beNil())
             }
             
             it("should not have a collection view cell with 'Pernambuco' which is a collection view cell inside a view controller that is in a container view") {
-                expect(nibSubject.view.firstVisibleCollectionViewCellPassing(with: "Pernambuco")).to(beNil())
+                expect(nibSubject.view.firstVisibleCollectionViewCell(with: "Pernambuco")).to(beNil())
             }
             
             it("should have a label with the text 'Left Stack Label' in a UIStackView") {
-                expect(nibSubject.view.firstLabelPassing(with: "Left Stack Label")).notTo(beNil())
+                expect(nibSubject.view.firstLabel(with: "Left Stack Label")).notTo(beNil())
             }
             
             it("should have a button with the text 'Right Stack Button' in a UIStackView") {
-                expect(nibSubject.view.firstButtonPassing(with: "Right Stack Button")).notTo(beNil())
+                expect(nibSubject.view.firstButton(with: "Right Stack Button")).notTo(beNil())
             }
         }
         
@@ -180,29 +171,29 @@ class SampleAppSpec: QuickSpec {
             
             context("When two views are overlapped and are within subviews") {
                 it("should be overlapped and return the intersected area") {
-                    expect(overlapSubject.button.findOverlappedArea(with: overlapSubject.label)).to(equal(CGRect.init(x: 143.0, y: 51.0, width: 10.0, height: 7.0)))
+                    expect(overlapSubject.button.findOverlappedArea(with: overlapSubject.label)).to(equal(CGRect(x: 143.0, y: 51.0, width: 10.0, height: 7.0)))
                 }
             }
             
             context("When a label is on top of a table view cell") {
                 it("should be overlapped and return the intersected area") {
                     let cell = overlapSubject.tableView.visibleCells[0]
-                    expect(cell.findOverlappedArea(with: overlapSubject.overlappedTableViewLabel)).to(equal(CGRect.init(x: 39.0, y: 230.0, width: 42.0, height: 6.0)))
+                    expect(cell.findOverlappedArea(with: overlapSubject.overlappedTableViewLabel)).to(equal(CGRect(x: 39.0, y: 230.0, width: 42.0, height: 6.0)))
                 }
             }
             
             context("When 3 labels are side by side and only 2 overlaps by 1 pixel") {
                 it("should only return the intersected area between the 2 labels giving a width of 1 px") {
                     expect(overlapSubject.redButton.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect.zero))
-                    expect(overlapSubject.greenLabel.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect.init(x: 87.0, y: 466.0, width: 1.0, height: 21.0)))
+                    expect(overlapSubject.greenLabel.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect(x: 87.0, y: 466.0, width: 1.0, height: 21.0)))
                 }
             }
             
             context("when an imageview in a subview overlaps 2 labels and a button") {
                 it("should return the intersected area between the 2 labels and button") {
-                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.redButton)).to(equal(CGRect.init(x: 16.0, y: 478.0, width: 30.0, height: 13.0)))
-                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect.init(x: 46.0, y: 478.0, width: 42.0, height: 9.0)))
-                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.greenLabel)).to(equal(CGRect.init(x: 87.0, y: 478.0, width: 27.0, height: 9.0)))
+                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.redButton)).to(equal(CGRect(x: 16.0, y: 478.0, width: 30.0, height: 13.0)))
+                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect(x: 46.0, y: 478.0, width: 42.0, height: 9.0)))
+                    expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.greenLabel)).to(equal(CGRect(x: 87.0, y: 478.0, width: 27.0, height: 9.0)))
                 }
             }
         }

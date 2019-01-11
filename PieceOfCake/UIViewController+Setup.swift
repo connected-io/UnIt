@@ -1,17 +1,10 @@
-//
-//  UIViewController+PieceOfCakeExtensions.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-08.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
+import XCTest
 
 extension UIViewController {
     /**
-     Runs the view lifecycle on the view controller that is passed in to match UIKit. It will **roughly** follow the following view lifecycle:
+     Due to the laziness of UIKit, the view lifecycle does not run properly when instantiating view/view controllers in unit tests. This method makes sure that the viewController's view lifecycle is ran to match UIKit (when a user interacts with the app). It will **roughly** follow the following view lifecycle:
      - viewDidLoad()
      - viewWillAppear(animated: Bool)
      - viewWillLayoutSubviews()
@@ -26,9 +19,9 @@ extension UIViewController {
     public func kickUIKit() {
         let _ = self.view
         self.viewWillAppear(false)
-        self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded() // Handles any view changes after viewWillAppear if needed.
         self.viewDidAppear(false)
-        self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded() // Handles any view changes after viewDidAppear if needed.
     }
     
     /**
@@ -39,9 +32,12 @@ extension UIViewController {
         - identifier: the identifier of the view controller that exists inside your storyboard.
      - returns: Your custom view controller from storyboard.
      */
-    public static func loadAndSetupViewControllerFromStoryboard(_ storyboardName: String, _ bundle: Bundle, _ identifier: String) -> UIViewController? {
+    public static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(_ storyboardName: String, _ identifier: String? = nil, _ bundle: Bundle = Bundle.main) -> T {
         let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
-        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        let vcTypeName = String(describing: self)
+        let vcIdentifier = identifier ?? vcTypeName
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: vcIdentifier) as! T
         viewController.kickUIKit()
         return viewController
     }
@@ -54,7 +50,7 @@ extension UIViewController {
         - klass: the custom view controller class that you want to instantiate.
      - returns: Your custom view controller from xib.
      */
-    public static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T? {
+    public static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T {
         let viewController = klass.init(nibName: nibName, bundle: bundle)
         viewController.kickUIKit()
         return viewController

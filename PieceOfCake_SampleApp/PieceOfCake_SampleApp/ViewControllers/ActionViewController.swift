@@ -1,11 +1,3 @@
-//
-//  ActionViewController.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-07.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 class ActionViewController: UIViewController {
@@ -56,15 +48,15 @@ extension ActionViewController : UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        NSLog("ActionViewController: textFieldDidEndEditing")
+        print("ActionViewController: textFieldDidEndEditing")
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        NSLog("ActionViewController: textFieldShouldEndEditing")
+        print("ActionViewController: textFieldShouldEndEditing")
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        NSLog("ActionViewController: textFieldDidBeginEditing")
+        print("ActionViewController: textFieldDidBeginEditing")
     }
 }

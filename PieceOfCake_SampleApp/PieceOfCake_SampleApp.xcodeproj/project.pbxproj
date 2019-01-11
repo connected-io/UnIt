@@ -14,7 +14,6 @@
 		F424F1A721E6472C00F2888C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424F1A521E6472C00F2888C /* Main.storyboard */; };
 		F424F1A921E6472E00F2888C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F424F1A821E6472E00F2888C /* Assets.xcassets */; };
 		F424F1AC21E6472E00F2888C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424F1AA21E6472E00F2888C /* LaunchScreen.storyboard */; };
-		F424F1B721E6472E00F2888C /* PieceOfCake_SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1B621E6472E00F2888C /* PieceOfCake_SampleAppTests.swift */; };
 		F424F1C221E6472E00F2888C /* PieceOfCake_SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1C121E6472E00F2888C /* PieceOfCake_SampleAppUITests.swift */; };
 		F424F1D421E647B400F2888C /* SampleAppSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1D321E647B400F2888C /* SampleAppSpec.swift */; };
 		F424F1E221E6480F00F2888C /* NibTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1D921E6480E00F2888C /* NibTopViewController.swift */; };
@@ -103,7 +102,6 @@
 		F424F1AB21E6472E00F2888C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F424F1AD21E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424F1B221E6472E00F2888C /* PieceOfCake_SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieceOfCake_SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F424F1B621E6472E00F2888C /* PieceOfCake_SampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceOfCake_SampleAppTests.swift; sourceTree = "<group>"; };
 		F424F1B821E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424F1BD21E6472E00F2888C /* PieceOfCake_SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieceOfCake_SampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424F1C121E6472E00F2888C /* PieceOfCake_SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceOfCake_SampleAppUITests.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		F424F1B521E6472E00F2888C /* PieceOfCake_SampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F424F1B621E6472E00F2888C /* PieceOfCake_SampleAppTests.swift */,
 				F424F1B821E6472E00F2888C /* Info.plist */,
 				F424F1D321E647B400F2888C /* SampleAppSpec.swift */,
 			);
@@ -406,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F424F1B721E6472E00F2888C /* PieceOfCake_SampleAppTests.swift in Sources */,
 				F424F1D421E647B400F2888C /* SampleAppSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

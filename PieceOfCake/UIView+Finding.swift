@@ -1,13 +1,25 @@
-//
-//  UIView+PieceOfCakeExtensions.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-08.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
+
+protocol TextTestable {
+    var testableText: String { get }
+}
+
+extension UIView : TextTestable {
+    var testableText: String {
+        if let label = self as? UILabel {
+            return label.text ?? ""
+        } else if let button = self as? UIButton {
+            return button.titleLabel?.text ?? ""
+        } else {
+            return ""
+        }
+    }
+    
+    func testExactMatch( _ text: String) -> Bool {
+        return testableText == text
+    }
+}
 
 extension UIView {
     /**
@@ -16,14 +28,8 @@ extension UIView {
         - text: the string that a label in the given view must match.
      - returns: The first **UILabel** found to match the text or nil if not.
      */
-    public func firstLabelPassing(with text: String) -> UILabel? {
-        let allLabels:[UILabel] = self.returnViewHierarchy()
-        for label in allLabels {
-            if (label.text == text) {
-                return label
-            }
-        }
-        return nil
+    public func firstLabel(with text: String) -> UILabel? {
+        return firstView(ofType: UILabel.self, passing: { $0.testExactMatch(text)} )
     }
     
     /**
@@ -32,14 +38,8 @@ extension UIView {
         - text: the string that a button title in the given view must match.
      - returns: The first **UIButton** found to match the text or nil if not.
      */
-    public func firstButtonPassing(with text: String) -> UIButton? {
-        let allButtons:[UIButton] = self.returnViewHierarchy()
-        for button in allButtons {
-            if (button.titleLabel?.text == text) {
-                return button
-            }
-        }
-        return nil
+    public func firstButton(with title: String) -> UIButton? {
+        return firstView(ofType: UIButton.self, passing: { $0.testExactMatch(title)} )
     }
     
     /**
@@ -48,17 +48,10 @@ extension UIView {
         - text: the string that a label within a table view cell must match.
      - returns: The first **UITableViewCell** found to match the text or nil if not.
      */
-    public func firstVisibleTableViewCellPassing(with text: String) -> UITableViewCell? {
-        let allTableViewCells:[UITableViewCell] = self.returnViewHierarchy()
-        for tableViewCell in allTableViewCells {
-            let labelsInTableViewCell:[UILabel] = tableViewCell.returnViewHierarchy()
-            for label in labelsInTableViewCell {
-                if (label.text == text) {
-                    return tableViewCell
-                }
-            }
-        }
-        return nil
+    public func firstVisibleTableViewCell(with text: String) -> UITableViewCell? {
+        return views(ofType: UITableViewCell.self) { cell in
+            return cell.firstLabel(with: text) != nil
+        }.first
     }
     
     /**
@@ -67,32 +60,64 @@ extension UIView {
         - text: the string that a label within a collection view cell must match.
      - returns: The first **UICollectionViewCell** found to match the text or nil if not.
      */
-    public func firstVisibleCollectionViewCellPassing(with text: String) -> UICollectionViewCell? {
-        let allCollectionViewCells:[UICollectionViewCell] = self.returnViewHierarchy()
-        for collectionViewCell in allCollectionViewCells {
-            let labelsInCollectionViewCell:[UILabel] = collectionViewCell.returnViewHierarchy()
-            for label in labelsInCollectionViewCell {
-                if (label.text == text) {
-                    return collectionViewCell
-                }
+    public func firstVisibleCollectionViewCell(with text: String) -> UICollectionViewCell? {
+        return views(ofType: UICollectionViewCell.self) { cell in
+            return cell.firstLabel(with: text) != nil
+        }.first
+    }
+    
+    /**
+     Returns the first subclass of **UIView** that passes a certain test defined by you
+     - parameters:
+        - type: The class that you want to filter on.
+        - test: The closure that the generic and it's subviews check against.
+     - returns: The first generic of your choice that passes your test.
+     */
+    private func firstView<T: UIView>(ofType type: T.Type, passing test: (T) -> Bool) -> T? {
+        return firstView { view in
+            guard let typedView = view as? T else {
+                return false
             }
+            return test(typedView)
+            } as? T
+    }
+    
+    
+    /**
+     Returns the first **UIView** that passes a certain test defined by you. Implements a breadth-first-search, but does an early return when it finds the first element that passes the test.
+     - parameters:
+        - test: The closure that the view and it's subviews check against.
+     - returns: The first view that passes the test.
+     */
+    private func firstView(passing test: (UIView) -> Bool) -> UIView? {
+        var queue:[UIView] = [self]
+        while !queue.isEmpty {
+            let nextView = queue.removeFirst()
+            if test(nextView) {
+                return nextView
+            }
+            queue.append(contentsOf: nextView.subviews)
         }
         return nil
     }
     
     /**
-     Returns all subviews of a **UIView** of your choice by recursively going through it's view hierarchy.
-     - returns: A generic of your choice. (i.e. If you want all labels within a UIView you would write `let labels:[UILabel] = returnSubviewsFor(view: view)`).
+     Returns all subviews of a **UIView** of your choice that passes a certain test defined by you. Does a full breadth-first-search going through the view hierarchy. Useful if you want to check against multiple **UIView** subclasses.
+     - parameters:
+        - test: The closure that the view and it's subviews check against.
+     - returns: An array of generics of your choice that subclasses **UIView**.
      */
-    private func returnViewHierarchy<T: UIView>() -> [T] {
-        var subviews = [T]()
-        for subview in self.subviews {
-            subviews += subview.returnViewHierarchy() as [T]
-            
-            if let subview = subview as? T {
-                subviews.append(subview)
+    private func views<T: UIView>(ofType type: T.Type, passing test: ((T) -> Bool)? = nil) -> [T] {
+        var viewsPassingTest: [T] = []
+        var queue: [UIView] = [self]
+        while !queue.isEmpty {
+            let nextView = queue.removeFirst()
+            if let typedView = nextView as? T,
+                test?(typedView) ?? true {
+                viewsPassingTest.append(typedView)
             }
+            queue.append(contentsOf: nextView.subviews)
         }
-        return subviews
+        return viewsPassingTest
     }
 }

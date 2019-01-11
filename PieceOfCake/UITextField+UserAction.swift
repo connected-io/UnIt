@@ -1,11 +1,3 @@
-//
-//  UITextField+UserAction.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-08.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -20,7 +12,7 @@ extension UITextField {
         self.becomeFirstResponder()
         let characters = text.map { String($0) }
         for currentCharacter in characters {
-            let range = NSRange.init(location: self.text?.count ?? 0, length: 0)
+            let range = NSRange(location: self.text?.count ?? 0, length: 0)
             let delegate = self.delegate
             let shouldAcceptCharacter = delegate?.textField?(self, shouldChangeCharactersIn: range, replacementString: currentCharacter) ?? true
             if (shouldAcceptCharacter) {
@@ -40,7 +32,7 @@ extension UITextField {
     public func paste(with text: String) {
         self.becomeFirstResponder()
         let delegate = self.delegate
-        let range = NSRange.init(location: self.text?.count ?? 0, length: 0)
+        let range = NSRange(location: self.text?.count ?? 0, length: 0)
         let shouldAcceptCharacter = delegate?.textField?(self, shouldChangeCharactersIn: range, replacementString: text) ?? true
         if (shouldAcceptCharacter) {
             self.insertText(text)
