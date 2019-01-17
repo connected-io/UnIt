@@ -12,6 +12,7 @@ class SampleAppSpec: QuickSpec {
         var overlapSubject : OverlapViewController!
         var labelSubject: LabelViewController!
         var constraintBreakSubject: ConstraintBreakViewController!
+        var offscreenSubject: OffScreenViewController!
         
         describe("ViewController from storyboard") {
             beforeEach() {
@@ -258,6 +259,26 @@ class SampleAppSpec: QuickSpec {
                     expect(labelSubject.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(3))
                     expect(labelSubject.oneLineLabelThatSizeWillDecreaseToTruncate.numberOfTheoreticalLines()).to(equal(2))
                     expect(labelSubject.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(5))
+                }
+            }
+        }
+        
+        describe("View Controller with views offscreen") {
+            beforeEach {
+                offscreenSubject = UIViewController.loadAndSetupViewControllerFromNib("OffScreenViewController", OffScreenViewController.self)
+            }
+            
+            context("When there are offscreen elements") {
+                it("should find all the offscreen elements") {
+                    expect(offscreenSubject.viewsOffScreen().count).to(equal(6))
+                }
+                
+                it("should find all the partially offscreen elements") {
+                    expect(offscreenSubject.viewsPartiallyOffScreen().count).to(equal(5))
+                }
+                
+                it("should find all the entirely offscreen elements") {
+                    expect(offscreenSubject.viewsEntirelyOffScreen().count).to(equal(1))
                 }
             }
         }
