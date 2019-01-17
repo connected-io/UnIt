@@ -1,11 +1,3 @@
-//
-//  LabelViewController.swift
-//  PieceOfCake_SampleApp
-//
-//  Created by cl-dev on 2019-01-14.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 class LabelViewController: UIViewController {

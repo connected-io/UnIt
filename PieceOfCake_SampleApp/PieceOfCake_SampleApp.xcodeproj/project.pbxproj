@@ -31,6 +31,8 @@
 		F424F1F221E6481700F2888C /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1EE21E6481600F2888C /* FirstCollectionViewCell.swift */; };
 		F43233D321ECDC70002ABCA3 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43233D121ECDC70002ABCA3 /* LabelViewController.swift */; };
 		F43233D421ECDC70002ABCA3 /* LabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D221ECDC70002ABCA3 /* LabelViewController.xib */; };
+		F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */; };
+		F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */; };
 		F4A9D33121E64AFC00F7E1EC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D32F21E64AFC00F7E1EC /* Quick.framework */; };
 		F4A9D33221E64AFC00F7E1EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; };
 		F4A9D33321E64B0200F7E1EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; };
@@ -124,6 +126,8 @@
 		F424F1EE21E6481600F2888C /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		F43233D121ECDC70002ABCA3 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		F43233D221ECDC70002ABCA3 /* LabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewController.xib; sourceTree = "<group>"; };
+		F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintBreakViewController.swift; sourceTree = "<group>"; };
+		F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstraintBreakViewController.xib; sourceTree = "<group>"; };
 		F4A9D32F21E64AFC00F7E1EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F4A9D33021E64AFC00F7E1EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +242,8 @@
 				F416469221E78F2C006E94EE /* OverlapViewController.xib */,
 				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
 				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
+				F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */,
+				F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				F424F1A921E6472E00F2888C /* Assets.xcassets in Resources */,
 				F424F1EF21E6481700F2888C /* LabelCollectionViewCell.xib in Resources */,
 				F43233D421ECDC70002ABCA3 /* LabelViewController.xib in Resources */,
+				F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */,
 				F424F1A721E6472C00F2888C /* Main.storyboard in Resources */,
 				F424F1E621E6480F00F2888C /* NibViewController.xib in Resources */,
 				F424F1EA21E6480F00F2888C /* ActionViewController.xib in Resources */,
@@ -400,6 +407,7 @@
 				F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */,
 				F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */,
 				F424F1F221E6481700F2888C /* FirstCollectionViewCell.swift in Sources */,
+				F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */,
 				F424F1F121E6481700F2888C /* SecondCollectionViewCell.swift in Sources */,
 				F424F1E421E6480F00F2888C /* ActionViewController.swift in Sources */,
 				F424F1E221E6480F00F2888C /* NibTopViewController.swift in Sources */,

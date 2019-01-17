@@ -7,5 +7,3 @@ FOUNDATION_EXPORT double PieceOfCakeVersionNumber;
 FOUNDATION_EXPORT const unsigned char PieceOfCakeVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PieceOfCake/PublicHeader.h>
-
-

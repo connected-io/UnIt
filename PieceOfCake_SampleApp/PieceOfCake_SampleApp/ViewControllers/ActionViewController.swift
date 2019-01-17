@@ -46,17 +46,4 @@ extension ActionViewController : UITextFieldDelegate {
         return true
 
     }
-    
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        print("ActionViewController: textFieldDidEndEditing")
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        print("ActionViewController: textFieldShouldEndEditing")
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("ActionViewController: textFieldDidBeginEditing")
-    }
 }
