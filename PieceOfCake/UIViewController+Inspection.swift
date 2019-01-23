@@ -24,4 +24,14 @@ extension UIViewController {
     public func viewsEntirelyOffScreen() -> [UIView] {
         return view.subviewsEntirelyOutOfBounds()
     }
+    
+    /**
+     Finds all the overlapped subviews within a **UIViewController's** view. Removes redundant overlaps so if A overlaps with B, but C which is a subview of A also overlaps, this function will only return the A and B overlap. Also, this function does not include overlaps from view to subviews since they will always overlap (i.e. if C is a subview of A, it is obvious that they overlap so the function will not include them).
+     - Parameters:
+     - whitelist: an array of **UIView** tuples that should not be returned in the overlap dictionary.
+     - Returns: A dictionary with key: 2 overlappping subviews in a set and value: the area that the pair intersects at.
+     */
+    public func overlappingSubviews(whitelist: [(firstView: UIView, secondView: UIView)] = []) -> [Set<UIView>:CGRect] {
+        return view.findOverlappingSiblingSubviews(whitelist: whitelist)
+    }
 }

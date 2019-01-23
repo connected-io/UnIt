@@ -36,6 +36,15 @@ extension UIViewController {
             return view.conflictingConstraints
         }
     }
+    
+    /**
+     If you want to test your **UIViewController** for constraint conflicts, call this method **BEFORE** kickUIKit(). Afterwards you can test your view controller
+     for conflicting constraints with viewController.conflictingConstraints. Your view controller will now be able to handle constraint conflicts.
+     - Warning: This function uses swizzling to change a **PRIVATE** UIView function: (engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:)'s implementation in order to capture the conflicting constraints. Calling this once will affect the rest of the app.
+     */
+    public func setupToCaptureConflictingConstraints() {
+        view.setupToCaptureConflictingConstraints()
+    }
 }
 
 extension UIView {
@@ -102,7 +111,7 @@ extension UIView {
      - Warning: Once called, our swizzled method will exist for the rest of the app. There is no going back.
      - Note: let _ = UIView.swizzleAutoLayoutAlertMethodOnce required to only be called once. Replaces the deprecated dispatch_once method.
      */
-    public func setupToCaptureConflictingConstraints() {
+    fileprivate func setupToCaptureConflictingConstraints() {
         let _ = UIView.swizzleAutoLayoutAlertMethodOnce
     }
 }
