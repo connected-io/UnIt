@@ -15,9 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F420F7A921F90F52002CFFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DCE11821E64399009EBE61 /* PieceOfCake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PieceOfCake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DCE11B21E64399009EBE61 /* PieceOfCake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieceOfCake.h; sourceTree = "<group>"; };
-		F4DCE11C21E64399009EBE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+UserAction.swift"; sourceTree = "<group>"; };
 		F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+UserAction.swift"; sourceTree = "<group>"; };
 		F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Setup.swift"; sourceTree = "<group>"; };
@@ -54,12 +54,12 @@
 		F4DCE11A21E64399009EBE61 /* PieceOfCake */ = {
 			isa = PBXGroup;
 			children = (
+				F420F7A921F90F52002CFFC7 /* Info.plist */,
+				F4DCE11B21E64399009EBE61 /* PieceOfCake.h */,
 				F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */,
 				F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */,
 				F4DCE12621E643B2009EBE61 /* UIView+Finding.swift */,
 				F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */,
-				F4DCE11B21E64399009EBE61 /* PieceOfCake.h */,
-				F4DCE11C21E64399009EBE61 /* Info.plist */,
 			);
 			path = PieceOfCake;
 			sourceTree = "<group>";
