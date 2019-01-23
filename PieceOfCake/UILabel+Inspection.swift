@@ -10,7 +10,7 @@ extension UILabel {
         // layoutIfNeeded()?
         let myText = text! as NSString
         let labelSize = myText.boundingRect(with: CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
-        return Int(ceil(CGFloat(labelSize.height) / self.font.lineHeight))
+        return Int(ceil(CGFloat(labelSize.height) / font.lineHeight))
     }
     
     /**
