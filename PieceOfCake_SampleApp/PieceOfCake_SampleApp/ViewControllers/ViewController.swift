@@ -67,7 +67,6 @@ class ViewController: UIViewController {
         print("storyboard: viewDidLoad")
         setupTableView()
         setupCollectionView()
-        applyStyling()
     }
     
     override func viewWillAppear(_ animated: Bool) {

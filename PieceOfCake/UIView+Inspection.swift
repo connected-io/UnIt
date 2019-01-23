@@ -7,15 +7,15 @@ extension UIView {
      height and width and superview visibility.
      */
     public func isTrulyVisible() -> Bool {
-        if self.isHidden {
+        if isHidden {
             return false
         }
         
-        if self.alpha == 0 {
+        if alpha == 0 {
             return false
         }
         
-        if self.frame.size.width == 0 || self.frame.size.height == 0 {
+        if frame.size.width == 0 || frame.size.height == 0 {
             return false
         }
         
@@ -33,7 +33,7 @@ extension UIView {
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
     public func findOverlappedArea(with view: UIView) -> CGRect {
-        let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
+        let convertedSelf = superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
         let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
 
         if convertedSelf.intersects(convertedView) {
