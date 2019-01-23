@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F44AAF6E21DE6C9300426D10"
                BuildableName = "pieceofcake.app"
                BlueprintName = "pieceofcake"
-               ReferencedContainer = "container:pieceofcake.xcodeproj">
+               ReferencedContainer = "container:PieceOfCake.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "F44AAF8221DE6C9400426D10"
                BuildableName = "pieceofcakeTests.xctest"
                BlueprintName = "pieceofcakeTests"
-               ReferencedContainer = "container:pieceofcake.xcodeproj">
+               ReferencedContainer = "container:PieceOfCake.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "F44AAF8D21DE6C9400426D10"
                BuildableName = "pieceofcakeUITests.xctest"
                BlueprintName = "pieceofcakeUITests"
-               ReferencedContainer = "container:pieceofcake.xcodeproj">
+               ReferencedContainer = "container:PieceOfCake.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "F44AAF6E21DE6C9300426D10"
             BuildableName = "pieceofcake.app"
             BlueprintName = "pieceofcake"
-            ReferencedContainer = "container:pieceofcake.xcodeproj">
+            ReferencedContainer = "container:PieceOfCake.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "F44AAF6E21DE6C9300426D10"
             BuildableName = "pieceofcake.app"
             BlueprintName = "pieceofcake"
-            ReferencedContainer = "container:pieceofcake.xcodeproj">
+            ReferencedContainer = "container:PieceOfCake.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "F44AAF6E21DE6C9300426D10"
             BuildableName = "pieceofcake.app"
             BlueprintName = "pieceofcake"
-            ReferencedContainer = "container:pieceofcake.xcodeproj">
+            ReferencedContainer = "container:PieceOfCake.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
