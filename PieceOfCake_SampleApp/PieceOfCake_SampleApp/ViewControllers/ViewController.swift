@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var torontoLabel: UILabel!
+    @IBOutlet weak var leftButton: UIButton!
+    
     let statesOfUSAArray = ["Alaska",
                             "Alabama",
                             "Arkansas",
@@ -73,6 +75,7 @@ class ViewController: UIViewController {
         NSLog("storyboard: viewDidLoad")
         setupTableView()
         setupCollectionView()
+        applyStyling()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +87,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         NSLog("storyboard: viewDidAppear:")
         torontoLabel.text = "Montreal."
-        NSLog("%@", torontoLabel.text!)
+        
+//        UIScreen.main.traitCollection.preferredContentSizeCategory = UIContentSizeCategoryExtraSmall
+//        torontoLabel.text = ""+UIApplication.shared.preferredContentSizeCategory.rawValue
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -117,6 +122,26 @@ class ViewController: UIViewController {
         firstCollectionView.dataSource = self
     }
     
+    private func applyStyling() {
+        // torontoLabel.font = FontDecider.normalFont()
+        
+//        let largeTraitCollection = UITraitCollection.init(preferredContentSizeCategory: UIContentSizeCategory.accessibilityExtraLarge)
+//        let smallTraitCollection = UITraitCollection.init(preferredContentSizeCategory: UIContentSizeCategory.extraSmall)
+//        let largeFont = UIFontMetrics.default.scaledFont(for: UIFont.boldSystemFont(ofSize: 16), compatibleWith: largeTraitCollection)
+//        let smallFont = UIFontMetrics.default.scaledFont(for: UIFont.boldSystemFont(ofSize: 16), compatibleWith: smallTraitCollection)
+//        NSLog("largeFont \(largeFont)")
+//        NSLog("smallFont \(smallFont)")
+//
+//        NSLog("button \(String(describing: leftButton))")
+//        leftButton.titleLabel?.font = largeFont
+//
+//        view.setNeedsLayout()
+//        view.layoutIfNeeded()
+//        NSLog("button \(String(describing: leftButton))")
+//        leftButton.titleLabel?.font = smallFont
+//        NSLog("button \(leftButton)")
+    }
+    
     // Mark: Actions
     @IBAction func leftButtonTapped(_ sender: Any) {
         let nibViewController = NibViewController.init(nibName: "NibViewController", bundle: nil)
@@ -124,8 +149,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
-        let actionViewController = ActionViewController.init(nibName: "ActionViewController", bundle: nil)
-        self.present(actionViewController, animated: true, completion: nil)
+//        let actionViewController = ActionViewController.init(nibName: "ActionViewController", bundle: nil)
+//        self.present(actionViewController, animated: true, completion: nil)
+        let overlapViewController = OverlapViewController.init(nibName: "OverlapViewController", bundle: nil)
+        self.present(overlapViewController, animated: true, completion: nil)
     }
 }
 
