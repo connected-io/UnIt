@@ -1,11 +1,3 @@
-//
-//  PieceOfCake_SampleAppUITests.swift
-//  PieceOfCake_SampleAppUITests
-//
-//  Created by cl-dev on 2019-01-09.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import XCTest
 
 class PieceOfCake_SampleAppUITests: XCTestCase {

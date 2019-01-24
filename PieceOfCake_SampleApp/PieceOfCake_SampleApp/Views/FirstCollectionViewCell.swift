@@ -1,11 +1,3 @@
-//
-//  FirstCollectionViewCell.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-07.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -16,7 +8,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        NSLog("FirstCollectionViewCell: awakeFromNib")
+        print("FirstCollectionViewCell: awakeFromNib")
         secondCollectionView.dataSource = self
     }
 }
@@ -27,7 +19,7 @@ extension FirstCollectionViewCell : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        NSLog("FirstCollectionViewCell: cellForItemAt")
+        print("FirstCollectionViewCell: cellForItemAt")
         let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCollectionViewCell", for: indexPath) as! SecondCollectionViewCell
         collectionViewCell.label.text = provinces[indexPath.row]
         return collectionViewCell

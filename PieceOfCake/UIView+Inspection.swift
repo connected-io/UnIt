@@ -1,11 +1,3 @@
-//
-//  UIView+Inspection.swift
-//  PieceOfCake
-//
-//  Created by cl-dev on 2019-01-10.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -15,16 +7,17 @@ public extension UIView {
      height and width and superview visibility.
      - Note: Taken from an Objective-C library called PivotalCoreKit: https://github.com/pivotal-legacy/PivotalCoreKit/blob/master/UIKit/SpecHelper/Extensions/UIControl%2BSpec.m
      */
+    
     func isTrulyVisible() -> Bool {
-        if self.isHidden {
+        if isHidden {
             return false
         }
         
-        if self.alpha == 0 {
+        if alpha == 0 {
             return false
         }
         
-        if self.frame.size.width == 0 || self.frame.size.height == 0 {
+        if frame.size.width == 0 || frame.size.height == 0 {
             return false
         }
         
@@ -42,7 +35,7 @@ public extension UIView {
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
     func findOverlappedArea(with view: UIView) -> CGRect {
-        let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
+        let convertedSelf = superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
         let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
 
         if convertedSelf.intersects(convertedView) {

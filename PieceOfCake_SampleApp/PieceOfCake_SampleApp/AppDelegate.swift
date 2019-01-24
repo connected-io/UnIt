@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  PieceOfCake_SampleApp
-//
-//  Created by cl-dev on 2019-01-09.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

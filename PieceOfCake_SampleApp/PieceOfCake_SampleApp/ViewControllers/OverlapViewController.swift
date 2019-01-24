@@ -1,11 +1,3 @@
-//
-//  OverlapViewController.swift
-//  PieceOfCake_SampleApp
-//
-//  Created by cl-dev on 2019-01-10.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 class OverlapViewController: UIViewController {

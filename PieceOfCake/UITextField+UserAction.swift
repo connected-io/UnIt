@@ -1,11 +1,3 @@
-//
-//  UITextField+UserAction.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-08.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -17,19 +9,18 @@ extension UITextField {
         - text: the string that is being typed into the textfield.
      */
     public func type(with text: String) {
-        self.becomeFirstResponder()
+        becomeFirstResponder()
         let characters = text.map { String($0) }
         for currentCharacter in characters {
-            let range = NSRange.init(location: self.text?.count ?? 0, length: 0)
-            let delegate = self.delegate
+            let range = NSRange(location: self.text?.count ?? 0, length: 0)
             let shouldAcceptCharacter = delegate?.textField?(self, shouldChangeCharactersIn: range, replacementString: currentCharacter) ?? true
             if (shouldAcceptCharacter) {
-                self.insertText(currentCharacter)
-                self.sendActions(for: .editingChanged)
+                insertText(currentCharacter)
+                sendActions(for: .editingChanged)
             }
         }
         
-        self.resignFirstResponder()
+        resignFirstResponder()
     }
     
     /**
@@ -38,15 +29,14 @@ extension UITextField {
         - text: the string that is being pasted into the textfield.
      */
     public func paste(with text: String) {
-        self.becomeFirstResponder()
-        let delegate = self.delegate
-        let range = NSRange.init(location: self.text?.count ?? 0, length: 0)
+        becomeFirstResponder()
+        let range = NSRange(location: self.text?.count ?? 0, length: 0)
         let shouldAcceptCharacter = delegate?.textField?(self, shouldChangeCharactersIn: range, replacementString: text) ?? true
         if (shouldAcceptCharacter) {
-            self.insertText(text)
-            self.sendActions(for: .editingChanged)
+            insertText(text)
+            sendActions(for: .editingChanged)
         }
         
-        self.resignFirstResponder()
+        resignFirstResponder()
     }
 }

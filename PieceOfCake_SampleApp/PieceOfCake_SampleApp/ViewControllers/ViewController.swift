@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-03.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -72,44 +64,40 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("storyboard: viewDidLoad")
+        print("storyboard: viewDidLoad")
         setupTableView()
         setupCollectionView()
-        applyStyling()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NSLog("storyboard: viewWillAppear:")
+        print("storyboard: viewWillAppear:")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NSLog("storyboard: viewDidAppear:")
+        print("storyboard: viewDidAppear:")
         torontoLabel.text = "Montreal."
-        
-//        UIScreen.main.traitCollection.preferredContentSizeCategory = UIContentSizeCategoryExtraSmall
-//        torontoLabel.text = ""+UIApplication.shared.preferredContentSizeCategory.rawValue
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("storyboard: viewWillDisappear:")
+        print("storyboard: viewWillDisappear:")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("storyboard: viewDidDisappear:")
+        print("storyboard: viewDidDisappear:")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        NSLog("storyboard: viewWillLayoutSubviews")
+        print("storyboard: viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        NSLog("storyboard: viewDidLayoutSubviews")
+        print("storyboard: viewDidLayoutSubviews")
     }
 
     // MARK: Setup
@@ -122,36 +110,14 @@ class ViewController: UIViewController {
         firstCollectionView.dataSource = self
     }
     
-    private func applyStyling() {
-        // torontoLabel.font = FontDecider.normalFont()
-        
-//        let largeTraitCollection = UITraitCollection.init(preferredContentSizeCategory: UIContentSizeCategory.accessibilityExtraLarge)
-//        let smallTraitCollection = UITraitCollection.init(preferredContentSizeCategory: UIContentSizeCategory.extraSmall)
-//        let largeFont = UIFontMetrics.default.scaledFont(for: UIFont.boldSystemFont(ofSize: 16), compatibleWith: largeTraitCollection)
-//        let smallFont = UIFontMetrics.default.scaledFont(for: UIFont.boldSystemFont(ofSize: 16), compatibleWith: smallTraitCollection)
-//        NSLog("largeFont \(largeFont)")
-//        NSLog("smallFont \(smallFont)")
-//
-//        NSLog("button \(String(describing: leftButton))")
-//        leftButton.titleLabel?.font = largeFont
-//
-//        view.setNeedsLayout()
-//        view.layoutIfNeeded()
-//        NSLog("button \(String(describing: leftButton))")
-//        leftButton.titleLabel?.font = smallFont
-//        NSLog("button \(leftButton)")
-    }
-    
     // Mark: Actions
     @IBAction func leftButtonTapped(_ sender: Any) {
-        let nibViewController = NibViewController.init(nibName: "NibViewController", bundle: nil)
+        let nibViewController = NibViewController(nibName: "NibViewController", bundle: nil)
         self.present(nibViewController, animated: true, completion: nil)
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
-//        let actionViewController = ActionViewController.init(nibName: "ActionViewController", bundle: nil)
-//        self.present(actionViewController, animated: true, completion: nil)
-        let overlapViewController = OverlapViewController.init(nibName: "OverlapViewController", bundle: nil)
+        let overlapViewController = OverlapViewController(nibName: "OverlapViewController", bundle: nil)
         self.present(overlapViewController, animated: true, completion: nil)
     }
 }
@@ -162,7 +128,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("ViewController: Populating table view cells now")
+        print("ViewController: Populating table view cells now")
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell")
         tableViewCell?.textLabel?.text = statesOfUSAArray[indexPath.row]
         return tableViewCell!

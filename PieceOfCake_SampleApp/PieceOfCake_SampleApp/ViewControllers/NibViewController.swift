@@ -1,11 +1,3 @@
-//
-//  NibViewController.swift
-//  pieceofcake
-//
-//  Created by cl-dev on 2019-01-03.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -14,43 +6,43 @@ class NibViewController: UIViewController {
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var bottomContainerView: UIView!
     
-    let topViewController = NibTopViewController.init(nibName: "NibTopViewController", bundle: Bundle.main)
-    let bottomViewController = NibBottomViewController.init(nibName: "NibBottomViewController", bundle: Bundle.main)
+    let topViewController = NibTopViewController(nibName: "NibTopViewController", bundle: Bundle.main)
+    let bottomViewController = NibBottomViewController(nibName: "NibBottomViewController", bundle: Bundle.main)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("nib: viewDidLoad")
+        print("nib: viewDidLoad")
         embedViewControllers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NSLog("nib: viewWillAppear:")
+        print("nib: viewWillAppear:")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NSLog("nib: viewDidAppear:")
+        print("nib: viewDidAppear:")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("nib: viewWillDisappear:")
+        print("nib: viewWillDisappear:")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NSLog("nib: viewDidDisappear:")
+        print("nib: viewDidDisappear:")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        NSLog("nib: viewWillLayoutSubviews")
+        print("nib: viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        NSLog("nib: viewDidLayoutSubviews")
+        print("nib: viewDidLayoutSubviews")
     }
     
     // MARK: Setup
