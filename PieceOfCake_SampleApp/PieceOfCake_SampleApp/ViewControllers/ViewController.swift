@@ -117,8 +117,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
-        let overlapViewController = OverlapViewController(nibName: "OverlapViewController", bundle: nil)
-        self.present(overlapViewController, animated: true, completion: nil)
+        let labelViewController = LabelViewController(nibName: "LabelViewController", bundle: nil)
+        self.present(labelViewController, animated: true, completion: nil)
     }
 }
 

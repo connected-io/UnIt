@@ -50,7 +50,7 @@ extension UIViewController {
         - klass: the custom view controller class that you want to instantiate.
      - returns: Your custom view controller from xib.
      */
-    public static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ bundle: Bundle, _ klass: T.Type) -> T {
+    public static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ klass: T.Type, _ bundle: Bundle = Bundle.main) -> T {
         let viewController = klass.init(nibName: nibName, bundle: bundle)
         viewController.kickUIKit()
         return viewController

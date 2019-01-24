@@ -7,7 +7,6 @@ public extension UIView {
      height and width and superview visibility.
      - Note: Taken from an Objective-C library called PivotalCoreKit: https://github.com/pivotal-legacy/PivotalCoreKit/blob/master/UIKit/SpecHelper/Extensions/UIControl%2BSpec.m
      */
-    
     func isTrulyVisible() -> Bool {
         if isHidden {
             return false
