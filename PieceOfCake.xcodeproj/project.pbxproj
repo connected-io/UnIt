@@ -22,12 +22,11 @@
 /* Begin PBXFileReference section */
 		F416468F21E78DF7006E94EE /* UIView+Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Inspection.swift"; sourceTree = "<group>"; };
 		F43233CD21E8E502002ABCA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F43233CF21ECD4AD002ABCA3 /* UILabel+Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspection.swift"; sourceTree = "<group>"; };
 		F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraints.swift"; sourceTree = "<group>"; };
 		F46B400121F104F500FC606A /* UIViewController+Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Inspection.swift"; sourceTree = "<group>"; };
+		F420F7A921F90F52002CFFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DCE11821E64399009EBE61 /* PieceOfCake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PieceOfCake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DCE11B21E64399009EBE61 /* PieceOfCake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieceOfCake.h; sourceTree = "<group>"; };
-		F4DCE11C21E64399009EBE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+UserAction.swift"; sourceTree = "<group>"; };
 		F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+UserAction.swift"; sourceTree = "<group>"; };
 		F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Setup.swift"; sourceTree = "<group>"; };

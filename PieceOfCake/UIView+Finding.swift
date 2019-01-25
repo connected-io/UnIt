@@ -15,10 +15,6 @@ extension UIView : TextTestable {
             return ""
         }
     }
-    
-    func testExactMatch( _ text: String) -> Bool {
-        return testableText == text
-    }
 }
 
 extension UIView {
@@ -29,7 +25,7 @@ extension UIView {
      - returns: The first **UILabel** found to match the text or nil if not.
      */
     public func firstLabel(with text: String) -> UILabel? {
-        return firstView(ofType: UILabel.self, passing: { $0.testExactMatch(text)} )
+        return firstView(ofType: UILabel.self, passing: { $0.testableText == text } )
     }
     
     /**
@@ -39,7 +35,7 @@ extension UIView {
      - returns: The first **UIButton** found to match the text or nil if not.
      */
     public func firstButton(with title: String) -> UIButton? {
-        return firstView(ofType: UIButton.self, passing: { $0.testExactMatch(title)} )
+        return firstView(ofType: UIButton.self, passing: { $0.testableText == title } )
     }
     
     /**
