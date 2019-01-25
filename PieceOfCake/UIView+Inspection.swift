@@ -49,10 +49,10 @@ public extension UIView {
      Checks the view's subviews and identifies which ones are partially or entirely off-screen.
      - returns: An array of **UIView** that are partially/entirely not in the view's bounds.
      */
-    public func subviewsOutOfBounds() -> [UIView] {
+    func subviewsOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return subview.frame.size != rect.size
+            return !self.sizesAreEquivalent(subview.frame.size, rect.size)
         }
     }
     
@@ -60,10 +60,10 @@ public extension UIView {
      Checks the view's subviews and identifies which ones are partially off-screen.
      - returns: An array of **UIView** that are partially not in the view's bounds.
      */
-    public func subviewsPartiallyOutOfBounds() -> [UIView] {
+    func subviewsPartiallyOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return subview.frame.size != rect.size && rect.size != CGSize.zero
+            return self != subview && self.sizesAreEquivalent(subview.frame.size, rect.size) && rect.size != CGSize.zero
         }
     }
     
@@ -71,10 +71,15 @@ public extension UIView {
      Checks the view's subviews and identifies which ones are entirely off-screen.
      - returns: An array of **UIView** that are entirely not in the view's bounds.
      */
-    public func subviewsEntirelyOutOfBounds() -> [UIView] {
+    func subviewsEntirelyOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return rect.size == CGSize.zero && subview.isTrulyVisible()
+            return self != subview && rect.size == CGSize.zero && subview.isTrulyVisible()
         }
+    }
+    
+    private func sizesAreEquivalent(_ firstSize: CGSize, _ secondSize: CGSize) -> Bool {
+        return firstSize.width.roundTo(decimalPlace: 2) == secondSize.width.roundTo(decimalPlace: 2) &&
+               firstSize.height.roundTo(decimalPlace: 2) == secondSize.height.roundTo(decimalPlace: 2)
     }
 }
