@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		F416469021E78DF7006E94EE /* UIView+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416468F21E78DF7006E94EE /* UIView+Inspection.swift */; };
 		F43233CE21E8E502002ABCA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43233CD21E8E502002ABCA3 /* XCTest.framework */; };
-		F43233D021ECD4AD002ABCA3 /* UILabel+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43233CF21ECD4AD002ABCA3 /* UILabel+Inspection.swift */; };
+		F43233D021ECD4AD002ABCA3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F46B3FFC21EE4E1800FC606A /* UIViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */; };
 		F46B400221F104F500FC606A /* UIViewController+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B400121F104F500FC606A /* UIViewController+Inspection.swift */; };
+		F4D1732621FB5F060080B391 /* UILabel+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1732521FB5F060080B391 /* UILabel+Inspection.swift */; };
 		F4DCE11D21E64399009EBE61 /* PieceOfCake.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DCE11B21E64399009EBE61 /* PieceOfCake.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4DCE12721E643B2009EBE61 /* UIControl+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */; };
 		F4DCE12821E643B2009EBE61 /* UITextField+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */; };
@@ -24,7 +25,7 @@
 		F43233CD21E8E502002ABCA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraints.swift"; sourceTree = "<group>"; };
 		F46B400121F104F500FC606A /* UIViewController+Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Inspection.swift"; sourceTree = "<group>"; };
-		F420F7A921F90F52002CFFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D1732521FB5F060080B391 /* UILabel+Inspection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspection.swift"; sourceTree = "<group>"; };
 		F4DCE11821E64399009EBE61 /* PieceOfCake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PieceOfCake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DCE11B21E64399009EBE61 /* PieceOfCake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieceOfCake.h; sourceTree = "<group>"; };
 		F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+UserAction.swift"; sourceTree = "<group>"; };
@@ -73,16 +74,15 @@
 		F4DCE11A21E64399009EBE61 /* PieceOfCake */ = {
 			isa = PBXGroup;
 			children = (
-				F4DCE11C21E64399009EBE61 /* Info.plist */,
 				F4DCE11B21E64399009EBE61 /* PieceOfCake.h */,
 				F4DCE12321E643B2009EBE61 /* UIControl+UserAction.swift */,
-				F43233CF21ECD4AD002ABCA3 /* UILabel+Inspection.swift */,
+				F4D1732521FB5F060080B391 /* UILabel+Inspection.swift */,
 				F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */,
 				F4DCE12621E643B2009EBE61 /* UIView+Finding.swift */,
 				F416468F21E78DF7006E94EE /* UIView+Inspection.swift */,
 				F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */,
-				F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */,
 				F46B400121F104F500FC606A /* UIViewController+Inspection.swift */,
+				F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */,
 			);
 			path = PieceOfCake;
 			sourceTree = "<group>";
@@ -170,7 +170,8 @@
 				F4DCE12821E643B2009EBE61 /* UITextField+UserAction.swift in Sources */,
 				F46B3FFC21EE4E1800FC606A /* UIViewController+Constraints.swift in Sources */,
 				F416469021E78DF7006E94EE /* UIView+Inspection.swift in Sources */,
-				F43233D021ECD4AD002ABCA3 /* UILabel+Inspection.swift in Sources */,
+				F43233D021ECD4AD002ABCA3 /* (null) in Sources */,
+				F4D1732621FB5F060080B391 /* UILabel+Inspection.swift in Sources */,
 				F4DCE12721E643B2009EBE61 /* UIControl+UserAction.swift in Sources */,
 				F4DCE12A21E643B2009EBE61 /* UIView+Finding.swift in Sources */,
 				F4DCE12921E643B2009EBE61 /* UIViewController+Setup.swift in Sources */,
