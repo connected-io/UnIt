@@ -34,9 +34,9 @@ public extension UIView {
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
     func findOverlappedArea(with view: UIView) -> CGRect {
-        let convertedSelf = superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
-        let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
-
+        let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? self.frame
+        let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? view.frame
+        
         if convertedSelf.intersects(convertedView) {
             let intersection = convertedSelf.intersection(convertedView)
             return intersection
