@@ -228,5 +228,29 @@ class SampleAppSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("View Controller with untruncated and truncated labels on the largest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+            }
+            
+            context("when the labels are set") {
+                it("should determine the theoretical number of lines the label should have to look untruncated") {
+                    expect(labelSubject.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(4)) // same as line 227
+                }
+            }
+        }
+        
+        describe("View Controller with untruncated and truncated labels on the smallest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+            }
+            
+            context("when the labels are set") {
+                it("should find the truncated labels") {
+                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated()).to(equal(true))
+                }
+            }
+        }
     }
 }
