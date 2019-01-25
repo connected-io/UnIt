@@ -14,7 +14,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Bundle.main)
+                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
             }
 
             it("should not be nil") {
@@ -61,7 +61,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from nib") {
             beforeEach() {
-                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self)
+                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self, Device.iPhoneXS)
             }
 
             it("should not be nil") {
@@ -102,7 +102,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController with user inputs") {
             beforeEach() {
-                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self)
+                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self, Device.iPhone7Plus)
             }
             
             it("should not be nil") {
@@ -167,7 +167,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with overlapping elements") {
             beforeEach {
-                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self)
+                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
             }
             
             context("When two views are overlapped and are within subviews") {
@@ -201,7 +201,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
-                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self)
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhone8)
             }
             
             context("when the labels are set") {
