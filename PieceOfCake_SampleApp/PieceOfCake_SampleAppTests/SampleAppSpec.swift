@@ -14,7 +14,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Bundle.main)
+                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
             }
 
             it("should not be nil") {
@@ -61,7 +61,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from nib") {
             beforeEach() {
-                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self)
+                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self, Device.iPhoneXS)
             }
 
             it("should not be nil") {
@@ -102,7 +102,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController with user inputs") {
             beforeEach() {
-                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self)
+                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self, Device.iPhone7Plus)
             }
             
             it("should not be nil") {
@@ -167,7 +167,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with overlapping elements") {
             beforeEach {
-                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self)
+                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
             }
             
             context("When two views are overlapped and are within subviews") {
@@ -201,7 +201,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
-                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self)
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhone8)
             }
             
             context("when the labels are set") {
@@ -225,6 +225,30 @@ class SampleAppSpec: QuickSpec {
                     expect(labelSubject.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(3))
                     expect(labelSubject.oneLineLabelThatSizeWillDecreaseToTruncate.numberOfTheoreticalLines()).to(equal(2))
                     expect(labelSubject.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(5))
+                }
+            }
+        }
+        
+        describe("View Controller with untruncated and truncated labels on the largest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+            }
+            
+            context("when the labels are set") {
+                it("should determine the theoretical number of lines the label should have to look untruncated") {
+                    expect(labelSubject.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(4)) // same as line 227
+                }
+            }
+        }
+        
+        describe("View Controller with untruncated and truncated labels on the smallest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+            }
+            
+            context("when the labels are set") {
+                it("should find the truncated labels") {
+                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated()).to(equal(true))
                 }
             }
         }
