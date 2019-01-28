@@ -218,7 +218,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with constraint breaks") {
             beforeEach {
-                constraintBreakSubject = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Bundle.main, shouldCaptureConstraintBreaks:  true)
+                constraintBreakSubject = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Device.iPhone7, Bundle.main, shouldCaptureConstraintBreaks:  true)
             }
             
             context("When the view has finished laying out") {

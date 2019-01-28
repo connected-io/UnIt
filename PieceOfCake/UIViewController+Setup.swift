@@ -112,7 +112,6 @@ public extension UIViewController {
         if (shouldCaptureConstraintBreaks) {
             viewController.setupToCaptureConflictingConstraints()
         }
-        let viewController = klass.init(nibName: nibName, bundle: bundle)
         viewController.kickUIKit(for: device)
         return viewController
     }
