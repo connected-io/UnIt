@@ -103,7 +103,7 @@ public extension UIView {
         - test: The closure that the view and it's subviews check against.
      - returns: An array of generics of your choice that subclasses **UIView**.
      */
-    private func views<T: UIView>(ofType type: T.Type, passing test: ((T) -> Bool)? = nil) -> [T] {
+    internal func views<T: UIView>(ofType type: T.Type, passing test: ((T) -> Bool)? = nil) -> [T] {
         var viewsPassingTest: [T] = []
         var queue: [UIView] = [self]
         while !queue.isEmpty {

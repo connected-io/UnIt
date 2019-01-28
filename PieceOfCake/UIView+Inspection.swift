@@ -34,14 +34,52 @@ public extension UIView {
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
     func findOverlappedArea(with view: UIView) -> CGRect {
-        let convertedSelf = superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
-        let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? CGRect.zero
-
+        let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? self.frame
+        let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? view.frame
+        
         if convertedSelf.intersects(convertedView) {
             let intersection = convertedSelf.intersection(convertedView)
             return intersection
         } else {
             return CGRect.zero
         }
+    }
+    
+    /**
+     Checks the view's subviews and identifies which ones are partially or entirely off-screen.
+     - returns: An array of **UIView** that are partially/entirely not in the view's bounds.
+     */
+    func subviewsOutOfBounds() -> [UIView] {
+        return views(ofType: UIView.self) { subview in
+            let rect = self.findOverlappedArea(with: subview)
+            return !self.sizesAreEquivalent(subview.frame.size, rect.size)
+        }
+    }
+    
+    /**
+     Checks the view's subviews and identifies which ones are partially off-screen.
+     - returns: An array of **UIView** that are partially not in the view's bounds.
+     */
+    func subviewsPartiallyOutOfBounds() -> [UIView] {
+        return views(ofType: UIView.self) { subview in
+            let rect = self.findOverlappedArea(with: subview)
+            return self != subview && self.sizesAreEquivalent(subview.frame.size, rect.size) && rect.size != CGSize.zero
+        }
+    }
+    
+    /**
+     Checks the view's subviews and identifies which ones are entirely off-screen.
+     - returns: An array of **UIView** that are entirely not in the view's bounds.
+     */
+    func subviewsEntirelyOutOfBounds() -> [UIView] {
+        return views(ofType: UIView.self) { subview in
+            let rect = self.findOverlappedArea(with: subview)
+            return self != subview && rect.size == CGSize.zero && subview.isTrulyVisible()
+        }
+    }
+    
+    private func sizesAreEquivalent(_ firstSize: CGSize, _ secondSize: CGSize) -> Bool {
+        return firstSize.width.roundTo(decimalPlace: 2) == secondSize.width.roundTo(decimalPlace: 2) &&
+               firstSize.height.roundTo(decimalPlace: 2) == secondSize.height.roundTo(decimalPlace: 2)
     }
 }

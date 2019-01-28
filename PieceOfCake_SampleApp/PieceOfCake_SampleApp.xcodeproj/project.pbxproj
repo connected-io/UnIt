@@ -33,6 +33,8 @@
 		F43233D421ECDC70002ABCA3 /* LabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D221ECDC70002ABCA3 /* LabelViewController.xib */; };
 		F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */; };
 		F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */; };
+		F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B400321F1072400FC606A /* OffScreenViewController.swift */; };
+		F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B400421F1072400FC606A /* OffScreenViewController.xib */; };
 		F4A9D33121E64AFC00F7E1EC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D32F21E64AFC00F7E1EC /* Quick.framework */; };
 		F4A9D33221E64AFC00F7E1EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; };
 		F4A9D33321E64B0200F7E1EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; };
@@ -128,6 +130,8 @@
 		F43233D221ECDC70002ABCA3 /* LabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewController.xib; sourceTree = "<group>"; };
 		F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintBreakViewController.swift; sourceTree = "<group>"; };
 		F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstraintBreakViewController.xib; sourceTree = "<group>"; };
+		F46B400321F1072400FC606A /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
+		F46B400421F1072400FC606A /* OffScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffScreenViewController.xib; sourceTree = "<group>"; };
 		F4A9D32F21E64AFC00F7E1EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F4A9D33021E64AFC00F7E1EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,19 +235,21 @@
 			children = (
 				F424F1DB21E6480F00F2888C /* ActionViewController.swift */,
 				F424F1E121E6480F00F2888C /* ActionViewController.xib */,
+				F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */,
+				F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */,
+				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
+				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
 				F424F1E021E6480F00F2888C /* NibBottomViewController.swift */,
 				F424F1DC21E6480F00F2888C /* NibBottomViewController.xib */,
 				F424F1D921E6480E00F2888C /* NibTopViewController.swift */,
 				F424F1DA21E6480F00F2888C /* NibTopViewController.xib */,
 				F424F1DF21E6480F00F2888C /* NibViewController.swift */,
 				F424F1DD21E6480F00F2888C /* NibViewController.xib */,
-				F424F1DE21E6480F00F2888C /* ViewController.swift */,
+				F46B400321F1072400FC606A /* OffScreenViewController.swift */,
+				F46B400421F1072400FC606A /* OffScreenViewController.xib */,
 				F416469121E78F2C006E94EE /* OverlapViewController.swift */,
 				F416469221E78F2C006E94EE /* OverlapViewController.xib */,
-				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
-				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
-				F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */,
-				F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */,
+				F424F1DE21E6480F00F2888C /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			files = (
 				F424F1E321E6480F00F2888C /* NibTopViewController.xib in Resources */,
 				F416469421E78F2C006E94EE /* OverlapViewController.xib in Resources */,
+				F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */,
 				F424F1AC21E6472E00F2888C /* LaunchScreen.storyboard in Resources */,
 				F424F1A921E6472E00F2888C /* Assets.xcassets in Resources */,
 				F424F1EF21E6481700F2888C /* LabelCollectionViewCell.xib in Resources */,
@@ -402,6 +409,7 @@
 			files = (
 				F43233D321ECDC70002ABCA3 /* LabelViewController.swift in Sources */,
 				F424F1E821E6480F00F2888C /* NibViewController.swift in Sources */,
+				F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */,
 				F424F1E721E6480F00F2888C /* ViewController.swift in Sources */,
 				F424F1E921E6480F00F2888C /* NibBottomViewController.swift in Sources */,
 				F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */,
