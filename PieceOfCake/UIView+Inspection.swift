@@ -1,21 +1,22 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
     /**
      Checks to see if a **UIView** is actually shown to the user. Checks to see isHidden, alpha,
      height and width and superview visibility.
+     - Note: Taken from an Objective-C library called PivotalCoreKit: https://github.com/pivotal-legacy/PivotalCoreKit/blob/master/UIKit/SpecHelper/Extensions/UIControl%2BSpec.m
      */
-    public func isTrulyVisible() -> Bool {
-        if self.isHidden {
+    func isTrulyVisible() -> Bool {
+        if isHidden {
             return false
         }
         
-        if self.alpha == 0 {
+        if alpha == 0 {
             return false
         }
         
-        if self.frame.size.width == 0 || self.frame.size.height == 0 {
+        if frame.size.width == 0 || frame.size.height == 0 {
             return false
         }
         
@@ -32,10 +33,10 @@ extension UIView {
         - view: The view that you want to check the intersection against.
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
-    public func findOverlappedArea(with view: UIView) -> CGRect {
+    func findOverlappedArea(with view: UIView) -> CGRect {
         let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? self.frame
         let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? view.frame
-
+        
         if convertedSelf.intersects(convertedView) {
             let intersection = convertedSelf.intersection(convertedView)
             return intersection
@@ -138,10 +139,10 @@ extension UIView {
      Checks the view's subviews and identifies which ones are partially or entirely off-screen.
      - returns: An array of **UIView** that are partially/entirely not in the view's bounds.
      */
-    public func subviewsOutOfBounds() -> [UIView] {
+    func subviewsOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return subview.frame.size != rect.size
+            return !self.sizesAreEquivalent(subview.frame.size, rect.size)
         }
     }
     
@@ -149,10 +150,10 @@ extension UIView {
      Checks the view's subviews and identifies which ones are partially off-screen.
      - returns: An array of **UIView** that are partially not in the view's bounds.
      */
-    public func subviewsPartiallyOutOfBounds() -> [UIView] {
+    func subviewsPartiallyOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return subview.frame.size != rect.size && rect.size != CGSize.zero
+            return self != subview && self.sizesAreEquivalent(subview.frame.size, rect.size) && rect.size != CGSize.zero
         }
     }
     
@@ -160,17 +161,17 @@ extension UIView {
      Checks the view's subviews and identifies which ones are entirely off-screen.
      - returns: An array of **UIView** that are entirely not in the view's bounds.
      */
-    public func subviewsEntirelyOutOfBounds() -> [UIView] {
+    func subviewsEntirelyOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return rect.size == CGSize.zero && subview.isTrulyVisible()
+            return self != subview && rect.size == CGSize.zero && subview.isTrulyVisible()
         }
     }
     
     /**
      Given an array of views, filter that array to not include any of the view's subviews.
      - parameters:
-        - otherViews: An array of **UIView** to filter out your subviews against.
+        - otherViews: an array of **UIView** to filter out your subviews against.
      - returns: A filtered array not including the view's subviews.
      */
     private func filterOutSubviews(from otherViews:[UIView]) -> [UIView] {
@@ -193,5 +194,17 @@ extension UIView {
      */
     private func isScrollIndicator() -> Bool {
         return self is UIImageView && self.superview is UIScrollView
+    }
+    
+    /**
+     This function makes sure that when comparing widths and heights that no precision error occurs by rounding to 2 decimal places. (i.e. 10.666667 != 10.67 even though it falls within an acceptable range).
+     - parameters:
+        - firstSize: a **CGSize** of the first view.
+        - secondSize: a **CGSize** of the second view.
+     - returns: A true/false on whether the 2 sizes are equivalent up to 2 decimal places.
+    */
+    private func sizesAreEquivalent(_ firstSize: CGSize, _ secondSize: CGSize) -> Bool {
+        return firstSize.width.roundTo(decimalPlace: 2) == secondSize.width.roundTo(decimalPlace: 2) &&
+               firstSize.height.roundTo(decimalPlace: 2) == secondSize.height.roundTo(decimalPlace: 2)
     }
 }
