@@ -16,7 +16,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Bundle.main)
+                subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
             }
 
             it("should not be nil") {
@@ -59,11 +59,21 @@ class SampleAppSpec: QuickSpec {
             it("should have a button with the text 'Right Stack Button' in a UIStackView") {
                 expect(subject.view.firstButton(with: "Right Stack Button")).notTo(beNil())
             }
+            
+            context("when the tableview is scrolled to the bottom") {
+                beforeEach {
+                    subject.tableView.scrollToRow(at: NSIndexPath(row: 54, section: 0) as IndexPath, at: UITableView.ScrollPosition.bottom, animated: false)
+                }
+                
+                it("should have a table view cell with text 'Wyoming'") {
+                    expect(subject.view.firstVisibleTableViewCell(with: "Wyoming")).notTo(beNil())
+                }
+            }
         }
 
         describe("ViewController from nib") {
             beforeEach() {
-                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self)
+                nibSubject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self, Device.iPhoneXS)
             }
 
             it("should not be nil") {
@@ -104,7 +114,7 @@ class SampleAppSpec: QuickSpec {
 
         describe("ViewController with user inputs") {
             beforeEach() {
-                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self)
+                actionSubject = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self, Device.iPhone7Plus)
             }
 
             it("should not be nil") {
@@ -169,7 +179,7 @@ class SampleAppSpec: QuickSpec {
 
         describe("View Controller with overlapping elements") {
             beforeEach {
-                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self)
+                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
             }
 
             context("When the view has finished laying out") {
@@ -209,7 +219,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with constraint breaks") {
             beforeEach {
-                constraintBreakSubject = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Bundle.main, shouldCaptureConstraintBreaks:  true)
+                constraintBreakSubject = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Device.iPhone7, Bundle.main, shouldCaptureConstraintBreaks:  true)
             }
             
             context("When the view has finished laying out") {
@@ -229,7 +239,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
-                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self)
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhone8)
             }
 
             context("When the view has finished laying out") {
@@ -265,7 +275,7 @@ class SampleAppSpec: QuickSpec {
         
         describe("View Controller with views offscreen") {
             beforeEach {
-                offscreenSubject = UIViewController.loadAndSetupViewControllerFromNib("OffScreenViewController", OffScreenViewController.self)
+                offscreenSubject = UIViewController.loadAndSetupViewControllerFromNib("OffScreenViewController", OffScreenViewController.self, Device.iPhone7)
             }
             
             context("When there are offscreen elements") {
@@ -279,6 +289,30 @@ class SampleAppSpec: QuickSpec {
                 
                 it("should find all the entirely offscreen elements") {
                     expect(offscreenSubject.viewsEntirelyOffScreen().count).to(equal(1))
+                }
+            }
+        }
+        
+        describe("View Controller with untruncated and truncated labels on the largest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+            }
+            
+            context("when the labels are set") {
+                it("should determine the theoretical number of lines the label should have to look untruncated") {
+                    expect(labelSubject.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(4)) // same as line 227
+                }
+            }
+        }
+        
+        describe("View Controller with untruncated and truncated labels on the smallest possible iPhone to test screen sizes") {
+            beforeEach {
+                labelSubject = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+            }
+            
+            context("when the labels are set") {
+                it("should find the truncated labels") {
+                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated()).to(equal(true))
                 }
             }
         }
