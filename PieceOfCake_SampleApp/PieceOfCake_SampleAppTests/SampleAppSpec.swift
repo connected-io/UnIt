@@ -186,6 +186,14 @@ class SampleAppSpec: QuickSpec {
                 it("should show find all the conflicting constraints") {
                     expect(overlapSubject.conflictingConstraints).to(beEmpty())
                 }
+                
+                it("should find all the sibling overlapping views in the view controller") {
+                    expect(overlapSubject.overlappingSubviews().count).to(equal(7))
+                }
+                
+                it("should find all the sibling overlapping views in the view controller that are not in the white list") {
+                    expect(overlapSubject.overlappingSubviews(whitelist: [(overlapSubject.blueLabel, overlapSubject.royalBlueView), (overlapSubject.tableView, overlapSubject.overlappedTableViewLabel)]).count).to(equal(5))
+                }
             }
 
             context("When two views are overlapped and are within subviews") {

@@ -85,8 +85,8 @@ class ViewController: UIViewController {
     
     // Mark: Actions
     @IBAction func leftButtonTapped(_ sender: Any) {
-        let nibViewController = NibViewController(nibName: "NibViewController", bundle: nil)
-        self.present(nibViewController, animated: true, completion: nil)
+        let viewController = OverlapViewController(nibName: "OverlapViewController", bundle: nil)
+        self.present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {

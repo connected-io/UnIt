@@ -63,16 +63,6 @@ public extension UIViewController {
     }
     
     /**
-     If you want to test your **UIViewController** for constraint conflicts, call this method **BEFORE** kickUIKit(). Afterwards you can test your view controller
-     for conflicting constraints with viewController.conflictingConstraints. Your view controller will now be able to handle constraint conflicts.
-     - Warning: This function uses swizzling to change a **PRIVATE** UIView function: (engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:)'s implementation in order to capture the conflicting constraints. Calling this once will affect the rest of the app.
-     */
-
-    func setupToCaptureConflictingConstraints() {
-        view.setupToCaptureConflictingConstraints()
-    }
-    
-    /**
      Creates a **UIViewController** or subclass from storyboard and also makes sure it's view lifecycle is ran according to UIKit.
      - parameters:
         - storyboardName: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
