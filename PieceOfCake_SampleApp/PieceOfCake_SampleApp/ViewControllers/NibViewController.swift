@@ -11,38 +11,7 @@ class NibViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("nib: viewDidLoad")
         embedViewControllers()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("nib: viewWillAppear:")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("nib: viewDidAppear:")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("nib: viewWillDisappear:")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("nib: viewDidDisappear:")
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        print("nib: viewWillLayoutSubviews")
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print("nib: viewDidLayoutSubviews")
     }
     
     // MARK: Setup

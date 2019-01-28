@@ -6,39 +6,8 @@ class NibTopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("nibTop: viewDidLoad")
         collectionView.register(UINib(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
         collectionView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("nibTop: viewWillAppear:")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("nibTop: viewDidAppear:")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("nibTop: viewWillDisappear:")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("nibTop: viewDidDisappear:")
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        print("nibTop: viewWillLayoutSubviews")
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print("nibTop: viewDidLayoutSubviews")
     }
 }
 

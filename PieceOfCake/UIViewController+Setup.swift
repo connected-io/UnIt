@@ -1,6 +1,4 @@
 import Foundation
-import UIKit
-import XCTest
 
 /**
  Screensizes and scale factor from: https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
@@ -65,20 +63,35 @@ public extension UIViewController {
     }
     
     /**
+     If you want to test your **UIViewController** for constraint conflicts, call this method **BEFORE** kickUIKit(). Afterwards you can test your view controller
+     for conflicting constraints with viewController.conflictingConstraints. Your view controller will now be able to handle constraint conflicts.
+     - Warning: This function uses swizzling to change a **PRIVATE** UIView function: (engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:)'s implementation in order to capture the conflicting constraints. Calling this once will affect the rest of the app.
+     */
+
+    func setupToCaptureConflictingConstraints() {
+        view.setupToCaptureConflictingConstraints()
+    }
+    
+    /**
      Creates a **UIViewController** or subclass from storyboard and also makes sure it's view lifecycle is ran according to UIKit.
      - parameters:
         - storyboardName: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
         - identifier: the identifier of the view controller that exists inside your storyboard.
         - device: the device screen size that the view lifecycle
         - bundle: the bundle where the storyboard exists.
+        - shouldCaptureConstraintBreaks: flag to determine if you want the view controller to monitor for constraint conflicts.
      - returns: Your custom view controller from storyboard.
      */
-    static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(_ storyboardName: String, _ identifier: String? = nil, _ device: Device, _ bundle: Bundle = Bundle.main) -> T {
+
+    static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(_ storyboardName: String, _ identifier: String? = nil, _ device: Device, _ bundle: Bundle = Bundle.main, shouldCaptureConstraintBreaks: Bool = false) -> T {
         let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
         let vcTypeName = String(describing: self)
         let vcIdentifier = identifier ?? vcTypeName
         
         let viewController = storyboard.instantiateViewController(withIdentifier: vcIdentifier) as! T
+        if (shouldCaptureConstraintBreaks) {
+            viewController.setupToCaptureConflictingConstraints()
+        }
         viewController.kickUIKit(for: device)
         return viewController
     }
@@ -90,10 +103,15 @@ public extension UIViewController {
         - klass: the custom view controller class that you want to instantiate.
         - device: the device screen size that the test suite is testing against.
         - bundle: the bundle where the xib file exists.
+        - shouldCaptureConstraintBreaks: flag to determine if you want the view controller to monitor for constraint conflicts.
      - returns: Your custom view controller from xib.
      */
-    static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ klass: T.Type, _ device: Device, _ bundle: Bundle = Bundle.main) -> T {
+
+    static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ klass: T.Type, _ device: Device, _ bundle: Bundle = Bundle.main, shouldCaptureConstraintBreaks: Bool = false) -> T {
         let viewController = klass.init(nibName: nibName, bundle: bundle)
+        if (shouldCaptureConstraintBreaks) {
+            viewController.setupToCaptureConflictingConstraints()
+        }
         viewController.kickUIKit(for: device)
         return viewController
     }

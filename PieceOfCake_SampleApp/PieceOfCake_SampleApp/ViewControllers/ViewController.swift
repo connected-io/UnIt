@@ -64,40 +64,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("storyboard: viewDidLoad")
         setupTableView()
         setupCollectionView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("storyboard: viewWillAppear:")
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("storyboard: viewDidAppear:")
         torontoLabel.text = "Montreal."
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("storyboard: viewWillDisappear:")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("storyboard: viewDidDisappear:")
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        print("storyboard: viewWillLayoutSubviews")
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print("storyboard: viewDidLayoutSubviews")
     }
 
     // MARK: Setup
@@ -117,8 +90,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
-        let labelViewController = LabelViewController(nibName: "LabelViewController", bundle: nil)
-        self.present(labelViewController, animated: true, completion: nil)
+        let viewController = ConstraintBreakViewController(nibName: "ConstraintBreakViewController", bundle: nil)
+        self.present(viewController, animated: true, completion: nil)
     }
 }
 
@@ -128,7 +101,6 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("ViewController: Populating table view cells now")
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell")
         tableViewCell?.textLabel?.text = statesOfUSAArray[indexPath.row]
         return tableViewCell!

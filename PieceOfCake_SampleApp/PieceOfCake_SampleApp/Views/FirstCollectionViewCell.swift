@@ -8,7 +8,6 @@ class FirstCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("FirstCollectionViewCell: awakeFromNib")
         secondCollectionView.dataSource = self
     }
 }
@@ -19,7 +18,6 @@ extension FirstCollectionViewCell : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("FirstCollectionViewCell: cellForItemAt")
         let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCollectionViewCell", for: indexPath) as! SecondCollectionViewCell
         collectionViewCell.label.text = provinces[indexPath.row]
         return collectionViewCell
