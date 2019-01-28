@@ -51,7 +51,7 @@ public extension UIViewController {
      - viewWillLayoutSubviews()
      - viewDidLayoutSubviews()
      - parameters:
-        - viewController: the **UIViewController** that you want to run the view lifecycle against so it mirrors what UIKit does.
+        - device: the device screen size that the test suite is testing against.
      */
     
     func kickUIKit(for device:Device) {
@@ -68,8 +68,9 @@ public extension UIViewController {
      Creates a **UIViewController** or subclass from storyboard and also makes sure it's view lifecycle is ran according to UIKit.
      - parameters:
         - storyboardName: name of the storyboard. (i.e. For Main.storyboard you would put "Main").
-        - bundle: the bundle where the storyboard exists.
         - identifier: the identifier of the view controller that exists inside your storyboard.
+        - device: the device screen size that the view lifecycle
+        - bundle: the bundle where the storyboard exists.
      - returns: Your custom view controller from storyboard.
      */
     static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(_ storyboardName: String, _ identifier: String? = nil, _ device: Device, _ bundle: Bundle = Bundle.main) -> T {
@@ -86,8 +87,9 @@ public extension UIViewController {
      Creates a **UIViewController** or subclass from xib and also makes sure it's view lifecycle is ran according to UIKit.
      - parameters:
         - nibName: the name of the xib file. (i.e. For MyView.xib you would put "MyView").
-        - bundle: the bundle where the xib file exists.
         - klass: the custom view controller class that you want to instantiate.
+        - device: the device screen size that the test suite is testing against.
+        - bundle: the bundle where the xib file exists.
      - returns: Your custom view controller from xib.
      */
     static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ klass: T.Type, _ device: Device, _ bundle: Bundle = Bundle.main) -> T {

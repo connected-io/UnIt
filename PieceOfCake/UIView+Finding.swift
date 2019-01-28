@@ -17,14 +17,14 @@ extension UIView : TextTestable {
     }
 }
 
-extension UIView {
+public extension UIView {
     /**
      Finds the first **UILabel** within the given **UIView** that exactly matches the given text.
      - parameters:
         - text: the string that a label in the given view must match.
      - returns: The first **UILabel** found to match the text or nil if not.
      */
-    public func firstLabel(with text: String) -> UILabel? {
+    func firstLabel(with text: String) -> UILabel? {
         return firstView(ofType: UILabel.self, passing: { $0.testableText == text } )
     }
     
@@ -34,7 +34,7 @@ extension UIView {
         - text: the string that a button title in the given view must match.
      - returns: The first **UIButton** found to match the text or nil if not.
      */
-    public func firstButton(with title: String) -> UIButton? {
+    func firstButton(with title: String) -> UIButton? {
         return firstView(ofType: UIButton.self, passing: { $0.testableText == title } )
     }
     
@@ -44,7 +44,7 @@ extension UIView {
         - text: the string that a label within a table view cell must match.
      - returns: The first **UITableViewCell** found to match the text or nil if not.
      */
-    public func firstVisibleTableViewCell(with text: String) -> UITableViewCell? {
+    func firstVisibleTableViewCell(with text: String) -> UITableViewCell? {
         return views(ofType: UITableViewCell.self) { cell in
             return cell.firstLabel(with: text) != nil
         }.first
@@ -56,7 +56,7 @@ extension UIView {
         - text: the string that a label within a collection view cell must match.
      - returns: The first **UICollectionViewCell** found to match the text or nil if not.
      */
-    public func firstVisibleCollectionViewCell(with text: String) -> UICollectionViewCell? {
+    func firstVisibleCollectionViewCell(with text: String) -> UICollectionViewCell? {
         return views(ofType: UICollectionViewCell.self) { cell in
             return cell.firstLabel(with: text) != nil
         }.first

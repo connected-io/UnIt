@@ -57,6 +57,16 @@ class SampleAppSpec: QuickSpec {
             it("should have a button with the text 'Right Stack Button' in a UIStackView") {
                 expect(subject.view.firstButton(with: "Right Stack Button")).notTo(beNil())
             }
+            
+            context("when the tableview is scrolled to the bottom") {
+                beforeEach {
+                    subject.tableView.scrollToRow(at: NSIndexPath(row: 54, section: 0) as IndexPath, at: UITableView.ScrollPosition.bottom, animated: false)
+                }
+                
+                it("should have a table view cell with text 'Wyoming'") {
+                    expect(subject.view.firstVisibleTableViewCell(with: "Wyoming")).notTo(beNil())
+                }
+            }
         }
         
         describe("ViewController from nib") {
