@@ -10,17 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlapViewController" customModule="PieceOfCake_SampleApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlapViewController" customModule="UnIt_SampleApp" customModuleProvider="target">
             <connections>
+                <outlet property="alphaZeroView" destination="fa5-yq-rRJ" id="fXW-Ns-wbu"/>
                 <outlet property="blueLabel" destination="WlN-1R-aoq" id="IPR-2a-42i"/>
                 <outlet property="button" destination="bjW-1Y-s8b" id="BdH-y9-ztr"/>
                 <outlet property="buttonView" destination="r2e-Eq-g5R" id="J8r-fP-sCf"/>
                 <outlet property="greenLabel" destination="BQa-1l-mrE" id="73W-jl-PLN"/>
+                <outlet property="hiddenView" destination="zjW-zz-4ZL" id="64L-ry-q8c"/>
                 <outlet property="imageView" destination="ccr-B0-58d" id="8Lr-Lr-2lx"/>
                 <outlet property="label" destination="Rvu-O7-WCj" id="Ik3-RV-rm3"/>
                 <outlet property="labelView" destination="6pC-Lu-Wbc" id="dMM-0e-Jj3"/>
                 <outlet property="overlappedTableViewLabel" destination="Nvw-AS-yxQ" id="AFF-Be-UKa"/>
                 <outlet property="redButton" destination="5b0-Ij-1Gp" id="IQd-h3-NwP"/>
+                <outlet property="royalBlueImageView" destination="ccr-B0-58d" id="QSb-A2-iVY"/>
                 <outlet property="royalBlueView" destination="R6e-aO-hfG" id="40B-5s-SDl"/>
                 <outlet property="tableView" destination="Roh-iA-OeE" id="u1e-us-BvE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -127,6 +130,16 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.6810446161" blue="0.29358579309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zjW-zz-4ZL">
+                    <rect key="frame" x="250" y="430" width="43" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-yq-rRJ">
+                    <rect key="frame" x="303" y="430" width="56" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="0.96496323699999997" blue="0.70793627830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

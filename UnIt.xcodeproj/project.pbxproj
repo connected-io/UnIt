@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABFD035A2200A9F600DC52EE /* UIView+Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD03592200A9F600DC52EE /* UIView+Overlap.swift */; };
 		F416469021E78DF7006E94EE /* UIView+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416468F21E78DF7006E94EE /* UIView+Inspection.swift */; };
 		F43233CE21E8E502002ABCA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43233CD21E8E502002ABCA3 /* XCTest.framework */; };
 		F46B3FFC21EE4E1800FC606A /* UIViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABFD03592200A9F600DC52EE /* UIView+Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Overlap.swift"; sourceTree = "<group>"; };
 		F416468F21E78DF7006E94EE /* UIView+Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Inspection.swift"; sourceTree = "<group>"; };
 		F43233CD21E8E502002ABCA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraints.swift"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				F4DCE12421E643B2009EBE61 /* UITextField+UserAction.swift */,
 				F4DCE12621E643B2009EBE61 /* UIView+Finding.swift */,
 				F416468F21E78DF7006E94EE /* UIView+Inspection.swift */,
+				ABFD03592200A9F600DC52EE /* UIView+Overlap.swift */,
 				F46B3FFB21EE4E1800FC606A /* UIViewController+Constraints.swift */,
 				F46B400121F104F500FC606A /* UIViewController+Inspection.swift */,
 				F4DCE12521E643B2009EBE61 /* UIViewController+Setup.swift */,
@@ -174,6 +177,7 @@
 				F4D1732A21FB76A50080B391 /* CGFloat+Precision.swift in Sources */,
 				F4DCE12821E643B2009EBE61 /* UITextField+UserAction.swift in Sources */,
 				F46B3FFC21EE4E1800FC606A /* UIViewController+Constraints.swift in Sources */,
+				ABFD035A2200A9F600DC52EE /* UIView+Overlap.swift in Sources */,
 				F416469021E78DF7006E94EE /* UIView+Inspection.swift in Sources */,
 				F4DCE12721E643B2009EBE61 /* UIControl+UserAction.swift in Sources */,
 				F4DCE12A21E643B2009EBE61 /* UIView+Finding.swift in Sources */,

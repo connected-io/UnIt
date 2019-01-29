@@ -15,6 +15,10 @@ class OverlapViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var royalBlueView: UIView!
+    @IBOutlet weak var royalBlueImageView: UIImageView!
+    
+    @IBOutlet weak var hiddenView: UIView!
+    @IBOutlet weak var alphaZeroView: UIView!
     
     let canadianCities = ["Mississauga", "Toronto", "Montreal", "Ottawa", "Calgary", "Vancouver"]
     
