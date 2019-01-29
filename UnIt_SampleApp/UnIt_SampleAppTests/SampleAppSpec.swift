@@ -186,14 +186,6 @@ class SampleAppSpec: QuickSpec {
                 it("should show find all the conflicting constraints") {
                     expect(overlapSubject.conflictingConstraints).to(beEmpty())
                 }
-                
-                it("should find all the sibling overlapping views in the view controller") {
-                    expect(overlapSubject.overlappingSubviews().count).to(equal(7))
-                }
-                
-                it("should find all the sibling overlapping views in the view controller that are not in the white list") {
-                    expect(overlapSubject.overlappingSubviews(whitelist: [(overlapSubject.blueLabel, overlapSubject.royalBlueView), (overlapSubject.tableView, overlapSubject.overlappedTableViewLabel)]).count).to(equal(5))
-                }
             }
 
             context("When two views are overlapped and are within subviews") {
@@ -221,6 +213,40 @@ class SampleAppSpec: QuickSpec {
                     expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.redButton)).to(equal(CGRect(x: 16.0, y: 478.0, width: 30.0, height: 13.0)))
                     expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.blueLabel)).to(equal(CGRect(x: 46.0, y: 478.0, width: 42.0, height: 9.0)))
                     expect(overlapSubject.imageView.findOverlappedArea(with: overlapSubject.greenLabel)).to(equal(CGRect(x: 87.0, y: 478.0, width: 27.0, height: 9.0)))
+                }
+            }
+        }
+        
+        describe("Testing a View Controller with sibling overlaps and various whitelist methods") {
+            beforeEach {
+                overlapSubject = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
+            }
+            
+            context("When the view has finished laying out") {                
+                it("should find all the sibling overlapping views in the view controller") {
+                    expect(overlapSubject.overlappingSubviews().count).to(equal(7))
+                }
+                
+                it("should find all the sibiling overlapping views in the view controller after some elements become visible") {
+                    overlapSubject.hiddenView.isHidden = false
+                    expect(overlapSubject.overlappingSubviews().count).to(equal(8))
+                    overlapSubject.alphaZeroView.alpha = 1
+                    expect(overlapSubject.overlappingSubviews().count).to(equal(9))
+                }
+                
+                it("should find all the sibling overlapping views in the view controller that are not in the pair view white list") {
+                    let whiteListedOverlapViews = overlapSubject.overlappingSubviews(whiteList: [(overlapSubject.blueLabel, overlapSubject.royalBlueView), (overlapSubject.tableView, overlapSubject.overlappedTableViewLabel)])
+                    expect(whiteListedOverlapViews.count).to(equal(5))
+                }
+                
+                it("should find all the sibiling overlapping views in the view controller that are in the single view white list") {
+                    let whiteListedOverlapViews = overlapSubject.overlappingSubviews(whiteList: [overlapSubject.royalBlueView, overlapSubject.royalBlueImageView])
+                    expect(whiteListedOverlapViews.count).to(equal(3))
+                }
+                
+                it("should find all the sibiling overlapping views in the view controller that are in the view tag white list") {
+                    let whiteListedOverlapViews = overlapSubject.overlappingSubviews(whiteList: [11,12])
+                    expect(whiteListedOverlapViews.count).to(equal(3))
                 }
             }
         }
