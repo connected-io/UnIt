@@ -66,7 +66,7 @@ public extension UIView {
         - test: The closure that the generic and it's subviews check against.
      - returns: The first generic of your choice that passes your test.
      */
-    private func firstView<T: UIView>(ofType type: T.Type, passing test: (T) -> Bool) -> T? {
+    func firstView<T: UIView>(ofType type: T.Type, passing test: (T) -> Bool) -> T? {
         return firstView { view in
             guard let typedView = view as? T else {
                 return false
@@ -74,7 +74,6 @@ public extension UIView {
             return test(typedView)
             } as? T
     }
-    
     
     /**
      Returns the first **UIView** that passes a certain test defined by you. Implements a breadth-first-search, but does an early return when it finds the first element that passes the test.
