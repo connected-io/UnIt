@@ -23,7 +23,6 @@
  The moment you use this file, it changes that selector implementation for as long as your app/tests run. Just a warning. If Apple changes this function or
  anything we may be doomed and you won't be able to use this file.
  */
-
 extension UIViewController {
     /**
      Getter to return all the conflicting constraints and groups them together based on how they are produced in the log.
