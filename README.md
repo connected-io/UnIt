@@ -1,7 +1,7 @@
 ![unit](https://user-images.githubusercontent.com/37081225/52099835-dc273f00-25a2-11e9-8aee-752e5a54554b.png)
 > Oh ma goodness, UnIt is just an absolute unit 🔥🔥🔥 - Anonymous
 
-Unit tests are great for testing business logic and your models. However, it get's a little cumbersome when you are trying to test view specific logic due to boilerplate code, drilling through multiple view layers or UIKit laziness. This framework attempts to ease some of that pain away with helpful extensions on your favourite classes like **UIView**, **UIViewController** and more! By having your UI able to be easily validated by unit tests, we can capture visual bugs before we get shamed by our QA department :( 
+Unit tests are great for testing business logic and your models. However, it get's a little cumbersome when you are trying to test view specific logic due to boilerplate code, drilling through multiple view layers or UIKit laziness. **UnIt** attempts to ease some of that pain away with helpful extensions on your favourite UIKit classes like **UILabel**, **UIViewController** and more! By having your UI able to be easily validated by unit tests, we can capture visual bugs before we get shamed by our QA department :( 
 
 ## Warning
 This library uses the black magic of swizzling for one of the extensions (capturing constraints). Please be cognizant of this as Apple can change the underlying objective-C private method that this extension swizzles anytime. In addition, you will most likely get an App Store rejection if this framework is included in your app target. It's recommended to keep this framework only in your test target.
