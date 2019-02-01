@@ -57,7 +57,7 @@ return myView.firstView(ofType: MyCustomView.self, passing: { $0.titleLabel.text
 ```
 The example above states that within **myView**, return the first subview that is a **MyCustomView** class with the titleLabel text of "Drake is the greatest" and has a blue background color.
 
-## Capturing Constraints
+## Capturing Conflicting Constraints
 Constraint breaks are one of the top 5 most unenjoyable experiences an iOS developer can experience. All we get is a system log of all the conflicting constraints that shames us and is hard to read.
 
 We can use our extension on **UIViewController**:
