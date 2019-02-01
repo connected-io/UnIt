@@ -14,7 +14,7 @@ When creating a view controller in unit tests, UIKit decides to be lazy and does
 
 Instead we can use this extension on **UIViewController**:
 ```swift
-func kickUIKit(for device:Device)
+func kickUIKit(for device: Device)
 ```
 Example:
 ```swift
