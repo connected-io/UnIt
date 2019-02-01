@@ -81,7 +81,7 @@ How often have you run into the problem that your app looks great on one screen 
 
 We can use our extension on **UIViewController**:
 ```swift
-public func overlappingSubviews(whiteList: [UIView] = []) -> [Set<UIView>:CGRect] 
+public func overlappingSubviews(whiteList: [UIView]) -> [Set<UIView>:CGRect] 
 ```
 Example:
 ```swift

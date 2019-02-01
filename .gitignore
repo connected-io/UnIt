@@ -20,3 +20,7 @@ Carthage/Build
 *Carthage/Build
 */Carthage/Checkouts
 */Carthage/Build
+
+Cartfile.resolved
+*/Cartfile.resolved
+*Cartfile.resolved
