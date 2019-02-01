@@ -175,4 +175,4 @@ Works on **UIButton**, **UITableViewCell** and more!
 
 An open source library from:
 
-![connectedlogo_blue](https://user-images.githubusercontent.com/37081225/52149791-ef3a1d80-263b-11e9-9a31-5b50a131d131.png)
+[![connectedlogo_blue](https://user-images.githubusercontent.com/37081225/52149791-ef3a1d80-263b-11e9-9a31-5b50a131d131.png)](https://www.connected.io/)
