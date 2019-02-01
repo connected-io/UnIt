@@ -45,7 +45,7 @@ it ("should have a table view cell that contains the text 'Toronto Raptors'") {
   expect(subject.view.firstVisibleTableViewCell(with: "Toronto Raptors")).notTo(beNil())
 }
 ```
-Once again it's a 1 liner, but we solve the issue of not commiting the treacherous crimes that we commited in the previous example. Also, it reads more like a conversation and is easier to understand what the function is asking - "Give me the first table view cell in the subject's view that contains the text 'Toronto Raptors'.".
+Once again it's a 1 liner, but we solve the issue of not commiting the heinous crimes in the previous example. Also, it reads more like a conversation and is easier to understand what the function is asking - "Give me the first table view cell in the subject's view that contains the text 'Toronto Raptors'.".
 
 There are more convenience extension methods that apply to **UILabel**, **UIButton** and **UICollectionViewCell**. If you want to go subclass view hunting you can use this method:
 ```swift
