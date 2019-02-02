@@ -1,4 +1,4 @@
-![unit](https://user-images.githubusercontent.com/37081225/52099835-dc273f00-25a2-11e9-8aee-752e5a54554b.png)
+![unit](https://user-images.githubusercontent.com/37081225/52157432-f7568500-265c-11e9-97c6-33a2602d0093.png)
 > Oh ma goodness, UnIt is just an absolute unit 🔥🔥🔥 - Anonymous
 
 Unit tests are great for testing business logic and your models. However, it get's a little cumbersome when you are trying to test view specific logic due to boilerplate code, drilling through multiple view layers or UIKit laziness. **UnIt** attempts to ease some of that pain away with helpful extensions on your favourite UIKit classes like **UILabel**, **UIViewController** and more! By having your UI able to be easily validated by unit tests, we can capture visual bugs before we get shamed by our QA department :( 
