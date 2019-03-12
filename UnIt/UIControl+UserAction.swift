@@ -1,3 +1,5 @@
+import XCTest
+
 public extension UIControl {
     /**
      Simulates tapping on a **UIControl**. This works on **UIButton**, **UITableViewCell**, **UICollectionViewCell** and more.
