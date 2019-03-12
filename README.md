@@ -99,7 +99,7 @@ This function checks the view controller's subviews to see if any views overlaps
 There is another extension with the same functionality that works on **UIView** in case you want to check overlaps within a certain view.
 
 ## Capturing Text Truncation
-Sometimes our labels don't lay out the way we want, especially on a smaller screen size or when accessibility is enabled.
+Sometimes our labels don't lay out the way we want, especially on a smaller screen size.
 
 We can use our extension on **UILabel**:
 ```swift
@@ -168,3 +168,11 @@ Extension on **UIControl** that simulates a tap:
 func tap()
 ```
 Works on **UIButton**, **UITableViewCell** and more!
+
+## Maintainers
+- jyeung@connected.io - Jonathan Yeung
+- swu@connected.io - Steven Wu
+
+An open source library from:
+
+[![connectedlogo_blue](https://user-images.githubusercontent.com/37081225/52149791-ef3a1d80-263b-11e9-9a31-5b50a131d131.png)](https://www.connected.io/)
