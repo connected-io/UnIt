@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  
+
   s.name          = "UnIt"
-  s.version       = "0.0.1"
+  s.version       = "0.0.2"
   s.summary       = "An iOS Swift framework that helps bridge the gap between UI and Unit Testing."
   s.swift_version = "4.2"
   s.description   = "An iOS Swift framework that helps bridge the gap between UI and Unit Testing by providing helpful UIKit class extensions."
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.source                = { :git => "https://github.com/connected-io/UnIt.git", 
                               :tag => "#{s.version}" }
   s.source_files = "UnIt/**/*.{swift, .h, .m, .framework}"
-  s.resources    = "*/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   s.frameworks   = 'UIKit', 'Foundation', 'XCTest'
 
 end
