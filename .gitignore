@@ -1,7 +1,12 @@
+# Based on swift-gitignore from https://github.com/github/gitignore/blob/master/Swift.gitignore
+
+# Xcode
+
 ## Build generated
 build/
 DerivedData/
 
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -11,16 +16,35 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-*xcuserdata/
-*/xcuserdata/
 
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Mac OS
+*.DS_Store
+
+# Swift Package Manager
+Packages/
+# Package.pins
+# Package.resolved
+.build/
+
+# CocoaPods
+Pods/
+# *.xcworkspace
+
+# Carthage
 Carthage/Checkouts
 Carthage/Build
-*Carthage/Checkouts
-*Carthage/Build
-*/Carthage/Checkouts
-*/Carthage/Build
-
-Cartfile.resolved
-*/Cartfile.resolved
-*Cartfile.resolved
