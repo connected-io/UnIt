@@ -1,3 +1,8 @@
+# +------------------------------------+
+# |                                    |
+# | Podspec LAST SCRUBBED:  05-15-2019 |
+# |                                    |
+# +------------------------------------+
 #
 #  Be sure to run `pod spec lint UnIt.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
