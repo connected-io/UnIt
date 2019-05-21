@@ -1,3 +1,5 @@
+![Platform](https://img.shields.io/cocoapods/p/UnIt.svg) ![Cocoapods](https://img.shields.io/cocoapods/v/UnIt.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ![unit](https://user-images.githubusercontent.com/37081225/52099835-dc273f00-25a2-11e9-8aee-752e5a54554b.png)
 > Oh ma goodness, UnIt is just an absolute unit 🔥🔥🔥 - Anonymous
 
