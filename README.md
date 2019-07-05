@@ -1,3 +1,5 @@
+![Platform](https://img.shields.io/cocoapods/p/UnIt.svg) ![Cocoapods](https://img.shields.io/cocoapods/v/UnIt.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ![unit](https://user-images.githubusercontent.com/37081225/52099835-dc273f00-25a2-11e9-8aee-752e5a54554b.png)
 > Oh ma goodness, UnIt is just an absolute unit 🔥🔥🔥 - Anonymous
 
@@ -5,9 +7,6 @@ Unit tests are great for testing business logic and your models. However, it get
 
 ## Warning
 This library uses the black magic of swizzling for one of the extensions (capturing constraints). Please be cognizant of this as Apple can change the underlying objective-C private method that this extension swizzles anytime. In addition, you will most likely get an App Store rejection if this framework is included in your app target. It's recommended to keep this framework only in your test target.
-
-## Installation
-Will support Cocoapods, Carthage and Swift Package Manager in the near future!
 
 ## Removing UIViewController Boilerplate Code
 When creating a view controller in unit tests, UIKit decides to be lazy and does the least possible work possible. In unit tests, the view lifecycle method - **viewDidLoad**, **viewWillAppear**, **viewDidAppear** are not guaranteed to be invoked. This results in developers doing stuff like getting the key window, attach the view controller to the key window and make it key and visible - blegh.
@@ -168,6 +167,30 @@ Extension on **UIControl** that simulates a tap:
 func tap()
 ```
 Works on **UIButton**, **UITableViewCell** and more!
+
+## Installation
+### Cocoapods
+To use UnIt in your iOS app, add UnIt to your Podfile and add the `use_frameworks!` line to enable Swift support for CocoaPods. You should only add it to your unit test target in the Podfile.
+```ruby
+# Podfile
+
+use_frameworks!
+
+target 'MyUnitTests' do
+  pod 'UnIt'
+end
+```
+Then run `pod install`.
+
+### Carthage
+To use Carthage in your app, add UnIt to your Cartfile.
+```ruby
+github "connected-io/UnIt"
+```
+1. Run `carthage update`.
+2. Go into the `Carthage/Build/iOS` folder and add the UnIt framework. into your **test target's** "Link Binary With Libraries" build phase.
+3. In your **test target**, click the + button in the top left and select "New Copy Files Phase".
+4. Set the "Destination" to "Frameworks" and add the UnIt framework. Make sure "Code Sign On Copy" is enabled. 
 
 ## Maintainers
 - jyeung@connected.io - Jonathan Yeung
