@@ -14,7 +14,7 @@ public extension UILabel {
      Check to see if a line is currently truncated based on its size and font.
      - Returns: A true/false value on whether the label is truncated.
      */
-    func isTruncated() -> Bool {
+    var isTruncated: Bool {
         return numberOfTheoreticalLines() > numberOfLines && numberOfLines != 0
     }
 }

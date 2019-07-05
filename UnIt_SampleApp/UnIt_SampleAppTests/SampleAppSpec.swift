@@ -284,16 +284,16 @@ class SampleAppSpec: QuickSpec {
 
             context("when the labels are set") {
                 it("should find the untruncated labels") {
-                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated()).to(equal(false))
-                    expect(labelSubject.twoLineLabelNoTruncation.isTruncated()).to(equal(false))
-                    expect(labelSubject.infiniteLineLabel.isTruncated()).to(equal(false))
+                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated).to(equal(false))
+                    expect(labelSubject.twoLineLabelNoTruncation.isTruncated).to(equal(false))
+                    expect(labelSubject.infiniteLineLabel.isTruncated).to(equal(false))
                 }
 
                 it("should find the truncated labels") {
-                    expect(labelSubject.oneLineLabelWithTruncation.isTruncated()).to(equal(true))
-                    expect(labelSubject.oneLineLabelWithIncreasingFontToTruncate.isTruncated()).to(equal(true))
-                    expect(labelSubject.oneLineLabelThatSizeWillDecreaseToTruncate.isTruncated()).to(equal(true))
-                    expect(labelSubject.threeLineLabelWithTruncation.isTruncated()).to(equal(true))
+                    expect(labelSubject.oneLineLabelWithTruncation.isTruncated).to(equal(true))
+                    expect(labelSubject.oneLineLabelWithIncreasingFontToTruncate.isTruncated).to(equal(true))
+                    expect(labelSubject.oneLineLabelThatSizeWillDecreaseToTruncate.isTruncated).to(equal(true))
+                    expect(labelSubject.threeLineLabelWithTruncation.isTruncated).to(equal(true))
                 }
 
                 it("should determine the theoretical number of lines the label should have to look untruncated") {
@@ -346,7 +346,7 @@ class SampleAppSpec: QuickSpec {
             
             context("when the labels are set") {
                 it("should find the truncated labels") {
-                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated()).to(equal(true))
+                    expect(labelSubject.oneLineLabelNoTruncation.isTruncated).to(equal(true))
                 }
             }
         }
