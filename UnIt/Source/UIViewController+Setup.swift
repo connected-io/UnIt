@@ -51,7 +51,7 @@ public extension UIViewController {
         - device: the device screen size that the test suite is testing against.
      */
     
-    func kickUIKit(for device: Device) {
+    func runViewLifecycle(for device: Device) {
         let _ = self.view
         self.view.frame = CGRect(origin: CGPoint.zero, size: device.dimensions.screensize)
         self.view.contentScaleFactor = device.dimensions.scaleFactor
@@ -81,7 +81,7 @@ public extension UIViewController {
         if (shouldCaptureConstraintBreaks) {
             viewController.setupToCaptureConflictingConstraints()
         }
-        viewController.kickUIKit(for: device)
+        viewController.runViewLifecycle(for: device)
         return viewController
     }
     
@@ -101,7 +101,7 @@ public extension UIViewController {
         if (shouldCaptureConstraintBreaks) {
             viewController.setupToCaptureConflictingConstraints()
         }
-        viewController.kickUIKit(for: device)
+        viewController.runViewLifecycle(for: device)
         return viewController
     }
 }
