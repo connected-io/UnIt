@@ -13,13 +13,13 @@ When creating a view controller in unit tests, UIKit decides to be lazy and does
 
 Instead we can use this extension on **UIViewController**:
 ```swift
-func kickUIKit(for device: Device)
+func runViewLifecycle(for device: Device)
 ```
 Example:
 ```swift
 beforeEach {
   // Instantiate view controller (subject) with your custom instantiation code.
-  subject.kickUIKit(for: Device.iPhoneXS)
+  subject.runViewLifecycle(for: Device.iPhoneXS)
 }
 ```
 This function guarantees that the view controller's view lifecycle will run properly with the given iOS device size.
