@@ -102,7 +102,7 @@ Sometimes our labels don't lay out the way we want, especially on a smaller scre
 
 We can use our extension on **UILabel**:
 ```swift
-func isTruncated() -> Bool
+var isTruncated: Bool
 ```
 ## Capturing Out of Bounds Views
 When auto layout or our frame logic doesn't behave the way we expect it to, our views sometimes won't be positioned properly.
