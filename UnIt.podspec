@@ -13,7 +13,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'UnIt'
-  s.version = '0.0.4'
+  s.version = '0.0.5'
   s.summary = 'An iOS Swift framework that helps bridge the gap between UI and Unit Testing.'
   s.swift_version = '4.2'
   s.description = 'An iOS Swift framework that helps bridge the gap between UI and Unit Testing by providing helpful UIKit class extensions.'
