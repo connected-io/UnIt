@@ -1,6 +1,6 @@
 ![Platform](https://img.shields.io/cocoapods/p/UnIt.svg) ![Cocoapods](https://img.shields.io/cocoapods/v/UnIt.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![unit](https://user-images.githubusercontent.com/37081225/52099835-dc273f00-25a2-11e9-8aee-752e5a54554b.png)
+![unit](https://user-images.githubusercontent.com/37081225/61243074-2e08ef00-a715-11e9-89cc-f57435ab0119.png)
 > Oh ma goodness, UnIt is just an absolute unit 🔥🔥🔥 - Anonymous
 
 Unit tests are great for testing business logic and your models. However, it get's a little cumbersome when you are trying to test view specific logic due to boilerplate code, drilling through multiple view layers or UIKit laziness. **UnIt** attempts to ease some of that pain away with helpful extensions on your favourite UIKit classes like **UILabel**, **UIViewController** and more! By having your UI able to be easily validated by unit tests, we can capture visual bugs before we get shamed by our QA department :( 
