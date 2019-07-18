@@ -7,28 +7,7 @@ import UnIt
 class SampleAppSpec: QuickSpec {
     override func spec() {
         var labelSubject: LabelViewController!
-        var constraintBreakSubject: ConstraintBreakViewController!
         var offscreenSubject: OffScreenViewController!
-        
-        describe("View Controller with constraint breaks") {
-            beforeEach {
-                constraintBreakSubject = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Device.iPhone7, Bundle.main, shouldCaptureConstraintBreaks:  true)
-            }
-            
-            context("When the view has finished laying out") {
-                it("should show find all the conflicting constraints") {
-                    expect(constraintBreakSubject.conflictingConstraints).toNot(beEmpty())
-                    expect(constraintBreakSubject.conflictingConstraints.flatMap{ $0 }.count).to(equal(18))
-                }
-            }
-            
-            context("When the view has finished laying out and called again to test swizzling is only called once") {
-                it("should show find all the conflicting constraints") {
-                    expect(constraintBreakSubject.conflictingConstraints).toNot(beEmpty())
-                    expect(constraintBreakSubject.conflictingConstraints.flatMap{ $0 }.count).to(equal(18))
-                }
-            }
-        }
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
