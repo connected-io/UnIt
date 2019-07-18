@@ -1,10 +1,18 @@
+//
+//  VCWithOffscreenViewsSpec.swift
+//  UnIt_SampleAppTests
+//
+//  Created by Amaan Khan on 2019-07-18.
+//  Copyright © 2019 cl-dev. All rights reserved.
+//
+
 import Foundation
 import Nimble
 import Quick
 import UnIt
 @testable import UnIt_SampleApp
 
-class SampleAppSpec: QuickSpec {
+class VCWithOffscreenViewsSpec: QuickSpec {
     override func spec() {
         var offscreenSubject: OffScreenViewController!
         
@@ -29,3 +37,4 @@ class SampleAppSpec: QuickSpec {
         }
     }
 }
+
