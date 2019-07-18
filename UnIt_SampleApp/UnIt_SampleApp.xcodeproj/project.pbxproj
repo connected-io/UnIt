@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51A576FD22E0BCB200093152 /* VCFromStoryboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */; };
 		51A5770122E0BF3A00093152 /* VCFromNibSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */; };
+		51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */; };
 		F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416469121E78F2C006E94EE /* OverlapViewController.swift */; };
 		F416469421E78F2C006E94EE /* OverlapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F416469221E78F2C006E94EE /* OverlapViewController.xib */; };
 		F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1A121E6472C00F2888C /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFromStoryboardSpec.swift; sourceTree = "<group>"; };
 		51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFromNibSpec.swift; sourceTree = "<group>"; };
+		51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithUserInputsSpec.swift; sourceTree = "<group>"; };
 		F416469121E78F2C006E94EE /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
 		F416469221E78F2C006E94EE /* OverlapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlapViewController.xib; sourceTree = "<group>"; };
 		F424F19E21E6472C00F2888C /* UnIt_SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnIt_SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				F424F1D321E647B400F2888C /* SampleAppSpec.swift */,
 				51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */,
 				51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */,
+				51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */,
 			);
 			path = UnIt_SampleAppTests;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				51A576FD22E0BCB200093152 /* VCFromStoryboardSpec.swift in Sources */,
 				F424F1D421E647B400F2888C /* SampleAppSpec.swift in Sources */,
 				51A5770122E0BF3A00093152 /* VCFromNibSpec.swift in Sources */,
+				51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
