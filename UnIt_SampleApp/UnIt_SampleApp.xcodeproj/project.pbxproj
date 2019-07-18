@@ -12,6 +12,7 @@
 		51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */; };
 		51A5770722E0C73200093152 /* VCWithOverlappingElementsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770622E0C73200093152 /* VCWithOverlappingElementsSpec.swift */; };
 		51A5770922E0CA3000093152 /* VCWithConstraintBreaksSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770822E0CA3000093152 /* VCWithConstraintBreaksSpec.swift */; };
+		51A5770B22E0CBA400093152 /* VCWithLabelTruncationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770A22E0CBA400093152 /* VCWithLabelTruncationSpec.swift */; };
 		F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416469121E78F2C006E94EE /* OverlapViewController.swift */; };
 		F416469421E78F2C006E94EE /* OverlapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F416469221E78F2C006E94EE /* OverlapViewController.xib */; };
 		F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1A121E6472C00F2888C /* AppDelegate.swift */; };
@@ -85,6 +86,7 @@
 		51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithUserInputsSpec.swift; sourceTree = "<group>"; };
 		51A5770622E0C73200093152 /* VCWithOverlappingElementsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithOverlappingElementsSpec.swift; sourceTree = "<group>"; };
 		51A5770822E0CA3000093152 /* VCWithConstraintBreaksSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithConstraintBreaksSpec.swift; sourceTree = "<group>"; };
+		51A5770A22E0CBA400093152 /* VCWithLabelTruncationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithLabelTruncationSpec.swift; sourceTree = "<group>"; };
 		F416469121E78F2C006E94EE /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
 		F416469221E78F2C006E94EE /* OverlapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlapViewController.xib; sourceTree = "<group>"; };
 		F424F19E21E6472C00F2888C /* UnIt_SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnIt_SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */,
 				51A5770622E0C73200093152 /* VCWithOverlappingElementsSpec.swift */,
 				51A5770822E0CA3000093152 /* VCWithConstraintBreaksSpec.swift */,
+				51A5770A22E0CBA400093152 /* VCWithLabelTruncationSpec.swift */,
 			);
 			path = UnIt_SampleAppTests;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				51A576FD22E0BCB200093152 /* VCFromStoryboardSpec.swift in Sources */,
 				F424F1D421E647B400F2888C /* SampleAppSpec.swift in Sources */,
 				51A5770122E0BF3A00093152 /* VCFromNibSpec.swift in Sources */,
+				51A5770B22E0CBA400093152 /* VCWithLabelTruncationSpec.swift in Sources */,
 				51A5770722E0C73200093152 /* VCWithOverlappingElementsSpec.swift in Sources */,
 				51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */,
 			);
