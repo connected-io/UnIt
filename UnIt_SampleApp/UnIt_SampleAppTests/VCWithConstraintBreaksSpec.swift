@@ -1,11 +1,3 @@
-//
-//  VCWithConstraintBreaksSpec.swift
-//  UnIt_SampleAppTests
-//
-//  Created by Amaan Khan on 2019-07-18.
-//  Copyright © 2019 cl-dev. All rights reserved.
-//
-
 import Foundation
 import Nimble
 import Quick
