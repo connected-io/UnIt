@@ -52,17 +52,14 @@ class SampleAppSpec: QuickSpec {
                 expect(subject.view.firstVisibleCollectionViewCell(with: "Newfoundland")).to(beNil())
             }
             
-            // NEW
             it("should have it's first list item with text 'Quebec' be of type UITableViewCell") {
                 expect(subject.view.firstListItem(with: "Quebec") is UITableViewCell).to(beTrue())
             }
             
-            // NEW
             it("should not have it's first list item with text 'Quebec' be of type UICollectionViewCell") {
                 expect(subject.view.firstListItem(with: "Quebec") is UICollectionViewCell).to(beFalse())
             }
             
-            // NEW
             it("should not have a list item with 'Newfoundland'") {
                 expect(subject.view.firstListItem(with: "Newfoundland")).to(beNil())
             }
