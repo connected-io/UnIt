@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     
     let statesOfUSAArray = ["Alaska",
                             "Alabama",
-                            "Arkansas",
+                            "Quebec",
                             "American Samoa",
                             "Arizona",
                             "California",
