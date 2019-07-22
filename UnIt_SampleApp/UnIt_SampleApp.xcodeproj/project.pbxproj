@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5199B09B22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B09A22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift */; };
 		51A576FD22E0BCB200093152 /* VCFromStoryboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */; };
 		51A5770122E0BF3A00093152 /* VCFromNibSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */; };
 		51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5199B09A22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingSpec.swift"; sourceTree = "<group>"; };
 		51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFromStoryboardSpec.swift; sourceTree = "<group>"; };
 		51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFromNibSpec.swift; sourceTree = "<group>"; };
 		51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWithUserInputsSpec.swift; sourceTree = "<group>"; };
@@ -180,13 +182,14 @@
 			isa = PBXGroup;
 			children = (
 				F424F1B821E6472E00F2888C /* Info.plist */,
-				51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */,
+				5199B09A22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift */,
 				51A5770022E0BF3A00093152 /* VCFromNibSpec.swift */,
-				51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */,
-				51A5770622E0C73200093152 /* VCWithOverlappingElementsSpec.swift */,
+				51A576FC22E0BCB200093152 /* VCFromStoryboardSpec.swift */,
 				51A5770822E0CA3000093152 /* VCWithConstraintBreaksSpec.swift */,
 				51A5770A22E0CBA400093152 /* VCWithLabelTruncationSpec.swift */,
 				51A5770E22E0CDCB00093152 /* VCWithOffscreenViewsSpec.swift */,
+				51A5770622E0C73200093152 /* VCWithOverlappingElementsSpec.swift */,
+				51A5770222E0C37800093152 /* VCWithUserInputsSpec.swift */,
 			);
 			path = UnIt_SampleAppTests;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				51A5770122E0BF3A00093152 /* VCFromNibSpec.swift in Sources */,
 				51A5770B22E0CBA400093152 /* VCWithLabelTruncationSpec.swift in Sources */,
 				51A5770722E0C73200093152 /* VCWithOverlappingElementsSpec.swift in Sources */,
+				5199B09B22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift in Sources */,
 				51A5770322E0C37800093152 /* VCWithUserInputsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -72,12 +72,19 @@ public extension UIViewController {
      - returns: Your custom view controller from storyboard.
      */
 
-    static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(_ storyboardName: String, _ identifier: String? = nil, _ device: Device, _ bundle: Bundle = Bundle.main, shouldCaptureConstraintBreaks: Bool = false) -> T {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
-        let vcTypeName = String(describing: self)
-        let vcIdentifier = identifier ?? vcTypeName
+    static func loadAndSetupViewControllerFromStoryboard<T: UIViewController>(
+        _ storyboardName: String,
+        _ identifier: String? = nil,
+        _ device: Device,
+        _ bundle: Bundle? = nil,
+        shouldCaptureConstraintBreaks: Bool = false) -> T {
         
-        let viewController = storyboard.instantiateViewController(withIdentifier: vcIdentifier) as! T
+        let viewController: T = T.loadFromStoryboard(
+            named: storyboardName,
+            withIdentifier: identifier,
+            bundle: bundle
+        )
+        
         if (shouldCaptureConstraintBreaks) {
             viewController.setupToCaptureConflictingConstraints()
         }
@@ -96,8 +103,18 @@ public extension UIViewController {
      - returns: Your custom view controller from xib.
      */
 
-    static func loadAndSetupViewControllerFromNib<T: UIViewController>(_ nibName: String, _ klass: T.Type, _ device: Device, _ bundle: Bundle = Bundle.main, shouldCaptureConstraintBreaks: Bool = false) -> T {
-        let viewController = klass.init(nibName: nibName, bundle: bundle)
+    static func loadAndSetupViewControllerFromNib<T: UIViewController>(
+        _ nibName: String,
+        _ klass: T.Type,
+        _ device: Device,
+        _ bundle: Bundle? = nil,
+        shouldCaptureConstraintBreaks: Bool = false) -> T {
+        
+        let viewController: T = T.loadFromNib(
+            named: nibName,
+            bundle: bundle
+        )
+        
         if (shouldCaptureConstraintBreaks) {
             viewController.setupToCaptureConflictingConstraints()
         }

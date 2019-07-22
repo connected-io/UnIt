@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5199B09D22E60426004AB6B0 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */; };
 		F43233CE21E8E502002ABCA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43233CD21E8E502002ABCA3 /* XCTest.framework */; };
 		F489F838228C63E7001622F0 /* UIView+Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F82E228C63E7001622F0 /* UIView+Overlap.swift */; };
 		F489F839228C63E7001622F0 /* UIViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		F43233CD21E8E502002ABCA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F489F82E228C63E7001622F0 /* UIView+Overlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Overlap.swift"; sourceTree = "<group>"; };
 		F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraints.swift"; sourceTree = "<group>"; };
@@ -61,16 +63,17 @@
 		F489F82D228C63E7001622F0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F489F82E228C63E7001622F0 /* UIView+Overlap.swift */,
-				F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */,
+				F489F836228C63E7001622F0 /* CGFloat+Precision.swift */,
 				F489F830228C63E7001622F0 /* UIControl+UserAction.swift */,
 				F489F831228C63E7001622F0 /* UILabel+Inspection.swift */,
-				F489F832228C63E7001622F0 /* UIViewController+Setup.swift */,
-				F489F833228C63E7001622F0 /* UIView+Inspection.swift */,
-				F489F834228C63E7001622F0 /* UIView+Finding.swift */,
-				F489F835228C63E7001622F0 /* UIViewController+Inspection.swift */,
-				F489F836228C63E7001622F0 /* CGFloat+Precision.swift */,
 				F489F837228C63E7001622F0 /* UITextField+UserAction.swift */,
+				F489F834228C63E7001622F0 /* UIView+Finding.swift */,
+				F489F833228C63E7001622F0 /* UIView+Inspection.swift */,
+				F489F82E228C63E7001622F0 /* UIView+Overlap.swift */,
+				F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */,
+				F489F835228C63E7001622F0 /* UIViewController+Inspection.swift */,
+				5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */,
+				F489F832228C63E7001622F0 /* UIViewController+Setup.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5199B09D22E60426004AB6B0 /* UIViewController+Loading.swift in Sources */,
 				F489F83F228C63E7001622F0 /* UIViewController+Inspection.swift in Sources */,
 				F489F83B228C63E7001622F0 /* UILabel+Inspection.swift in Sources */,
 				F489F838228C63E7001622F0 /* UIView+Overlap.swift in Sources */,
