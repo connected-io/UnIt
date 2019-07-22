@@ -9,22 +9,18 @@ public extension UIControl {
             XCTFail("Control cannot be hidden.")
             return
         }
-        
         if (!isEnabled) {
             XCTFail("Control cannot be disabled.")
             return
         }
-        
         if (bounds.size.width == 0) {
             XCTFail("Control cannot have width of 0.")
             return
         }
-        
         if (bounds.size.height == 0) {
             XCTFail("Control cannot have height of 0.")
             return
         }
-        
         sendActions(for: .touchUpInside)
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import XCTest
 
 public extension UIViewController {
     static func loadFromNib<T: UIViewController>(named nibName: String? = nil, bundle: Bundle? = nil) -> T {

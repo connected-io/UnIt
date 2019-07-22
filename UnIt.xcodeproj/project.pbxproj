@@ -8,33 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		5199B09D22E60426004AB6B0 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */; };
+		5199B0A722E6319E004AB6B0 /* UIView+Finding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B0A622E6319E004AB6B0 /* UIView+Finding.swift */; };
+		5199B0A922E63397004AB6B0 /* UIView+SubviewBounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B0A822E63397004AB6B0 /* UIView+SubviewBounding.swift */; };
+		5199B0AB22E634DE004AB6B0 /* CGSize+Comparing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B0AA22E634DE004AB6B0 /* CGSize+Comparing.swift */; };
+		5199B0AD22E6395C004AB6B0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B0AC22E6395C004AB6B0 /* Device.swift */; };
 		F43233CE21E8E502002ABCA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43233CD21E8E502002ABCA3 /* XCTest.framework */; };
 		F489F838228C63E7001622F0 /* UIView+Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F82E228C63E7001622F0 /* UIView+Overlap.swift */; };
 		F489F839228C63E7001622F0 /* UIViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */; };
-		F489F83A228C63E7001622F0 /* UIControl+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F830228C63E7001622F0 /* UIControl+UserAction.swift */; };
-		F489F83B228C63E7001622F0 /* UILabel+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F831228C63E7001622F0 /* UILabel+Inspection.swift */; };
+		F489F83A228C63E7001622F0 /* UIControl+UserInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F830228C63E7001622F0 /* UIControl+UserInteracting.swift */; };
+		F489F83B228C63E7001622F0 /* UILabel+Inspecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F831228C63E7001622F0 /* UILabel+Inspecting.swift */; };
 		F489F83C228C63E7001622F0 /* UIViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F832228C63E7001622F0 /* UIViewController+Setup.swift */; };
-		F489F83D228C63E7001622F0 /* UIView+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F833228C63E7001622F0 /* UIView+Inspection.swift */; };
-		F489F83E228C63E7001622F0 /* UIView+Finding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F834228C63E7001622F0 /* UIView+Finding.swift */; };
+		F489F83D228C63E7001622F0 /* UIView+Inspecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F833228C63E7001622F0 /* UIView+Inspecting.swift */; };
+		F489F83E228C63E7001622F0 /* UIView+FindingBasedOnText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F834228C63E7001622F0 /* UIView+FindingBasedOnText.swift */; };
 		F489F83F228C63E7001622F0 /* UIViewController+Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F835228C63E7001622F0 /* UIViewController+Inspection.swift */; };
 		F489F840228C63E7001622F0 /* CGFloat+Precision.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F836228C63E7001622F0 /* CGFloat+Precision.swift */; };
-		F489F841228C63E7001622F0 /* UITextField+UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F837228C63E7001622F0 /* UITextField+UserAction.swift */; };
+		F489F841228C63E7001622F0 /* UITextField+UserInputting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F837228C63E7001622F0 /* UITextField+UserInputting.swift */; };
 		F4E5A15821FF855B00AD4FEB /* UnIt.h in Headers */ = {isa = PBXBuildFile; fileRef = F4E5A15721FF855B00AD4FEB /* UnIt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		5199B0A622E6319E004AB6B0 /* UIView+Finding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Finding.swift"; sourceTree = "<group>"; };
+		5199B0A822E63397004AB6B0 /* UIView+SubviewBounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SubviewBounding.swift"; sourceTree = "<group>"; };
+		5199B0AA22E634DE004AB6B0 /* CGSize+Comparing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Comparing.swift"; sourceTree = "<group>"; };
+		5199B0AC22E6395C004AB6B0 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F43233CD21E8E502002ABCA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F489F82E228C63E7001622F0 /* UIView+Overlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Overlap.swift"; sourceTree = "<group>"; };
 		F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraints.swift"; sourceTree = "<group>"; };
-		F489F830228C63E7001622F0 /* UIControl+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+UserAction.swift"; sourceTree = "<group>"; };
-		F489F831228C63E7001622F0 /* UILabel+Inspection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspection.swift"; sourceTree = "<group>"; };
+		F489F830228C63E7001622F0 /* UIControl+UserInteracting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+UserInteracting.swift"; sourceTree = "<group>"; };
+		F489F831228C63E7001622F0 /* UILabel+Inspecting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspecting.swift"; sourceTree = "<group>"; };
 		F489F832228C63E7001622F0 /* UIViewController+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Setup.swift"; sourceTree = "<group>"; };
-		F489F833228C63E7001622F0 /* UIView+Inspection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspection.swift"; sourceTree = "<group>"; };
-		F489F834228C63E7001622F0 /* UIView+Finding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Finding.swift"; sourceTree = "<group>"; };
+		F489F833228C63E7001622F0 /* UIView+Inspecting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspecting.swift"; sourceTree = "<group>"; };
+		F489F834228C63E7001622F0 /* UIView+FindingBasedOnText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FindingBasedOnText.swift"; sourceTree = "<group>"; };
 		F489F835228C63E7001622F0 /* UIViewController+Inspection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Inspection.swift"; sourceTree = "<group>"; };
 		F489F836228C63E7001622F0 /* CGFloat+Precision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Precision.swift"; sourceTree = "<group>"; };
-		F489F837228C63E7001622F0 /* UITextField+UserAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+UserAction.swift"; sourceTree = "<group>"; };
+		F489F837228C63E7001622F0 /* UITextField+UserInputting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+UserInputting.swift"; sourceTree = "<group>"; };
 		F4DCE11821E64399009EBE61 /* UnIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E0917C21FBB22B00A2C3DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E5A15721FF855B00AD4FEB /* UnIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnIt.h; sourceTree = "<group>"; };
@@ -64,12 +72,16 @@
 			isa = PBXGroup;
 			children = (
 				F489F836228C63E7001622F0 /* CGFloat+Precision.swift */,
-				F489F830228C63E7001622F0 /* UIControl+UserAction.swift */,
-				F489F831228C63E7001622F0 /* UILabel+Inspection.swift */,
-				F489F837228C63E7001622F0 /* UITextField+UserAction.swift */,
-				F489F834228C63E7001622F0 /* UIView+Finding.swift */,
-				F489F833228C63E7001622F0 /* UIView+Inspection.swift */,
+				5199B0AA22E634DE004AB6B0 /* CGSize+Comparing.swift */,
+				5199B0AC22E6395C004AB6B0 /* Device.swift */,
+				F489F830228C63E7001622F0 /* UIControl+UserInteracting.swift */,
+				F489F831228C63E7001622F0 /* UILabel+Inspecting.swift */,
+				F489F837228C63E7001622F0 /* UITextField+UserInputting.swift */,
+				5199B0A622E6319E004AB6B0 /* UIView+Finding.swift */,
+				F489F834228C63E7001622F0 /* UIView+FindingBasedOnText.swift */,
+				F489F833228C63E7001622F0 /* UIView+Inspecting.swift */,
 				F489F82E228C63E7001622F0 /* UIView+Overlap.swift */,
+				5199B0A822E63397004AB6B0 /* UIView+SubviewBounding.swift */,
 				F489F82F228C63E7001622F0 /* UIViewController+Constraints.swift */,
 				F489F835228C63E7001622F0 /* UIViewController+Inspection.swift */,
 				5199B09C22E60426004AB6B0 /* UIViewController+Loading.swift */,
@@ -186,15 +198,19 @@
 			files = (
 				5199B09D22E60426004AB6B0 /* UIViewController+Loading.swift in Sources */,
 				F489F83F228C63E7001622F0 /* UIViewController+Inspection.swift in Sources */,
-				F489F83B228C63E7001622F0 /* UILabel+Inspection.swift in Sources */,
+				5199B0A922E63397004AB6B0 /* UIView+SubviewBounding.swift in Sources */,
+				F489F83B228C63E7001622F0 /* UILabel+Inspecting.swift in Sources */,
 				F489F838228C63E7001622F0 /* UIView+Overlap.swift in Sources */,
-				F489F83D228C63E7001622F0 /* UIView+Inspection.swift in Sources */,
+				F489F83D228C63E7001622F0 /* UIView+Inspecting.swift in Sources */,
 				F489F839228C63E7001622F0 /* UIViewController+Constraints.swift in Sources */,
-				F489F83A228C63E7001622F0 /* UIControl+UserAction.swift in Sources */,
+				5199B0A722E6319E004AB6B0 /* UIView+Finding.swift in Sources */,
+				F489F83A228C63E7001622F0 /* UIControl+UserInteracting.swift in Sources */,
+				5199B0AD22E6395C004AB6B0 /* Device.swift in Sources */,
 				F489F840228C63E7001622F0 /* CGFloat+Precision.swift in Sources */,
 				F489F83C228C63E7001622F0 /* UIViewController+Setup.swift in Sources */,
-				F489F841228C63E7001622F0 /* UITextField+UserAction.swift in Sources */,
-				F489F83E228C63E7001622F0 /* UIView+Finding.swift in Sources */,
+				F489F841228C63E7001622F0 /* UITextField+UserInputting.swift in Sources */,
+				F489F83E228C63E7001622F0 /* UIView+FindingBasedOnText.swift in Sources */,
+				5199B0AB22E634DE004AB6B0 /* CGSize+Comparing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

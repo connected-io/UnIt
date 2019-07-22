@@ -24,9 +24,9 @@ class VCWithUserInputsSpec: QuickSpec {
             }
             
             it("should have 3 hidden buttons") {
-                expect(actionSubject.firstHiddenButton.isTrulyVisible()).to(beFalse())
-                expect(actionSubject.secondHiddenButton.isTrulyVisible()).to(beFalse())
-                expect(actionSubject.buttonInHiddenView.isTrulyVisible()).to(beFalse())
+                expect(actionSubject.firstHiddenButton.isTrulyVisible).to(beFalse())
+                expect(actionSubject.secondHiddenButton.isTrulyVisible).to(beFalse())
+                expect(actionSubject.buttonInHiddenView.isTrulyVisible).to(beFalse())
             }
             
             context("When the user taps the action button - simulating the user tapping a button") {
