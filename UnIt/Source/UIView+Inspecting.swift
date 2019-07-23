@@ -35,5 +35,4 @@ public extension UIView {
     func isEquivalentSizeTo(_ rect: CGRect, precision: Int = 2) -> Bool {
         return bounds.size.isEquivalentTo(otherSize: rect.size)
     }
-    
 }
