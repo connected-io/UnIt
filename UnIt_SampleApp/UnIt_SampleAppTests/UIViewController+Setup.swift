@@ -4,7 +4,7 @@ import Quick
 import UnIt
 @testable import UnIt_SampleApp
 
-class UIViewControllerSetup: QuickSpec {
+class UIViewControllerSetupSpec: QuickSpec {
     override func spec() {
         var vcFromNib : NibViewController!
         var vcFromStoryboard: ViewController!
