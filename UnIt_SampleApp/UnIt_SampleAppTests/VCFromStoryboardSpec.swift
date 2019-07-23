@@ -13,11 +13,6 @@ class VCFromStoryboardSpec: QuickSpec {
                 subject = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
             }
             
-            it("should not be nil") {
-                expect(subject).notTo(beNil())
-                expect(subject.view).notTo(beNil())
-            }
-            
             it("should have a label that has 'Connected.'") {
                 expect(subject.view.firstLabel(with: "Connected.")).notTo(beNil())
             }

@@ -13,11 +13,6 @@ class VCFromNibSpec: QuickSpec {
                 subject = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self, Device.iPhoneXS)
             }
             
-            it("should not be nil") {
-                expect(subject).notTo(beNil())
-                expect(subject.view).notTo(beNil())
-            }
-            
             it("should have a label that has text: 'Top View Controller Label'") {
                 expect(subject.view.firstLabel(with: "Top View Controller Label")).notTo(beNil())
             }
