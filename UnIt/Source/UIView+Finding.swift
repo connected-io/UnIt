@@ -2,6 +2,10 @@ protocol TextTestable {
     var testableText: String { get }
 }
 
+public protocol ListItem { }
+extension UICollectionViewCell: ListItem { }
+extension UITableViewCell: ListItem { }
+
 extension UIView : TextTestable {
     var testableText: String {
         if let label = self as? UILabel {
@@ -73,6 +77,16 @@ public extension UIView {
             }
             return test(typedView)
             } as? T
+    }
+    
+    func firstListItem(with text: String) -> ListItem? {
+        return firstView { view in
+            if view is ListItem {
+                return view.firstLabel(with: text) != nil
+            } else {
+                return false
+            }
+        } as? ListItem
     }
     
     /**
