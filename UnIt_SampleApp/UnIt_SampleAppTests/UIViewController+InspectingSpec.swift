@@ -33,7 +33,6 @@ class UIViewControllerInspectingSpec: QuickSpec {
                 vcWithOverlappingElements = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
             }
             
-            // TODO-AK
             context("When the view has finished laying out") {
                 it("should show find all the conflicting constraints") {
                     expect(vcWithOverlappingElements.conflictingConstraints).to(beEmpty())
