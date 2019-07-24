@@ -29,10 +29,10 @@ public extension UIView {
      - returns: A true/false on whether the 2 sizes are equivalent up to 2 decimal places.
      */
     func isEquivalentSizeTo(otherView: UIView, precision: Int = 2) -> Bool {
-        return bounds.size.isEquivalentTo(otherSize: otherView.bounds.size)
+        return bounds.size.isEqualTo(otherSize: otherView.bounds.size)
     }
     
     func isEquivalentSizeTo(_ rect: CGRect, precision: Int = 2) -> Bool {
-        return bounds.size.isEquivalentTo(otherSize: rect.size)
+        return bounds.size.isEqualTo(otherSize: rect.size)
     }
 }
