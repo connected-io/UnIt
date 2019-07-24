@@ -73,7 +73,7 @@ public extension UIView {
      */
     private func findOverlappingProvidedSubviews(subviews: [UIView]) -> [Set<UIView>:CGRect] {
         var overlapDictionary = [UIView:Set<UIView>]()
-        let subviews = subviews.filter{ $0 != self && !$0.isScrollIndicator() && $0.isTrulyVisible() }
+        let subviews = subviews.filter{ $0 != self && !$0.isScrollIndicator() && $0.isTrulyVisible }
         
         // Put all the subviews in a hash table and their overlapping views that are not subviews.
         for subject in subviews {
