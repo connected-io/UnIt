@@ -1,10 +1,9 @@
-import Foundation
 import Nimble
 import Quick
 import UnIt
 @testable import UnIt_SampleApp
 
-class VCWithConstraintBreaksSpec: QuickSpec {
+class UIViewControllerConstraintsSpec: QuickSpec {
     override func spec() {
         var loadedVc: ConstraintBreakViewController!
         
