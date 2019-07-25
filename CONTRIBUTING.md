@@ -12,7 +12,7 @@ Welcome friend – we're glad that you're thinking about contributing to _UnIt_.
 
 
 
-## How do I ...
+# So, how do I ...
 
 - [View or Add Work to Backlog](#view-or-add-work-to-backlog)
   - [Requesting Features or Enhancements](#requesting-features-or-enhancements)
