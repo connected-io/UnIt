@@ -10,7 +10,7 @@ class DeviceSpec: QuickSpec {
         var subjectScaleFactor: CGFloat!
         var loadedVc: NibViewController!
         
-        fdescribe("Loading a view controller") {
+        describe("Loading a view controller") {
             beforeEach {
                 subject = nil
                 subjectFrame = nil
