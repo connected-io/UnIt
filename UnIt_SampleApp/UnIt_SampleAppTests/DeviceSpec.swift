@@ -5,81 +5,61 @@ import UnIt
 
 class DeviceSpec: QuickSpec {
     override func spec() {
-        var subject: Device!
-        var subjectFrame: CGSize!
-        var subjectScaleFactor: CGFloat!
-        var loadedVc: NibViewController!
         
-        describe("Loading a view controller") {
+        fdescribe("Accessing the dimensions of the device") {
+            var subject: Device!
+            
             beforeEach {
                 subject = nil
-                subjectFrame = nil
-                subjectScaleFactor =  nil
-                loadedVc = nil
             }
             
-            it("should have the root view's frame's size equal to the iPhoneSE's screensize, and root view's contentScaleFactor equal to the iPhoneSE's scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhoneSE") {
                 subject = .iPhoneSE
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 320, height: 568)))
+                expect(dimensions.scaleFactor).to(equal(2.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhone6 screensize, and root view's contentScaleFactor equal to the iPhone6 scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhone6") {
                 subject = .iPhone6
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 375, height: 667)))
+                expect(dimensions.scaleFactor).to(equal(2.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhone6Plus' screensize, and root view's contentScaleFactor equal to the iPhone6Plus' scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhone6Plus") {
                 subject = .iPhone6Plus
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 375, height: 667)))
+                expect(dimensions.scaleFactor).to(equal(3.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhone7Plus' screensize, and root view's contentScaleFactor equal to the iPhone7Plus' scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhone7Plus") {
                 subject = .iPhone7Plus
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 414, height: 736)))
+                expect(dimensions.scaleFactor).to(equal(3.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhoneX's screensize, and root view's contentScaleFactor equal to the iPhoneX's scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhoneX") {
                 subject = .iPhoneX
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
-
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 375, height: 812)))
+                expect(dimensions.scaleFactor).to(equal(3.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhoneXR's screensize, and root view's contentScaleFactor equal to the iPhoneXR's scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhoneXR") {
                 subject = .iPhoneXR
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 414, height: 896)))
+                expect(dimensions.scaleFactor).to(equal(2.0))
             }
             
-            it("should have the root view's frame's size equal to the iPhoneXSMax's screensize, and root view's contentScaleFactor equal to the iPhoneXSMax's scaleFactor") {
+            it("should return the correct tuple consisting of size and scale factor for iPhoneXSMax") {
                 subject = .iPhoneXSMax
-                subjectFrame = subject.dimensions.screensize
-                subjectScaleFactor = subject.dimensions.scaleFactor
-                loadedVc = ViewController.loadAndSetupViewControllerFromNib(String(describing: NibViewController.self), NibViewController.self, subject)
-                expect(loadedVc.view.frame.size).to(equal(subjectFrame))
-                expect(loadedVc.view.contentScaleFactor).to(equal(subjectScaleFactor))
+                let dimensions = subject.dimensions
+                expect(dimensions.screensize).to(equal(CGSize(width: 414, height: 896)))
+                expect(dimensions.scaleFactor).to(equal(3.0))
             }
         }
     }
