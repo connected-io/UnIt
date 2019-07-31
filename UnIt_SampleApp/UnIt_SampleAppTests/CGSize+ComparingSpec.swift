@@ -19,9 +19,9 @@ class CGSizeComparingSpec: QuickSpec {
                 expect(size.isRoughlyEqualTo(otherSize: otherSize, precision: 2)).to(beTruthy())
             }
             
-            it("should return true if other size is the same width and height, when zero decimal places is specified") {
-                size = CGSize(width: 200.54, height: 12.923509)
-                otherSize = CGSize(width: 200.54, height: 12.923509)
+            it("should return true if other size is the same width and height, when low precision is specified") {
+                size = CGSize(width: 200, height: 12)
+                otherSize = CGSize(width: 200, height: 12)
                 expect(size.isRoughlyEqualTo(otherSize: otherSize, precision: 0)).to(beTruthy())
             }
             
