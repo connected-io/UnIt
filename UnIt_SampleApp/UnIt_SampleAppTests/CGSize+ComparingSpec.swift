@@ -5,7 +5,7 @@ import UnIt
 
 class CGSizeComparingSpec: QuickSpec {
     override func spec() {
-        fdescribe("Comparing this size to other size") {
+        describe("Comparing this size to other size") {
             var size: CGSize!
             var otherSize: CGSize!
             
@@ -25,15 +25,19 @@ class CGSizeComparingSpec: QuickSpec {
                 expect(size.isRoughlyEqualTo(otherSize: otherSize, precision: 0)).to(beTruthy())
             }
             
-            it("should be able to match zero sizes, when high degree of precision is specified") {
-                size = CGSize(width: 0, height: 0)
-                otherSize = CGSize(width: 0, height: 0)
+            it("should be able to match zero sizes") {
+                expect(CGSize.zero.isRoughlyEqualTo(otherSize: CGSize(width: 0, height: 0), precision: 2)).to(beTruthy())
+            }
+            
+            it("should be able to match zero widths") {
+                size = CGSize(width: 0, height: 423.43)
+                otherSize = CGSize(width: 0, height: 423.43)
                 expect(size.isRoughlyEqualTo(otherSize: otherSize, precision: 2)).to(beTruthy())
             }
             
-            it("should be able to match zero widths and zero heights, when high degree of precision is specified") {
-                size = CGSize(width: 0, height: 423.43)
-                otherSize = CGSize(width: 0, height: 423.43)
+            it("should be able to match zero heights") {
+                size = CGSize(width: 2423.34, height: 0)
+                otherSize = CGSize(width: 2423.34, height: 0)
                 expect(size.isRoughlyEqualTo(otherSize: otherSize, precision: 2)).to(beTruthy())
             }
             
