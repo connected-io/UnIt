@@ -28,11 +28,11 @@ public extension UIView {
      - secondSize: a **CGSize** of the second view.
      - returns: A true/false on whether the 2 sizes are equivalent up to 2 decimal places.
      */
-    func isEquivalentSizeTo(otherView: UIView, precision: Int = 2) -> Bool {
-        return bounds.size.isEquivalentTo(otherSize: otherView.bounds.size)
+    func isSizeRoughlyEqualTo(otherView: UIView, precision: Int = 2) -> Bool {
+        return bounds.size.isRoughlyEqualTo(otherSize: otherView.bounds.size)
     }
     
-    func isEquivalentSizeTo(_ rect: CGRect, precision: Int = 2) -> Bool {
-        return bounds.size.isEquivalentTo(otherSize: rect.size)
+    func isSizeRoughlyEqualTo(_ rect: CGRect, precision: Int = 2) -> Bool {
+        return bounds.size.isRoughlyEqualTo(otherSize: rect.size)
     }
 }

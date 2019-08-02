@@ -17,7 +17,7 @@ public enum Device {
     case iPhoneXS
     case iPhoneXSMax
     
-    var dimensions: (screensize: CGSize, scaleFactor: CGFloat) {
+    public var dimensions: (screensize: CGSize, scaleFactor: CGFloat) {
         switch self {
         case .iPhoneSE:
             return (CGSize(width: 320, height: 568), 2.0)
