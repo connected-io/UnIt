@@ -6,13 +6,11 @@ public extension UIView {
      - Note: Taken from an Objective-C library called PivotalCoreKit: https://github.com/pivotal-legacy/PivotalCoreKit/blob/master/UIKit/SpecHelper/Extensions/UIControl%2BSpec.m
      */
     var isTrulyVisible: Bool {
-        if isHidden {
-            return false
-        }
-        if alpha == 0 {
-            return false
-        }
-        if frame.size.width == 0 || frame.size.height == 0 {
+        if
+            isHidden ||
+            alpha == 0 ||
+            frame.size.width == 0 ||
+            frame.size.height == 0 {
             return false
         }
         if let superview = self.superview {
@@ -32,7 +30,7 @@ public extension UIView {
         return bounds.size.isRoughlyEqualTo(otherSize: otherView.bounds.size)
     }
     
-    func isSizeRoughlyEqualTo(_ rect: CGRect, precision: Int = 2) -> Bool {
+    func isSizeRoughlyEqualTo(rect: CGRect, precision: Int = 2) -> Bool {
         return bounds.size.isRoughlyEqualTo(otherSize: rect.size)
     }
 }

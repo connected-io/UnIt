@@ -106,4 +106,3 @@ class DeviceSpec: QuickSpec {
         }
     }
 }
-
