@@ -10,7 +10,7 @@ public extension UIView {
     func subviewsOutOfBounds() -> [UIView] {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
-            return !subview.isSizeRoughlyEqualTo(rect)
+            return !subview.isSizeRoughlyEqualTo(rect: rect)
         }
     }
     
@@ -22,7 +22,7 @@ public extension UIView {
         return views(ofType: UIView.self) { subview in
             let rect = self.findOverlappedArea(with: subview)
             return self != subview &&
-                subview.isSizeRoughlyEqualTo(rect) && rect.size != CGSize.zero
+                subview.isSizeRoughlyEqualTo(rect: rect) && rect.size != CGSize.zero
         }
     }
     
