@@ -10,7 +10,8 @@ class UIViewControllerInspectingSpec: QuickSpec {
         
         describe("View Controller with views offscreen") {
             beforeEach {
-                vcWithOffscreenElements = UIViewController.loadAndSetupViewControllerFromNib("OffScreenViewController", OffScreenViewController.self, Device.iPhone7)
+                vcWithOffscreenElements = UIViewController.loadFromNib(named: "OffScreenViewController")
+                vcWithOffscreenElements.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             context("When there are offscreen elements") {
@@ -30,7 +31,8 @@ class UIViewControllerInspectingSpec: QuickSpec {
         
         describe("View Controller with overlapping elements") {
             beforeEach {
-                vcWithOverlappingElements = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
+                vcWithOverlappingElements = UIViewController.loadFromNib(named: "OverlapViewController")
+                vcWithOverlappingElements.runViewLifecycle(for: .iPhone6)
             }
             
             context("When the view has finished laying out") {
@@ -70,7 +72,8 @@ class UIViewControllerInspectingSpec: QuickSpec {
         
         describe("View Controller with sibling overlaps and various whitelist methods") {
             beforeEach {
-                vcWithOverlappingElements = UIViewController.loadAndSetupViewControllerFromNib("OverlapViewController", OverlapViewController.self, Device.iPhone6)
+                vcWithOverlappingElements = UIViewController.loadFromNib(named: "OverlapViewController")
+                vcWithOverlappingElements.runViewLifecycle(for: .iPhone6)
             }
             
             context("When the view has finished laying out") {

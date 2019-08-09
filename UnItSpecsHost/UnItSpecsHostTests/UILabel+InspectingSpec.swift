@@ -9,7 +9,8 @@ class UILabelInspectingSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhone8)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhone8)
             }
             
             context("When the view has finished laying out") {
@@ -45,7 +46,8 @@ class UILabelInspectingSpec: QuickSpec {
     
         describe("View Controller with untruncated and truncated labels on the largest possible iPhone to test screen sizes") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             context("when the labels are set") {
@@ -57,7 +59,8 @@ class UILabelInspectingSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels on the smallest possible iPhone to test screen sizes") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneSE)
             }
             
             context("when the labels are set") {

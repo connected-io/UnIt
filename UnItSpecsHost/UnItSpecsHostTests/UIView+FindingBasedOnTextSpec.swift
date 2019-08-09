@@ -9,7 +9,8 @@ class UIViewTextBasedFindingSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "StoryboardedViewController", Device.iPhoneXSMax)
+                loadedVc = UIViewController.loadFromStoryboard(named: "Main", withIdentifier: "ViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             it("should have a label that has 'Connected.'") {

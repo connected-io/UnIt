@@ -10,7 +10,8 @@ class UIViewControllerSetupSpec: QuickSpec {
         
         describe("ViewController from nib") {
             beforeEach() {
-                vcFromNib = UIViewController.loadAndSetupViewControllerFromNib("EmbeddingViewController", EmbeddingViewController.self, Device.iPhoneXS)
+                vcFromNib = UIViewController.loadFromNib(named: "NibViewController")
+                vcFromNib.runViewLifecycle(for: .iPhoneXS)
             }
             
             it("should not be nil") {
@@ -29,7 +30,8 @@ class UIViewControllerSetupSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                vcFromStoryboard = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "StoryboardedViewController", Device.iPhoneXSMax)
+                vcFromStoryboard = UIViewController.loadFromStoryboard(named: "Main")
+                vcFromStoryboard.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             it("should not be nil") {
