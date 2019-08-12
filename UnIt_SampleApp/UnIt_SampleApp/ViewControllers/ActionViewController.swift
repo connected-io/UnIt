@@ -14,6 +14,7 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var secondHiddenButton: UIButton!
     @IBOutlet weak var hiddenViewThatContainsButton: UIView!
     @IBOutlet weak var buttonInHiddenView: UIButton!
+    @IBOutlet weak var zeroWidthButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
