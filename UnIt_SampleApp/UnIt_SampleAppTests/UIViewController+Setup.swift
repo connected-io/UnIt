@@ -17,6 +17,14 @@ class UIViewControllerSetupSpec: QuickSpec {
                 expect(vcFromNib).notTo(beNil())
                 expect(vcFromNib.view).notTo(beNil())
             }
+            
+            it("should have run its lifecycle") {
+                expect(vcFromNib.lifecycle.contains(.didLoad)).to(beTrue())
+                expect(vcFromNib.lifecycle.contains(.willAppear)).to(beTrue())
+                expect(vcFromNib.lifecycle.contains(.willLayoutSubviews)).to(beTrue())
+                expect(vcFromNib.lifecycle.contains(.didLayoutSubviews)).to(beTrue())
+                expect(vcFromNib.lifecycle.contains(.didAppear)).to(beTrue())
+            }
         }
         
         describe("ViewController from storyboard") {
