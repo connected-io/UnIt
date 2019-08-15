@@ -5,12 +5,12 @@ import UnIt
 
 class UIViewControllerSetupSpec: QuickSpec {
     override func spec() {
-        var vcFromNib : NibViewController!
-        var vcFromStoryboard: ViewController!
+        var vcFromNib : EmbeddingViewController!
+        var vcFromStoryboard: StoryboardedViewController!
         
         describe("ViewController from nib") {
             beforeEach() {
-                vcFromNib = UIViewController.loadAndSetupViewControllerFromNib("NibViewController", NibViewController.self, Device.iPhoneXS)
+                vcFromNib = UIViewController.loadAndSetupViewControllerFromNib("EmbeddingViewController", EmbeddingViewController.self, Device.iPhoneXS)
             }
             
             it("should not be nil") {
@@ -21,7 +21,7 @@ class UIViewControllerSetupSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                vcFromStoryboard = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
+                vcFromStoryboard = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "StoryboardedViewController", Device.iPhoneXSMax)
             }
             
             it("should not be nil") {

@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class StoryboardedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var torontoLabel: UILabel!
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension StoryboardedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return statesOfUSAArray.count
     }
@@ -107,7 +107,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension StoryboardedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-class NibBottomViewController: UIViewController {
+class BottomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

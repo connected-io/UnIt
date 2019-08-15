@@ -1,13 +1,13 @@
 import Foundation
 import UIKit
 
-class NibViewController: UIViewController {
+class EmbeddingViewController: UIViewController {
     
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var bottomContainerView: UIView!
     
-    let topViewController = NibTopViewController(nibName: "NibTopViewController", bundle: Bundle.main)
-    let bottomViewController = NibBottomViewController(nibName: "NibBottomViewController", bundle: Bundle.main)
+    let topViewController = TopViewController(nibName: "TopViewController", bundle: Bundle.main)
+    let bottomViewController = BottomViewController(nibName: "BottomViewController", bundle: Bundle.main)
     
     override func viewDidLoad() {
         super.viewDidLoad()
