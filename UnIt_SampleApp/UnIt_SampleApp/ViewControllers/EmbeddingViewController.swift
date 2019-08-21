@@ -11,16 +11,16 @@ struct Lifecycle: OptionSet {
     static let didAppear = Lifecycle(rawValue: 1 << 4)
 }
 
-class NibViewController: UIViewController {
+class EmbeddingViewController: UIViewController {
     
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var bottomContainerView: UIView!
     
     // tracking which view lifecycle calls have been made
     var lifecycle = Lifecycle(rawValue: 0)
-    
-    let topViewController = NibTopViewController(nibName: "NibTopViewController", bundle: Bundle.main)
-    let bottomViewController = NibBottomViewController(nibName: "NibBottomViewController", bundle: Bundle.main)
+
+    let topViewController = TopViewController(nibName: "TopViewController", bundle: Bundle.main)
+    let bottomViewController = BottomViewController(nibName: "BottomViewController", bundle: Bundle.main)
     
     override func viewDidLoad() {
         super.viewDidLoad()
