@@ -1,7 +1,7 @@
 import Nimble
 import Quick
 import UnIt
-@testable import UnIt_SampleApp
+@testable import UnItSpecsHost
 
 class UITextFieldUserInputtingSpec: QuickSpec {
     override func spec() {

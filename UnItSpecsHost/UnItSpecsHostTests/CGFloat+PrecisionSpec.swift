@@ -1,7 +1,7 @@
 import Nimble
 import Quick
 import UnIt
-@testable import UnIt_SampleApp
+@testable import UnItSpecsHost
 
 class CGFloatPrecisionSpec: QuickSpec {
     override func spec() {

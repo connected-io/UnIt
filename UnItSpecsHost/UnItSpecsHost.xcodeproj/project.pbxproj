@@ -106,13 +106,13 @@
 		51A5770A22E0CBA400093152 /* UILabel+InspectingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+InspectingSpec.swift"; sourceTree = "<group>"; };
 		F416469121E78F2C006E94EE /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
 		F416469221E78F2C006E94EE /* OverlapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlapViewController.xib; sourceTree = "<group>"; };
-		F424F19E21E6472C00F2888C /* UnIt_SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnIt_SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F424F19E21E6472C00F2888C /* UnItSpecsHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnItSpecsHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424F1A121E6472C00F2888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F424F1A621E6472C00F2888C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F424F1A821E6472E00F2888C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F424F1AB21E6472E00F2888C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F424F1AD21E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F424F1B221E6472E00F2888C /* UnIt_SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnIt_SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F424F1B221E6472E00F2888C /* UnItSpecsHostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnItSpecsHostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424F1B821E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424F1D921E6480E00F2888C /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		F424F1DA21E6480F00F2888C /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 		F424F19521E6472C00F2888C = {
 			isa = PBXGroup;
 			children = (
-				F424F1A021E6472C00F2888C /* UnIt_SampleApp */,
-				F424F1B521E6472E00F2888C /* UnIt_SampleAppTests */,
+				F424F1A021E6472C00F2888C /* UnItSpecsHost */,
+				F424F1B521E6472E00F2888C /* UnItSpecsHostTests */,
 				F424F19F21E6472C00F2888C /* Products */,
 				F4A9D32E21E64AFC00F7E1EC /* Frameworks */,
 			);
@@ -172,13 +172,13 @@
 		F424F19F21E6472C00F2888C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F424F19E21E6472C00F2888C /* UnIt_SampleApp.app */,
-				F424F1B221E6472E00F2888C /* UnIt_SampleAppTests.xctest */,
+				F424F19E21E6472C00F2888C /* UnItSpecsHost.app */,
+				F424F1B221E6472E00F2888C /* UnItSpecsHostTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F424F1A021E6472C00F2888C /* UnIt_SampleApp */ = {
+		F424F1A021E6472C00F2888C /* UnItSpecsHost */ = {
 			isa = PBXGroup;
 			children = (
 				F424F1D821E647FB00F2888C /* ViewControllers */,
@@ -189,10 +189,10 @@
 				F424F1AA21E6472E00F2888C /* LaunchScreen.storyboard */,
 				F424F1AD21E6472E00F2888C /* Info.plist */,
 			);
-			path = UnIt_SampleApp;
+			path = UnItSpecsHost;
 			sourceTree = "<group>";
 		};
-		F424F1B521E6472E00F2888C /* UnIt_SampleAppTests */ = {
+		F424F1B521E6472E00F2888C /* UnItSpecsHostTests */ = {
 			isa = PBXGroup;
 			children = (
 				5199B0B222E75150004AB6B0 /* CGFloat+PrecisionSpec.swift */,
@@ -212,7 +212,7 @@
 				5199B09A22E602D1004AB6B0 /* UIViewController+LoadingSpec.swift */,
 				5199B0B022E736E2004AB6B0 /* UIViewController+Setup.swift */,
 			);
-			path = UnIt_SampleAppTests;
+			path = UnItSpecsHostTests;
 			sourceTree = "<group>";
 		};
 		F424F1D521E647D000F2888C /* Views */ = {
@@ -263,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F424F19D21E6472C00F2888C /* UnIt_SampleApp */ = {
+		F424F19D21E6472C00F2888C /* UnItSpecsHost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F424F1C621E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnIt_SampleApp" */;
+			buildConfigurationList = F424F1C621E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnItSpecsHost" */;
 			buildPhases = (
 				F424F19A21E6472C00F2888C /* Sources */,
 				F424F19B21E6472C00F2888C /* Frameworks */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = UnIt_SampleApp;
+			name = UnItSpecsHost;
 			productName = PieceOfCake_SampleApp;
-			productReference = F424F19E21E6472C00F2888C /* UnIt_SampleApp.app */;
+			productReference = F424F19E21E6472C00F2888C /* UnItSpecsHost.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F424F1B121E6472E00F2888C /* UnIt_SampleAppTests */ = {
+		F424F1B121E6472E00F2888C /* UnItSpecsHostTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F424F1C921E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnIt_SampleAppTests" */;
+			buildConfigurationList = F424F1C921E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnItSpecsHostTests" */;
 			buildPhases = (
 				F424F1AE21E6472E00F2888C /* Sources */,
 				F424F1AF21E6472E00F2888C /* Frameworks */,
@@ -295,9 +295,9 @@
 			dependencies = (
 				F424F1B421E6472E00F2888C /* PBXTargetDependency */,
 			);
-			name = UnIt_SampleAppTests;
+			name = UnItSpecsHostTests;
 			productName = PieceOfCake_SampleAppTests;
-			productReference = F424F1B221E6472E00F2888C /* UnIt_SampleAppTests.xctest */;
+			productReference = F424F1B221E6472E00F2888C /* UnItSpecsHostTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -319,7 +319,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F424F19921E6472C00F2888C /* Build configuration list for PBXProject "UnIt_SampleApp" */;
+			buildConfigurationList = F424F19921E6472C00F2888C /* Build configuration list for PBXProject "UnItSpecsHost" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -332,8 +332,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F424F19D21E6472C00F2888C /* UnIt_SampleApp */,
-				F424F1B121E6472E00F2888C /* UnIt_SampleAppTests */,
+				F424F19D21E6472C00F2888C /* UnItSpecsHost */,
+				F424F1B121E6472E00F2888C /* UnItSpecsHostTests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,7 +415,7 @@
 /* Begin PBXTargetDependency section */
 		F424F1B421E6472E00F2888C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F424F19D21E6472C00F2888C /* UnIt_SampleApp */;
+			target = F424F19D21E6472C00F2888C /* UnItSpecsHost */;
 			targetProxy = F424F1B321E6472E00F2888C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -563,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL7Q499FV6;
-				INFOPLIST_FILE = UnIt_SampleApp/Info.plist;
+				INFOPLIST_FILE = UnItSpecsHost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YL7Q499FV6;
-				INFOPLIST_FILE = UnIt_SampleApp/Info.plist;
+				INFOPLIST_FILE = UnItSpecsHost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +605,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = UnIt_SampleAppTests/Info.plist;
+				INFOPLIST_FILE = UnItSpecsHostTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,7 +615,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnIt_SampleApp.app/UnIt_SampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnItSpecsHost.app/UnItSpecsHost";
 			};
 			name = Debug;
 		};
@@ -630,7 +630,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = UnIt_SampleAppTests/Info.plist;
+				INFOPLIST_FILE = UnItSpecsHostTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,14 +640,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnIt_SampleApp.app/UnIt_SampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnItSpecsHost.app/UnItSpecsHost";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F424F19921E6472C00F2888C /* Build configuration list for PBXProject "UnIt_SampleApp" */ = {
+		F424F19921E6472C00F2888C /* Build configuration list for PBXProject "UnItSpecsHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F424F1C421E6472E00F2888C /* Debug */,
@@ -656,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F424F1C621E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnIt_SampleApp" */ = {
+		F424F1C621E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnItSpecsHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F424F1C721E6472E00F2888C /* Debug */,
@@ -665,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F424F1C921E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnIt_SampleAppTests" */ = {
+		F424F1C921E6472E00F2888C /* Build configuration list for PBXNativeTarget "UnItSpecsHostTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F424F1CA21E6472E00F2888C /* Debug */,
