@@ -1,25 +1,27 @@
 import XCTest
 
+public enum UIControlUserInteractingError: Error {
+    case controlIsHidden
+    case controlIsDisabled
+    case controlHasZeroDimension
+}
+
 public extension UIControl {
     /**
      Simulates tapping on a **UIControl**. This works on **UIButton**, **UITableViewCell**, **UICollectionViewCell** and more.
      */
-    func tap() {
+    func tap() throws {
         if (isHidden) {
-            XCTFail("Control cannot be hidden.")
-            return
+            throw UIControlUserInteractingError.controlIsHidden
         }
         if (!isEnabled) {
-            XCTFail("Control cannot be disabled.")
-            return
+            throw UIControlUserInteractingError.controlIsDisabled
         }
         if (bounds.size.width == 0) {
-            XCTFail("Control cannot have width of 0.")
-            return
+            throw UIControlUserInteractingError.controlHasZeroDimension
         }
         if (bounds.size.height == 0) {
-            XCTFail("Control cannot have height of 0.")
-            return
+            throw UIControlUserInteractingError.controlHasZeroDimension
         }
         sendActions(for: .touchUpInside)
     }
