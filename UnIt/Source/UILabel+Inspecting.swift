@@ -11,10 +11,18 @@ public extension UILabel {
     }
     
     /**
-     Check to see if a line is currently truncated based on its size and font.
+     Check to see if the text is currently truncated based on its size and font.
      - Returns: A true/false value on whether the label is truncated.
      */
     var isTruncated: Bool {
         return numberOfTheoreticalLines() > numberOfLines && numberOfLines != 0
+    }
+    
+    /**
+     Check to see if the text has gone past single-line on a label with no maximum.
+     - Returns: A true/false value on whether the label is multilined.
+     */
+    var isMultilined: Bool {
+        return numberOfTheoreticalLines() > 1 && numberOfLines == 0
     }
 }

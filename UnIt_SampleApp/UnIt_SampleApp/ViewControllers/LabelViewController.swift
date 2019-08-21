@@ -8,6 +8,7 @@ class LabelViewController: UIViewController {
     @IBOutlet weak var oneLineLabelThatSizeWillDecreaseToTruncate: UILabel!
     @IBOutlet weak var widthConstraintForDecreaseSizeLabel: NSLayoutConstraint!
     @IBOutlet weak var threeLineLabelWithTruncation: UILabel!
+    @IBOutlet weak var shortInfiniteLabel: UILabel!
     @IBOutlet weak var infiniteLineLabel: UILabel!
     
     override func viewDidLoad() {
