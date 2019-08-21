@@ -5,11 +5,11 @@ import UnIt
 
 class UIViewFindingSpec: QuickSpec {
     override func spec() {
-        var loadedVc: ViewController!
+        var loadedVc: StoryboardedViewController!
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "ViewController", Device.iPhoneXSMax)
+                loadedVc = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "StoryboardedViewController", Device.iPhoneXSMax)
             }
             
             it("should have not have a view that is hidden") {

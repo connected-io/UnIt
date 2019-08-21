@@ -20,23 +20,23 @@ class UILabelInspectingSpec: QuickSpec {
             
             context("when the labels are set") {
                 it("should find the untruncated labels") {
-                    expect(loadedVc.oneLineLabelNoTruncation.isTruncated).to(equal(false))
-                    expect(loadedVc.twoLineLabelNoTruncation.isTruncated).to(equal(false))
-                    expect(loadedVc.infiniteLineLabel.isTruncated).to(equal(false))
+                    expect(loadedVc.oneLineLabelNoTruncation.isTruncated).to(beFalse())
+                    expect(loadedVc.twoLineLabelNoTruncation.isTruncated).to(beFalse())
+                    expect(loadedVc.infiniteLineLabel.isTruncated).to(beFalse())
                 }
                 
                 it("should find the truncated labels") {
-                    expect(loadedVc.oneLineLabelWithTruncation.isTruncated).to(equal(true))
-                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.isTruncated).to(equal(true))
-                    expect(loadedVc.oneLineLabelThatSizeWillDecreaseToTruncate.isTruncated).to(equal(true))
-                    expect(loadedVc.threeLineLabelWithTruncation.isTruncated).to(equal(true))
+                    expect(loadedVc.oneLineLabelWithTruncation.isTruncated).to(beTrue())
+                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.isTruncated).to(beTrue())
+                    expect(loadedVc.oneLineLabelThatSizeWillDecreaseToTruncate.isTruncated).to(beTrue())
+                    expect(loadedVc.threeLineLabelWithTruncation.isTruncated).to(beTrue())
                 }
                 
                 it("should determine the theoretical number of lines the label should have to look untruncated") {
                     expect(loadedVc.oneLineLabelNoTruncation.numberOfTheoreticalLines()).to(equal(1))
                     expect(loadedVc.oneLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(2))
                     expect(loadedVc.twoLineLabelNoTruncation.numberOfTheoreticalLines()).to(equal(2))
-                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(3))
+                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(2))
                     expect(loadedVc.oneLineLabelThatSizeWillDecreaseToTruncate.numberOfTheoreticalLines()).to(equal(2))
                     expect(loadedVc.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(5))
                 }
@@ -50,7 +50,7 @@ class UILabelInspectingSpec: QuickSpec {
             
             context("when the labels are set") {
                 it("should determine the theoretical number of lines the label should have to look untruncated") {
-                    expect(loadedVc.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(4)) // same as line 227
+                    expect(loadedVc.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(4))
                 }
             }
         }
@@ -62,7 +62,25 @@ class UILabelInspectingSpec: QuickSpec {
             
             context("when the labels are set") {
                 it("should find the truncated labels") {
-                    expect(loadedVc.oneLineLabelNoTruncation.isTruncated).to(equal(true))
+                    expect(loadedVc.oneLineLabelNoTruncation.isTruncated).to(beTrue())
+                }
+            }
+        }
+        
+        describe("View Controller with a label that could be multilined") {
+            context("when the screen size allows one line") {
+                it("should not be multilined") {
+                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+                    expect(loadedVc.shortInfiniteLabel.isMultilined).to(beFalse())
+                    expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(1))
+                }
+            }
+            
+            context("when the screen size forces multiline") {
+                it("should be multilined") {
+                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+                    expect(loadedVc.shortInfiniteLabel.isMultilined).to(beTrue())
+                    expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(2))
                 }
             }
         }

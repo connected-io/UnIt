@@ -1,6 +1,6 @@
 import UIKit
 
-class NibTopViewController: UIViewController {
+class TopViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let someBrazilStates = ["Acre", "Alagoas", "Amazonas", "Amapá", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Minas Gerais", "Mato Grosso do Sul", "Mato Grosso", "Pará", "Paraíba", "Pernambuco"]
     
@@ -11,7 +11,7 @@ class NibTopViewController: UIViewController {
     }
 }
 
-extension NibTopViewController : UICollectionViewDataSource {
+extension TopViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LabelCollectionViewCell", for: indexPath) as! LabelCollectionViewCell
         cell.configure(with: someBrazilStates[indexPath.item])

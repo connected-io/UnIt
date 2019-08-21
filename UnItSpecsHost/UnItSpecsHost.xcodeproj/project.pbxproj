@@ -28,14 +28,14 @@
 		F424F1A721E6472C00F2888C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424F1A521E6472C00F2888C /* Main.storyboard */; };
 		F424F1A921E6472E00F2888C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F424F1A821E6472E00F2888C /* Assets.xcassets */; };
 		F424F1AC21E6472E00F2888C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424F1AA21E6472E00F2888C /* LaunchScreen.storyboard */; };
-		F424F1E221E6480F00F2888C /* NibTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1D921E6480E00F2888C /* NibTopViewController.swift */; };
-		F424F1E321E6480F00F2888C /* NibTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DA21E6480F00F2888C /* NibTopViewController.xib */; };
+		F424F1E221E6480F00F2888C /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1D921E6480E00F2888C /* TopViewController.swift */; };
+		F424F1E321E6480F00F2888C /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DA21E6480F00F2888C /* TopViewController.xib */; };
 		F424F1E421E6480F00F2888C /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1DB21E6480F00F2888C /* ActionViewController.swift */; };
-		F424F1E521E6480F00F2888C /* NibBottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DC21E6480F00F2888C /* NibBottomViewController.xib */; };
-		F424F1E621E6480F00F2888C /* NibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DD21E6480F00F2888C /* NibViewController.xib */; };
-		F424F1E721E6480F00F2888C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1DE21E6480F00F2888C /* ViewController.swift */; };
-		F424F1E821E6480F00F2888C /* NibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1DF21E6480F00F2888C /* NibViewController.swift */; };
-		F424F1E921E6480F00F2888C /* NibBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1E021E6480F00F2888C /* NibBottomViewController.swift */; };
+		F424F1E521E6480F00F2888C /* BottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DC21E6480F00F2888C /* BottomViewController.xib */; };
+		F424F1E621E6480F00F2888C /* EmbeddingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1DD21E6480F00F2888C /* EmbeddingViewController.xib */; };
+		F424F1E721E6480F00F2888C /* StoryboardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */; };
+		F424F1E821E6480F00F2888C /* EmbeddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1DF21E6480F00F2888C /* EmbeddingViewController.swift */; };
+		F424F1E921E6480F00F2888C /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1E021E6480F00F2888C /* BottomViewController.swift */; };
 		F424F1EA21E6480F00F2888C /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1E121E6480F00F2888C /* ActionViewController.xib */; };
 		F424F1EF21E6481700F2888C /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424F1EB21E6481600F2888C /* LabelCollectionViewCell.xib */; };
 		F424F1F021E6481700F2888C /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F1EC21E6481600F2888C /* LabelCollectionViewCell.swift */; };
@@ -114,14 +114,14 @@
 		F424F1AD21E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424F1B221E6472E00F2888C /* UnItSpecsHostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnItSpecsHostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424F1B821E6472E00F2888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F424F1D921E6480E00F2888C /* NibTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibTopViewController.swift; sourceTree = "<group>"; };
-		F424F1DA21E6480F00F2888C /* NibTopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibTopViewController.xib; sourceTree = "<group>"; };
+		F424F1D921E6480E00F2888C /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		F424F1DA21E6480F00F2888C /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
 		F424F1DB21E6480F00F2888C /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		F424F1DC21E6480F00F2888C /* NibBottomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibBottomViewController.xib; sourceTree = "<group>"; };
-		F424F1DD21E6480F00F2888C /* NibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibViewController.xib; sourceTree = "<group>"; };
-		F424F1DE21E6480F00F2888C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F424F1DF21E6480F00F2888C /* NibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibViewController.swift; sourceTree = "<group>"; };
-		F424F1E021E6480F00F2888C /* NibBottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBottomViewController.swift; sourceTree = "<group>"; };
+		F424F1DC21E6480F00F2888C /* BottomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomViewController.xib; sourceTree = "<group>"; };
+		F424F1DD21E6480F00F2888C /* EmbeddingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbeddingViewController.xib; sourceTree = "<group>"; };
+		F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardedViewController.swift; sourceTree = "<group>"; };
+		F424F1DF21E6480F00F2888C /* EmbeddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddingViewController.swift; sourceTree = "<group>"; };
+		F424F1E021E6480F00F2888C /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
 		F424F1E121E6480F00F2888C /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		F424F1EB21E6481600F2888C /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
 		F424F1EC21E6481600F2888C /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -231,21 +231,21 @@
 			children = (
 				F424F1DB21E6480F00F2888C /* ActionViewController.swift */,
 				F424F1E121E6480F00F2888C /* ActionViewController.xib */,
+				F424F1E021E6480F00F2888C /* BottomViewController.swift */,
+				F424F1DC21E6480F00F2888C /* BottomViewController.xib */,
 				F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */,
 				F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */,
+				F424F1DF21E6480F00F2888C /* EmbeddingViewController.swift */,
+				F424F1DD21E6480F00F2888C /* EmbeddingViewController.xib */,
 				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
 				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
-				F424F1E021E6480F00F2888C /* NibBottomViewController.swift */,
-				F424F1DC21E6480F00F2888C /* NibBottomViewController.xib */,
-				F424F1D921E6480E00F2888C /* NibTopViewController.swift */,
-				F424F1DA21E6480F00F2888C /* NibTopViewController.xib */,
-				F424F1DF21E6480F00F2888C /* NibViewController.swift */,
-				F424F1DD21E6480F00F2888C /* NibViewController.xib */,
 				F46B400321F1072400FC606A /* OffScreenViewController.swift */,
 				F46B400421F1072400FC606A /* OffScreenViewController.xib */,
 				F416469121E78F2C006E94EE /* OverlapViewController.swift */,
 				F416469221E78F2C006E94EE /* OverlapViewController.xib */,
-				F424F1DE21E6480F00F2888C /* ViewController.swift */,
+				F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */,
+				F424F1D921E6480E00F2888C /* TopViewController.swift */,
+				F424F1DA21E6480F00F2888C /* TopViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F424F1E321E6480F00F2888C /* NibTopViewController.xib in Resources */,
+				F424F1E321E6480F00F2888C /* TopViewController.xib in Resources */,
 				F416469421E78F2C006E94EE /* OverlapViewController.xib in Resources */,
 				F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */,
 				F424F1AC21E6472E00F2888C /* LaunchScreen.storyboard in Resources */,
@@ -352,9 +352,9 @@
 				F43233D421ECDC70002ABCA3 /* LabelViewController.xib in Resources */,
 				F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */,
 				F424F1A721E6472C00F2888C /* Main.storyboard in Resources */,
-				F424F1E621E6480F00F2888C /* NibViewController.xib in Resources */,
+				F424F1E621E6480F00F2888C /* EmbeddingViewController.xib in Resources */,
 				F424F1EA21E6480F00F2888C /* ActionViewController.xib in Resources */,
-				F424F1E521E6480F00F2888C /* NibBottomViewController.xib in Resources */,
+				F424F1E521E6480F00F2888C /* BottomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,17 +373,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43233D321ECDC70002ABCA3 /* LabelViewController.swift in Sources */,
-				F424F1E821E6480F00F2888C /* NibViewController.swift in Sources */,
+				F424F1E821E6480F00F2888C /* EmbeddingViewController.swift in Sources */,
 				F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */,
-				F424F1E721E6480F00F2888C /* ViewController.swift in Sources */,
-				F424F1E921E6480F00F2888C /* NibBottomViewController.swift in Sources */,
+				F424F1E721E6480F00F2888C /* StoryboardedViewController.swift in Sources */,
+				F424F1E921E6480F00F2888C /* BottomViewController.swift in Sources */,
 				F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */,
 				F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */,
 				F424F1F221E6481700F2888C /* FirstCollectionViewCell.swift in Sources */,
 				F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */,
 				F424F1F121E6481700F2888C /* SecondCollectionViewCell.swift in Sources */,
 				F424F1E421E6480F00F2888C /* ActionViewController.swift in Sources */,
-				F424F1E221E6480F00F2888C /* NibTopViewController.swift in Sources */,
+				F424F1E221E6480F00F2888C /* TopViewController.swift in Sources */,
 				F424F1F021E6481700F2888C /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
