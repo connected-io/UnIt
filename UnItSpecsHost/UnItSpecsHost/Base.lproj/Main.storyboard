@@ -38,6 +38,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-F3-tVf">
                                                 <rect key="frame" x="55.5" y="55.5" width="77" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Left Button"/>
                                                 <connections>
                                                     <action selector="leftButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ah-Yg-x4C"/>
@@ -57,7 +58,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-FC-TPg">
                                                 <rect key="frame" x="51" y="55.5" width="86" height="30"/>
-                                                <state key="normal" title="Right Button"/>
+                                                <state key="normal" title="Right Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="rightButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSm-u0-OGt"/>
                                                 </connections>
@@ -197,7 +200,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-Hy-oj8">
                                                 <rect key="frame" x="123.5" y="0.0" width="251.5" height="161.5"/>
-                                                <state key="normal" title="Right Stack Button"/>
+                                                <state key="normal" title="Right Stack Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                     </stackView>
