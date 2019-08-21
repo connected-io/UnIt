@@ -1,10 +1,23 @@
 import Foundation
 import UIKit
 
+struct Lifecycle: OptionSet {
+    let rawValue: Int
+    
+    static let didLoad = Lifecycle(rawValue: 1 << 0)
+    static let willAppear = Lifecycle(rawValue: 1 << 1)
+    static let willLayoutSubviews = Lifecycle(rawValue: 1 << 2)
+    static let didLayoutSubviews = Lifecycle(rawValue: 1 << 3)
+    static let didAppear = Lifecycle(rawValue: 1 << 4)
+}
+
 class NibViewController: UIViewController {
     
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var bottomContainerView: UIView!
+    
+    // tracking which view lifecycle calls have been made
+    var lifecycle = Lifecycle(rawValue: 0)
     
     let topViewController = NibTopViewController(nibName: "NibTopViewController", bundle: Bundle.main)
     let bottomViewController = NibBottomViewController(nibName: "NibBottomViewController", bundle: Bundle.main)
@@ -12,6 +25,27 @@ class NibViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         embedViewControllers()
+        lifecycle = lifecycle.union(.didLoad)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lifecycle = lifecycle.union(.willAppear)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        lifecycle = lifecycle.union(.willLayoutSubviews)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        lifecycle = lifecycle.union(.didLayoutSubviews)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        lifecycle = lifecycle.union(.didAppear)
     }
     
     // MARK: Setup
