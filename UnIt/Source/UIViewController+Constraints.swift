@@ -51,7 +51,7 @@ extension UIView {
      */
     static let swizzleAutoLayoutAlertMethodOnce: Void = {
         guard let originalMethod = class_getInstanceMethod(UIView.self, NSSelectorFromString("engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:")) else {
-            assertionFailure("Can't find a matching selector. Did the name change?")
+            assertionFailure("Swizzled selector for capturing constraints: 'engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:' could not be found.")
             return
         }
         guard let swizzledMethod = class_getInstanceMethod(UIView.self, #selector(handleConstraintBreak(engine:breakConstraint:mutuallyExclusiveConstraints:))) else {
