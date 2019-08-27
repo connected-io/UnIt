@@ -10,7 +10,7 @@ class UIViewControllerSetupSpec: QuickSpec {
         
         describe("ViewController from nib") {
             beforeEach() {
-                vcFromNib = UIViewController.loadFromNib(named: "NibViewController")
+                vcFromNib = UIViewController.loadFromNib(named: "EmbeddingViewController")
                 vcFromNib.runViewLifecycle(for: .iPhoneXS)
             }
             

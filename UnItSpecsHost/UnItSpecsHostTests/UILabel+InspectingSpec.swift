@@ -73,7 +73,8 @@ class UILabelInspectingSpec: QuickSpec {
         describe("View Controller with a label that could be multilined") {
             context("when the screen size allows one line") {
                 it("should not be multilined") {
-                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+                    loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                    loadedVc.runViewLifecycle(for: .iPhoneXSMax)
                     expect(loadedVc.shortInfiniteLabel.isMultilined).to(beFalse())
                     expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(1))
                 }
@@ -81,7 +82,8 @@ class UILabelInspectingSpec: QuickSpec {
             
             context("when the screen size forces multiline") {
                 it("should be multilined") {
-                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+                    loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                    loadedVc.runViewLifecycle(for: .iPhoneSE)
                     expect(loadedVc.shortInfiniteLabel.isMultilined).to(beTrue())
                     expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(2))
                 }
