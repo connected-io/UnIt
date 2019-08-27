@@ -58,4 +58,37 @@ public extension UIView {
             return cell.firstLabel(with: text) != nil
         }.first
     }
+    
+    /**
+     Finds all **UILabels** within the given **UIView** that exactly match the given text.
+     - parameters:
+        - text: the string that labels in a given view must match.
+     - returns: An array of labels that match the given string.
+     */
+    func labels(with text: String) -> [UILabel] {
+        return views(ofType: UILabel.self) { label in
+            return label.text == text
+        }
+    }
+    
+    /**
+     
+    */
+    func buttons(with text: String) -> [UIButton] {
+        return views(ofType: UIButton.self) { button in
+            button.titleLabel?.text == text
+        }
+    }
+    
+    func tableViewCells(with text: String) -> [UITableViewCell] {
+        return views(ofType: UITableViewCell.self) { cell in
+            return cell.firstLabel(with: text) != nil
+        }
+    }
+    
+    func collectionViewCells(with text: String) -> [UICollectionViewCell] {
+        return views(ofType: UICollectionViewCell.self) { cell in
+            return cell.firstLabel(with: text) != nil
+        }
+    }
 }
