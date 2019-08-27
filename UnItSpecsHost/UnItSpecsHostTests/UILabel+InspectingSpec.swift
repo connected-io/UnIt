@@ -9,7 +9,8 @@ class UILabelInspectingSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhone8)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhone8)
             }
             
             context("When the view has finished laying out") {
@@ -45,7 +46,8 @@ class UILabelInspectingSpec: QuickSpec {
     
         describe("View Controller with untruncated and truncated labels on the largest possible iPhone to test screen sizes") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             context("when the labels are set") {
@@ -57,7 +59,8 @@ class UILabelInspectingSpec: QuickSpec {
         
         describe("View Controller with untruncated and truncated labels on the smallest possible iPhone to test screen sizes") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+                loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneSE)
             }
             
             context("when the labels are set") {
@@ -70,7 +73,8 @@ class UILabelInspectingSpec: QuickSpec {
         describe("View Controller with a label that could be multilined") {
             context("when the screen size allows one line") {
                 it("should not be multilined") {
-                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneXSMax)
+                    loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                    loadedVc.runViewLifecycle(for: .iPhoneXSMax)
                     expect(loadedVc.shortInfiniteLabel.isMultilined).to(beFalse())
                     expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(1))
                 }
@@ -78,7 +82,8 @@ class UILabelInspectingSpec: QuickSpec {
             
             context("when the screen size forces multiline") {
                 it("should be multilined") {
-                    loadedVc = UIViewController.loadAndSetupViewControllerFromNib("LabelViewController", LabelViewController.self, Device.iPhoneSE)
+                    loadedVc = UIViewController.loadFromNib(named: "LabelViewController")
+                    loadedVc.runViewLifecycle(for: .iPhoneSE)
                     expect(loadedVc.shortInfiniteLabel.isMultilined).to(beTrue())
                     expect(loadedVc.shortInfiniteLabel.numberOfTheoreticalLines()).to(equal(2))
                 }

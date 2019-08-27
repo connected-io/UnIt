@@ -9,7 +9,9 @@ class UIViewControllerConstraintsSpec: QuickSpec {
         
         describe("View Controller with constraint breaks") {
             beforeEach {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("ConstraintBreakViewController", ConstraintBreakViewController.self, Device.iPhone7, Bundle.main, shouldCaptureConstraintBreaks:  true)
+                loadedVc = UIViewController.loadFromNib(named: "ConstraintBreakViewController")
+                loadedVc.setupToCaptureConflictingConstraints()
+                loadedVc.runViewLifecycle(for: .iPhone7)
             }
             
             context("When the view has finished laying out") {

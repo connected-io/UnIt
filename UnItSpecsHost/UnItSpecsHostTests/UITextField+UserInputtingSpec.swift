@@ -9,7 +9,8 @@ class UITextFieldUserInputtingSpec: QuickSpec {
         
         describe("ViewController with user inputs") {
             beforeEach() {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromNib("ActionViewController", ActionViewController.self, Device.iPhone7Plus)
+                loadedVc = UIViewController.loadFromNib(named: "ActionViewController")
+                loadedVc.runViewLifecycle(for: .iPhone7Plus)
             }
             
             it("should have disabled switches") {

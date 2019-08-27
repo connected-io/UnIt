@@ -9,7 +9,8 @@ class UIViewFindingSpec: QuickSpec {
         
         describe("ViewController from storyboard") {
             beforeEach() {
-                loadedVc = UIViewController.loadAndSetupViewControllerFromStoryboard("Main", "StoryboardedViewController", Device.iPhoneXSMax)
+                loadedVc = UIViewController.loadFromStoryboard(named: "Main", withIdentifier: "StoryboardedViewController")
+                loadedVc.runViewLifecycle(for: .iPhoneXSMax)
             }
             
             it("should have not have a view that is hidden") {
