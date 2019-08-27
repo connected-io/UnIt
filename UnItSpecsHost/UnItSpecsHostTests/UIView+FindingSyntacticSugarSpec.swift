@@ -9,7 +9,8 @@ class UIViewFindingSyntacticSugarSpec: QuickSpec {
         
         describe("ViewController with multiple of the same elements") {
             beforeEach {
-                multipleElementsVc = UIViewController.loadAndSetupViewControllerFromNib("MultipleSameElementsViewController", MultipleSameElementsViewController.self, Device.iPhoneX)
+                multipleElementsVc = UIViewController.loadFromNib(named: "MultipleSameElementsViewController")
+                multipleElementsVc.runViewLifecycle(for: .iPhoneX)
             }
             
             it("should contain 2 labels with the text: Toronto") {
