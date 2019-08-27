@@ -47,11 +47,14 @@
 		F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */; };
 		F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B400321F1072400FC606A /* OffScreenViewController.swift */; };
 		F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B400421F1072400FC606A /* OffScreenViewController.xib */; };
-		F4A9D33121E64AFC00F7E1EC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D32F21E64AFC00F7E1EC /* Quick.framework */; };
-		F4A9D33221E64AFC00F7E1EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; };
-		F4A9D33921E64B3F00F7E1EC /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4A9D32F21E64AFC00F7E1EC /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F4A9D33A21E64B4400F7E1EC /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4A9D33021E64AFC00F7E1EC /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4E5A15421FF845200AD4FEB /* UnIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E5A15321FF845200AD4FEB /* UnIt.framework */; };
+		F4E8841F230EDBC700848785 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E88418230EDB4C00848785 /* Nimble.framework */; };
+		F4E88420230EDBC700848785 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E88419230EDB4C00848785 /* Quick.framework */; };
+		F4E88421230EDBFB00848785 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4E88418230EDB4C00848785 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4E88422230EDBFB00848785 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4E88419230EDB4C00848785 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4E88426230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E88425230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift */; };
+		F4E88429230F1ECB00848785 /* MultipleSameElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */; };
+		F4E8842A230F1ECB00848785 /* MultipleSameElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +74,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F4A9D33A21E64B4400F7E1EC /* Nimble.framework in CopyFiles */,
-				F4A9D33921E64B3F00F7E1EC /* Quick.framework in CopyFiles */,
+				F4E88421230EDBFB00848785 /* Nimble.framework in CopyFiles */,
+				F4E88422230EDBFB00848785 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +139,11 @@
 		F4A9D32F21E64AFC00F7E1EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F4A9D33021E64AFC00F7E1EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F4E5A15321FF845200AD4FEB /* UnIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E88418230EDB4C00848785 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		F4E88419230EDB4C00848785 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		F4E88425230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindingSyntacticSugarSpec.swift"; sourceTree = "<group>"; };
+		F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSameElementsViewController.swift; sourceTree = "<group>"; };
+		F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleSameElementsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E5A15421FF845200AD4FEB /* UnIt.framework in Frameworks */,
-				F4A9D33121E64AFC00F7E1EC /* Quick.framework in Frameworks */,
-				F4A9D33221E64AFC00F7E1EC /* Nimble.framework in Frameworks */,
+				F4E8841F230EDBC700848785 /* Nimble.framework in Frameworks */,
+				F4E88420230EDBC700848785 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +212,7 @@
 				51A5770222E0C37800093152 /* UITextField+UserInputtingSpec.swift */,
 				5199B0A222E62F9F004AB6B0 /* UIView+FindingBasedOnTextSpec.swift */,
 				5199B0A422E62FC1004AB6B0 /* UIView+FindingSpec.swift */,
+				F4E88425230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift */,
 				5199B0BC22E75E67004AB6B0 /* UIView+InspectingSpec.swift */,
 				5199B0C022E768AB004AB6B0 /* UIView+OverlapingSpec.swift */,
 				5199B0BE22E76870004AB6B0 /* UIView+SubviewBoundingSpec.swift */,
@@ -246,6 +255,8 @@
 				F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */,
 				F424F1D921E6480E00F2888C /* TopViewController.swift */,
 				F424F1DA21E6480F00F2888C /* TopViewController.xib */,
+				F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */,
+				F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,6 +264,8 @@
 		F4A9D32E21E64AFC00F7E1EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4E88418230EDB4C00848785 /* Nimble.framework */,
+				F4E88419230EDB4C00848785 /* Quick.framework */,
 				F4E5A15321FF845200AD4FEB /* UnIt.framework */,
 				F4A9D33021E64AFC00F7E1EC /* Nimble.framework */,
 				F4A9D32F21E64AFC00F7E1EC /* Quick.framework */,
@@ -346,6 +359,7 @@
 				F424F1E321E6480F00F2888C /* TopViewController.xib in Resources */,
 				F416469421E78F2C006E94EE /* OverlapViewController.xib in Resources */,
 				F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */,
+				F4E8842A230F1ECB00848785 /* MultipleSameElementsViewController.xib in Resources */,
 				F424F1AC21E6472E00F2888C /* LaunchScreen.storyboard in Resources */,
 				F424F1A921E6472E00F2888C /* Assets.xcassets in Resources */,
 				F424F1EF21E6481700F2888C /* LabelCollectionViewCell.xib in Resources */,
@@ -379,6 +393,7 @@
 				F424F1E921E6480F00F2888C /* BottomViewController.swift in Sources */,
 				F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */,
 				F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */,
+				F4E88429230F1ECB00848785 /* MultipleSameElementsViewController.swift in Sources */,
 				F424F1F221E6481700F2888C /* FirstCollectionViewCell.swift in Sources */,
 				F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */,
 				F424F1F121E6481700F2888C /* SecondCollectionViewCell.swift in Sources */,
@@ -395,6 +410,7 @@
 				5199B0B122E736E2004AB6B0 /* UIViewController+Setup.swift in Sources */,
 				51A5770922E0CA3000093152 /* UIViewController+ConstraintsSpec.swift in Sources */,
 				51A5770B22E0CBA400093152 /* UILabel+InspectingSpec.swift in Sources */,
+				F4E88426230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift in Sources */,
 				5199B0BB22E75602004AB6B0 /* UIControl+UserInteractingSpec.swift in Sources */,
 				5199B0A322E62F9F004AB6B0 /* UIView+FindingBasedOnTextSpec.swift in Sources */,
 				5199B0B322E75150004AB6B0 /* CGFloat+PrecisionSpec.swift in Sources */,
