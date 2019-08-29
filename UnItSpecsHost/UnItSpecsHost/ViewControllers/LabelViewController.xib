@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelViewController" customModule="UnItSpecsHost" customModuleProvider="target">
+            <connections>
+                <outlet property="infiniteLineLabel" destination="TRe-dI-MG0" id="D1d-mk-HVv"/>
+                <outlet property="oneLineLabelNoTruncation" destination="wX5-6K-39k" id="nLb-j6-mUf"/>
+                <outlet property="oneLineLabelThatSizeWillDecreaseToTruncate" destination="KQD-l0-YdK" id="TAJ-7a-Cuo"/>
+                <outlet property="oneLineLabelWithIncreasingFontToTruncate" destination="Zsy-Fs-nV8" id="A1r-3E-Zqi"/>
+                <outlet property="oneLineLabelWithTruncation" destination="LAh-4h-oR6" id="qOB-9y-fNl"/>
+                <outlet property="shortInfiniteLabel" destination="iTk-6t-etj" id="yHT-Fg-tbr"/>
+                <outlet property="threeLineLabelWithTruncation" destination="Fus-O3-Iy2" id="V32-iX-3qG"/>
+                <outlet property="twoLineLabelNoTruncation" destination="pum-2J-NE3" id="g0W-tR-X7W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="widthConstraintForDecreaseSizeLabel" destination="I8V-vH-BSs" id="sVc-bu-qfh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a label that is not truncated, but close." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX5-6K-39k">
+                    <rect key="frame" x="10" y="10" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label is most definitely truncated. We'll just add a few more characters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAh-4h-oR6">
+                    <rect key="frame" x="10" y="41" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a two line label. We are going to make sure that it does not truncate. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pum-2J-NE3">
+                    <rect key="frame" x="10" y="72" width="355" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not truncated yet, but we will increase font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsy-Fs-nV8">
+                    <rect key="frame" x="10" y="123" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not truncated yet, but we will decrease size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQD-l0-YdK">
+                    <rect key="frame" x="10" y="154" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-O3-Iy2">
+                    <rect key="frame" x="10" y="185" width="355" height="61"/>
+                    <string key="text">This is a 3 line label that is gonna be truncated. It's gonne be a lot of writing, so sit back and hold on tight! Almost there, kick back and relax. Any minute now. Is it now? I think so.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This text is probably just one line on larger screens." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-6t-etj">
+                    <rect key="frame" x="10" y="256" width="355" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This label has no end! We will add more text in viewDidAppear" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-dI-MG0">
+                    <rect key="frame" x="10" y="307" width="355" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.68104461607652933" blue="0.29358579311293131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LAh-4h-oR6" secondAttribute="trailing" constant="10" id="16e-NW-SNF"/>
+                <constraint firstItem="wX5-6K-39k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="1EU-Gz-rNW"/>
+                <constraint firstItem="LAh-4h-oR6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="4Cl-vr-Jau"/>
+                <constraint firstItem="Zsy-Fs-nV8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="681-kB-rGh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zsy-Fs-nV8" secondAttribute="trailing" constant="10" id="AHH-Sm-2jq"/>
+                <constraint firstItem="LAh-4h-oR6" firstAttribute="top" secondItem="wX5-6K-39k" secondAttribute="bottom" constant="10" id="Aah-Ue-PYk"/>
+                <constraint firstItem="iTk-6t-etj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Eey-js-qNT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KQD-l0-YdK" secondAttribute="trailing" constant="10" id="I8V-vH-BSs"/>
+                <constraint firstItem="Zsy-Fs-nV8" firstAttribute="top" secondItem="pum-2J-NE3" secondAttribute="bottom" constant="10" id="L3i-Td-VVn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wX5-6K-39k" secondAttribute="trailing" constant="10" id="PQV-bu-fi8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iTk-6t-etj" secondAttribute="trailing" constant="10" id="Pq9-PB-awv"/>
+                <constraint firstItem="KQD-l0-YdK" firstAttribute="top" secondItem="Zsy-Fs-nV8" secondAttribute="bottom" constant="10" id="Vx9-Ej-own"/>
+                <constraint firstItem="iTk-6t-etj" firstAttribute="top" secondItem="Fus-O3-Iy2" secondAttribute="bottom" constant="10" id="YHM-nR-tvG"/>
+                <constraint firstItem="pum-2J-NE3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="YT9-Wf-LqV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iTk-6t-etj" secondAttribute="trailing" constant="10" id="g24-MO-702"/>
+                <constraint firstItem="iTk-6t-etj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="gCb-1W-UVe"/>
+                <constraint firstItem="KQD-l0-YdK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="kOA-GI-nxf"/>
+                <constraint firstItem="Fus-O3-Iy2" firstAttribute="top" secondItem="KQD-l0-YdK" secondAttribute="bottom" constant="10" id="mQk-uQ-PWu"/>
+                <constraint firstItem="wX5-6K-39k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="nw3-HE-03U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pum-2J-NE3" secondAttribute="trailing" constant="10" id="nyr-fi-ggv"/>
+                <constraint firstItem="pum-2J-NE3" firstAttribute="top" secondItem="LAh-4h-oR6" secondAttribute="bottom" constant="10" id="pOR-KO-2gK"/>
+                <constraint firstItem="Fus-O3-Iy2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="sHW-4r-fNj"/>
+                <constraint firstItem="TRe-dI-MG0" firstAttribute="top" secondItem="iTk-6t-etj" secondAttribute="bottom" constant="10" id="sl0-Mg-gYp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fus-O3-Iy2" secondAttribute="trailing" constant="10" id="vfU-lU-mmC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="142" y="111"/>
+        </view>
+    </objects>
+</document>

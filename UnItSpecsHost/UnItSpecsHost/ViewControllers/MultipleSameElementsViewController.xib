@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultipleSameElementsViewController" customModule="UnItSpecsHost" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="kgd-vb-9yr" id="3qi-H7-NVB"/>
+                <outlet property="tableView" destination="YM8-Qc-xxM" id="8Gr-aw-WSa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="labelCollection" destination="A7Y-gI-cV1" collectionClass="NSMutableArray" id="z6j-3x-RL5"/>
+                <outletCollection property="labelCollection" destination="Iti-EV-Ae9" collectionClass="NSMutableArray" id="30w-x5-mmg"/>
+                <outletCollection property="labelCollection" destination="bIK-OZ-wHD" collectionClass="NSMutableArray" id="Uon-8E-dcq"/>
+                <outletCollection property="labelCollection" destination="EdF-Ko-W1h" collectionClass="NSMutableArray" id="QRM-u5-h0D"/>
+                <outletCollection property="buttonCollection" destination="i0V-oe-NkQ" collectionClass="NSMutableArray" id="U1C-5q-B9e"/>
+                <outletCollection property="buttonCollection" destination="Zod-3T-Yi0" collectionClass="NSMutableArray" id="AWp-KJ-B1N"/>
+                <outletCollection property="buttonCollection" destination="d4d-Sm-fe9" collectionClass="NSMutableArray" id="L9V-V8-HG2"/>
+                <outletCollection property="buttonCollection" destination="r8T-lw-xjc" collectionClass="NSMutableArray" id="Naz-8Z-Soo"/>
+                <outletCollection property="buttonCollection" destination="pTS-BA-qCJ" collectionClass="NSMutableArray" id="IAb-SO-E1h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7Y-gI-cV1">
+                    <rect key="frame" x="0.0" y="44" width="59" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto Raptors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iti-EV-Ae9">
+                    <rect key="frame" x="0.0" y="65" width="123" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-OZ-wHD">
+                    <rect key="frame" x="0.0" y="86" width="73" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-Ko-W1h">
+                    <rect key="frame" x="0.0" y="107" width="59" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-oe-NkQ">
+                    <rect key="frame" x="0.0" y="128" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zod-3T-Yi0">
+                    <rect key="frame" x="0.0" y="158" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-Sm-fe9">
+                    <rect key="frame" x="0.0" y="188" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8T-lw-xjc">
+                    <rect key="frame" x="0.0" y="218" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YM8-Qc-xxM">
+                    <rect key="frame" x="123" y="44" width="291" height="234"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0eQ-I1-TfN"/>
+                        <outlet property="delegate" destination="-1" id="Gco-bN-GA9"/>
+                    </connections>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kgd-vb-9yr">
+                    <rect key="frame" x="0.0" y="278" width="414" height="584"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y8K-ch-fYX">
+                        <size key="itemSize" width="120" height="30"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dNv-3Q-RPh"/>
+                        <outlet property="delegate" destination="-1" id="G8q-9e-RLe"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTS-BA-qCJ">
+                    <rect key="frame" x="0.0" y="248" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kgd-vb-9yr" secondAttribute="trailing" id="130-VD-9Gc"/>
+                <constraint firstItem="YM8-Qc-xxM" firstAttribute="bottom" secondItem="pTS-BA-qCJ" secondAttribute="bottom" id="2PJ-gD-9JI"/>
+                <constraint firstItem="YM8-Qc-xxM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8GT-Zm-YPg"/>
+                <constraint firstItem="A7Y-gI-cV1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8UQ-0y-Pac"/>
+                <constraint firstItem="EdF-Ko-W1h" firstAttribute="top" secondItem="bIK-OZ-wHD" secondAttribute="bottom" id="DlZ-8c-qvt"/>
+                <constraint firstItem="Zod-3T-Yi0" firstAttribute="top" secondItem="i0V-oe-NkQ" secondAttribute="bottom" id="EV5-mx-9I7"/>
+                <constraint firstItem="i0V-oe-NkQ" firstAttribute="top" secondItem="EdF-Ko-W1h" secondAttribute="bottom" id="GeM-LL-Kvd"/>
+                <constraint firstItem="bIK-OZ-wHD" firstAttribute="top" secondItem="Iti-EV-Ae9" secondAttribute="bottom" id="Glc-Q4-q7N"/>
+                <constraint firstItem="pTS-BA-qCJ" firstAttribute="top" secondItem="r8T-lw-xjc" secondAttribute="bottom" id="NpR-gW-Akf"/>
+                <constraint firstItem="kgd-vb-9yr" firstAttribute="top" secondItem="YM8-Qc-xxM" secondAttribute="bottom" id="O7o-bF-ycn"/>
+                <constraint firstItem="Iti-EV-Ae9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PXQ-ae-OAX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kgd-vb-9yr" secondAttribute="bottom" id="RVf-DP-Bcv"/>
+                <constraint firstItem="pTS-BA-qCJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SQK-y5-A4r"/>
+                <constraint firstItem="YM8-Qc-xxM" firstAttribute="leading" secondItem="Iti-EV-Ae9" secondAttribute="trailing" id="YE4-IR-sZt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YM8-Qc-xxM" secondAttribute="trailing" id="Z66-EO-LKv"/>
+                <constraint firstItem="r8T-lw-xjc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a4L-zi-Mjz"/>
+                <constraint firstItem="A7Y-gI-cV1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aLd-UI-DhI"/>
+                <constraint firstItem="i0V-oe-NkQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fhu-4r-fzP"/>
+                <constraint firstItem="d4d-Sm-fe9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ixK-0y-ZdF"/>
+                <constraint firstItem="Iti-EV-Ae9" firstAttribute="top" secondItem="A7Y-gI-cV1" secondAttribute="bottom" id="jZh-IF-eEN"/>
+                <constraint firstItem="bIK-OZ-wHD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lUl-Sf-0MW"/>
+                <constraint firstItem="d4d-Sm-fe9" firstAttribute="top" secondItem="Zod-3T-Yi0" secondAttribute="bottom" id="mNr-HU-xgi"/>
+                <constraint firstItem="EdF-Ko-W1h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="piC-rD-RY3"/>
+                <constraint firstItem="Zod-3T-Yi0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rCU-GE-9BV"/>
+                <constraint firstItem="r8T-lw-xjc" firstAttribute="top" secondItem="d4d-Sm-fe9" secondAttribute="bottom" id="sfu-9r-qxj"/>
+                <constraint firstItem="kgd-vb-9yr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xkP-U3-sCb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
