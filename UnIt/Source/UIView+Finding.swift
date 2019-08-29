@@ -5,8 +5,8 @@ public extension UIView {
     /**
      Returns the first subclass of **UIView** that passes a certain test defined by you
      - parameters:
-     - type: The class that you want to filter on.
-     - test: The closure that the generic and it's subviews check against.
+        - type: The class that you want to filter on.
+        - test: The closure that the generic and it's subviews check against.
      - returns: The first generic of your choice that passes your test.
      */
     func firstView<T: UIView>(ofType type: T.Type, passing test: (T) -> Bool) -> T? {
@@ -19,9 +19,25 @@ public extension UIView {
     }
     
     /**
+     Same as the above function, but checks if a **UIView** subview passes a certain test defined by you.
+     - parameters:
+        - type: The class that you want to filter on.
+        - test: The closure that the generic and it's subviews check against.
+     - returns: A boolean on whether the UIView contains a view that passes that test.
+     */
+    func containsView<T: UIView>(ofType type: T.Type, passing test: (T) -> Bool) -> Bool {
+        return firstView(passing: { view in
+            guard let typedView = view as? T else {
+                return false
+            }
+            return test(typedView)
+        }) != nil
+    }
+    
+    /**
      Returns the first **UIView** that passes a certain test defined by you. Implements a breadth-first-search, but does an early return when it finds the first element that passes the test.
      - parameters:
-     - test: The closure that the view and it's subviews check against.
+        - test: The closure that the view and it's subviews check against.
      - returns: The first view that passes the test.
      */
     func firstView(passing test: (UIView) -> Bool) -> UIView? {
@@ -39,7 +55,7 @@ public extension UIView {
     /**
      Returns all subviews of a **UIView** of your choice that passes a certain test defined by you. Does a full breadth-first-search going through the view hierarchy. Useful if you want to check against multiple **UIView** subclasses.
      - parameters:
-     - test: The closure that the view and it's subviews check against.
+        - test: The closure that the view and it's subviews check against.
      - returns: An array of generics of your choice that subclasses **UIView**.
      */
     func views<T: UIView>(ofType type: T.Type, passing test: ((T) -> Bool)? = nil) -> [T] {

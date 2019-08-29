@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopViewController" customModule="pieceofcake" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Z6c-Yt-9tq" id="bJi-uO-Ghj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top View Controller Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEP-mb-FCm">
+                    <rect key="frame" x="89.5" y="30" width="196" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-Yt-9tq">
+                    <rect key="frame" x="0.0" y="51" width="375" height="616"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mad-3c-NRf">
+                        <size key="itemSize" width="150" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.99955804531810521" blue="0.60394612500609346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z6c-Yt-9tq" secondAttribute="trailing" id="8ck-YL-GAZ"/>
+                <constraint firstItem="EEP-mb-FCm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="BGc-mQ-tPv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Z6c-Yt-9tq" secondAttribute="bottom" id="HBV-PC-cSv"/>
+                <constraint firstItem="Z6c-Yt-9tq" firstAttribute="top" secondItem="EEP-mb-FCm" secondAttribute="bottom" id="Plq-r8-C7x"/>
+                <constraint firstItem="Z6c-Yt-9tq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZeL-8l-jo3"/>
+                <constraint firstItem="EEP-mb-FCm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iZv-Ae-zFI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
