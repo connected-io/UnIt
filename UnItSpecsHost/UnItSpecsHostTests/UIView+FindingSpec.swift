@@ -37,8 +37,8 @@ class UIViewFindingSpec: QuickSpec {
                 })?.titleLabel?.text).to(equal("Right Button"))
             }
             
-            it("should have three views which are buttons") {
-                expect(loadedVc.view.views(ofType: UIButton.self).count).to(equal(3))
+            it("should have four views which are buttons") {
+                expect(loadedVc.view.views(ofType: UIButton.self).count).to(equal(4))
             }
             
             it("should have no views which are switches") {
