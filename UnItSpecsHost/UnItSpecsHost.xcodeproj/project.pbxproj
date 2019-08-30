@@ -45,6 +45,8 @@
 		F43233D421ECDC70002ABCA3 /* LabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D221ECDC70002ABCA3 /* LabelViewController.xib */; };
 		F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */; };
 		F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */; };
+		F4676BDB2319A28F00BD99DD /* AccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4676BD92319A28F00BD99DD /* AccessibilityViewController.swift */; };
+		F4676BDC2319A28F00BD99DD /* AccessibilityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4676BDA2319A28F00BD99DD /* AccessibilityViewController.xib */; };
 		F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B400321F1072400FC606A /* OffScreenViewController.swift */; };
 		F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B400421F1072400FC606A /* OffScreenViewController.xib */; };
 		F4E5A15421FF845200AD4FEB /* UnIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E5A15321FF845200AD4FEB /* UnIt.framework */; };
@@ -134,6 +136,8 @@
 		F43233D221ECDC70002ABCA3 /* LabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewController.xib; sourceTree = "<group>"; };
 		F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintBreakViewController.swift; sourceTree = "<group>"; };
 		F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstraintBreakViewController.xib; sourceTree = "<group>"; };
+		F4676BD92319A28F00BD99DD /* AccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityViewController.swift; sourceTree = "<group>"; };
+		F4676BDA2319A28F00BD99DD /* AccessibilityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessibilityViewController.xib; sourceTree = "<group>"; };
 		F46B400321F1072400FC606A /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
 		F46B400421F1072400FC606A /* OffScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffScreenViewController.xib; sourceTree = "<group>"; };
 		F4A9D32F21E64AFC00F7E1EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 		F424F1D821E647FB00F2888C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4676BD92319A28F00BD99DD /* AccessibilityViewController.swift */,
+				F4676BDA2319A28F00BD99DD /* AccessibilityViewController.xib */,
 				F424F1DB21E6480F00F2888C /* ActionViewController.swift */,
 				F424F1E121E6480F00F2888C /* ActionViewController.xib */,
 				F424F1E021E6480F00F2888C /* BottomViewController.swift */,
@@ -248,6 +254,8 @@
 				F424F1DD21E6480F00F2888C /* EmbeddingViewController.xib */,
 				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
 				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
+				F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */,
+				F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */,
 				F46B400321F1072400FC606A /* OffScreenViewController.swift */,
 				F46B400421F1072400FC606A /* OffScreenViewController.xib */,
 				F416469121E78F2C006E94EE /* OverlapViewController.swift */,
@@ -255,8 +263,6 @@
 				F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */,
 				F424F1D921E6480E00F2888C /* TopViewController.swift */,
 				F424F1DA21E6480F00F2888C /* TopViewController.xib */,
-				F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */,
-				F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */,
 				F424F1A721E6472C00F2888C /* Main.storyboard in Resources */,
 				F424F1E621E6480F00F2888C /* EmbeddingViewController.xib in Resources */,
+				F4676BDC2319A28F00BD99DD /* AccessibilityViewController.xib in Resources */,
 				F424F1EA21E6480F00F2888C /* ActionViewController.xib in Resources */,
 				F424F1E521E6480F00F2888C /* BottomViewController.xib in Resources */,
 			);
@@ -394,6 +401,7 @@
 				F424F1A221E6472C00F2888C /* AppDelegate.swift in Sources */,
 				F416469321E78F2C006E94EE /* OverlapViewController.swift in Sources */,
 				F4E88429230F1ECB00848785 /* MultipleSameElementsViewController.swift in Sources */,
+				F4676BDB2319A28F00BD99DD /* AccessibilityViewController.swift in Sources */,
 				F424F1F221E6481700F2888C /* FirstCollectionViewCell.swift in Sources */,
 				F43233D721ED1535002ABCA3 /* ConstraintBreakViewController.swift in Sources */,
 				F424F1F121E6481700F2888C /* SecondCollectionViewCell.swift in Sources */,
