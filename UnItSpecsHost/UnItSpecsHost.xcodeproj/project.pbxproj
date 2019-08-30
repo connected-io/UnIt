@@ -47,6 +47,9 @@
 		F43233D821ED1535002ABCA3 /* ConstraintBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */; };
 		F46B400521F1072400FC606A /* OffScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B400321F1072400FC606A /* OffScreenViewController.swift */; };
 		F46B400621F1072400FC606A /* OffScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B400421F1072400FC606A /* OffScreenViewController.xib */; };
+		F4772D8A2318433C0012E0CE /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4772D882318433C0012E0CE /* ColorViewController.swift */; };
+		F4772D8B2318433C0012E0CE /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4772D892318433C0012E0CE /* ColorViewController.xib */; };
+		F4A2301A23197845000FE6C4 /* UIView+ColorInspectingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2301923197845000FE6C4 /* UIView+ColorInspectingSpec.swift */; };
 		F4E5A15421FF845200AD4FEB /* UnIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E5A15321FF845200AD4FEB /* UnIt.framework */; };
 		F4E8841F230EDBC700848785 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E88418230EDB4C00848785 /* Nimble.framework */; };
 		F4E88420230EDBC700848785 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E88419230EDB4C00848785 /* Quick.framework */; };
@@ -136,6 +139,9 @@
 		F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstraintBreakViewController.xib; sourceTree = "<group>"; };
 		F46B400321F1072400FC606A /* OffScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenViewController.swift; sourceTree = "<group>"; };
 		F46B400421F1072400FC606A /* OffScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffScreenViewController.xib; sourceTree = "<group>"; };
+		F4772D882318433C0012E0CE /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		F4772D892318433C0012E0CE /* ColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
+		F4A2301923197845000FE6C4 /* UIView+ColorInspectingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColorInspectingSpec.swift"; sourceTree = "<group>"; };
 		F4A9D32F21E64AFC00F7E1EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F4A9D33021E64AFC00F7E1EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F4E5A15321FF845200AD4FEB /* UnIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +216,7 @@
 				5199B0BA22E75602004AB6B0 /* UIControl+UserInteractingSpec.swift */,
 				51A5770A22E0CBA400093152 /* UILabel+InspectingSpec.swift */,
 				51A5770222E0C37800093152 /* UITextField+UserInputtingSpec.swift */,
+				F4A2301923197845000FE6C4 /* UIView+ColorInspectingSpec.swift */,
 				5199B0A222E62F9F004AB6B0 /* UIView+FindingBasedOnTextSpec.swift */,
 				5199B0A422E62FC1004AB6B0 /* UIView+FindingSpec.swift */,
 				F4E88425230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift */,
@@ -242,12 +249,16 @@
 				F424F1E121E6480F00F2888C /* ActionViewController.xib */,
 				F424F1E021E6480F00F2888C /* BottomViewController.swift */,
 				F424F1DC21E6480F00F2888C /* BottomViewController.xib */,
+				F4772D882318433C0012E0CE /* ColorViewController.swift */,
+				F4772D892318433C0012E0CE /* ColorViewController.xib */,
 				F43233D521ED1535002ABCA3 /* ConstraintBreakViewController.swift */,
 				F43233D621ED1535002ABCA3 /* ConstraintBreakViewController.xib */,
 				F424F1DF21E6480F00F2888C /* EmbeddingViewController.swift */,
 				F424F1DD21E6480F00F2888C /* EmbeddingViewController.xib */,
 				F43233D121ECDC70002ABCA3 /* LabelViewController.swift */,
 				F43233D221ECDC70002ABCA3 /* LabelViewController.xib */,
+				F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */,
+				F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */,
 				F46B400321F1072400FC606A /* OffScreenViewController.swift */,
 				F46B400421F1072400FC606A /* OffScreenViewController.xib */,
 				F416469121E78F2C006E94EE /* OverlapViewController.swift */,
@@ -255,8 +266,6 @@
 				F424F1DE21E6480F00F2888C /* StoryboardedViewController.swift */,
 				F424F1D921E6480E00F2888C /* TopViewController.swift */,
 				F424F1DA21E6480F00F2888C /* TopViewController.xib */,
-				F4E88427230F1ECB00848785 /* MultipleSameElementsViewController.swift */,
-				F4E88428230F1ECB00848785 /* MultipleSameElementsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,6 +377,7 @@
 				F424F1A721E6472C00F2888C /* Main.storyboard in Resources */,
 				F424F1E621E6480F00F2888C /* EmbeddingViewController.xib in Resources */,
 				F424F1EA21E6480F00F2888C /* ActionViewController.xib in Resources */,
+				F4772D8B2318433C0012E0CE /* ColorViewController.xib in Resources */,
 				F424F1E521E6480F00F2888C /* BottomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +409,7 @@
 				F424F1F121E6481700F2888C /* SecondCollectionViewCell.swift in Sources */,
 				F424F1E421E6480F00F2888C /* ActionViewController.swift in Sources */,
 				F424F1E221E6480F00F2888C /* TopViewController.swift in Sources */,
+				F4772D8A2318433C0012E0CE /* ColorViewController.swift in Sources */,
 				F424F1F021E6481700F2888C /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +421,7 @@
 				5199B0B122E736E2004AB6B0 /* UIViewController+Setup.swift in Sources */,
 				51A5770922E0CA3000093152 /* UIViewController+ConstraintsSpec.swift in Sources */,
 				51A5770B22E0CBA400093152 /* UILabel+InspectingSpec.swift in Sources */,
+				F4A2301A23197845000FE6C4 /* UIView+ColorInspectingSpec.swift in Sources */,
 				F4E88426230F19FF00848785 /* UIView+FindingSyntacticSugarSpec.swift in Sources */,
 				5199B0BB22E75602004AB6B0 /* UIControl+UserInteractingSpec.swift in Sources */,
 				5199B0A322E62F9F004AB6B0 /* UIView+FindingBasedOnTextSpec.swift in Sources */,
