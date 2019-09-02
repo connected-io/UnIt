@@ -1,6 +1,9 @@
 osx_image: xcode10.1
 language: swift
 os: osx
-xcode_project: UnItSpecsHost.xcodeproj
+xcode_workspace: UnIt.xcworkspace
 xcode_scheme: UnItSpecsHost
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
+before_install:
+- cd UnItSpecsHost
+- carthage update
