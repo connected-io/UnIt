@@ -6,3 +6,6 @@ xcode_scheme: UnItSpecsHost
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
 before_install:
 - carthage update
+- cd UnItSpecsHost
+- carthage update
+- cd ..
