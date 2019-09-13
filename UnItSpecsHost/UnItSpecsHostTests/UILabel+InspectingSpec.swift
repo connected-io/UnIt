@@ -37,7 +37,7 @@ class UILabelInspectingSpec: QuickSpec {
                     expect(loadedVc.oneLineLabelNoTruncation.numberOfTheoreticalLines()).to(equal(1))
                     expect(loadedVc.oneLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(2))
                     expect(loadedVc.twoLineLabelNoTruncation.numberOfTheoreticalLines()).to(equal(2))
-                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(2))
+                    expect(loadedVc.oneLineLabelWithIncreasingFontToTruncate.numberOfTheoreticalLines()).to(equal(3))
                     expect(loadedVc.oneLineLabelThatSizeWillDecreaseToTruncate.numberOfTheoreticalLines()).to(equal(2))
                     expect(loadedVc.threeLineLabelWithTruncation.numberOfTheoreticalLines()).to(equal(5))
                 }
