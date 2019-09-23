@@ -6,8 +6,8 @@ public extension UIView {
      - Returns: A **CGRect** of the intersection between the two views. If there is no intersection a CGRect.zero is returned.
      */
     func findOverlappedArea(with view: UIView) -> CGRect {
-        let convertedSelf = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) ?? self.frame
-        let convertedView = view.superview?.convert(view.frame, to: UIApplication.shared.keyWindow) ?? view.frame
+        let convertedSelf = self.superview?.convert(self.frame, to: rootSuperView()) ?? self.frame
+        let convertedView = view.superview?.convert(view.frame, to: rootSuperView()) ?? view.frame
         
         if convertedSelf.intersects(convertedView) {
             let intersection = convertedSelf.intersection(convertedView)
@@ -171,5 +171,17 @@ public extension UIView {
      */
     private func isScrollIndicator() -> Bool {
         return self is UIImageView && self.superview is UIScrollView
+    }
+    
+    /**
+     In order to accurately calculate view overlaps, we need to find each view's position in the most superview. We cannot use the UIWindow because UnIt runs agnostic of the simulator.
+     - returns: The viewcontroller's main view.
+    */
+    private func rootSuperView() -> UIView {
+        var view = self
+        while let superview = view.superview {
+            view = superview
+        }
+        return view
     }
 }
